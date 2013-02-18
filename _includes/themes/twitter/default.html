@@ -8,11 +8,8 @@
 
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
-    <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/journal/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"></link>
+    <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cosmo/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"></link>
    <link rel="shortcut icon" href="https://github.com/favicon.ico">
-  <!-- Update these with your own images
-    <link rel="shortcut icon" href="images/favicon.ico">
-  -->
   </head>
 
   <body>
@@ -26,9 +23,9 @@
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads<b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-              <li><a tabindex="-1" href="/torrents.html">Torrents</a></li>
+              <li><a tabindex="-1" href="/downloads.html">Downloads</a></li>
               <li><a tabindex="-1" href="/vm.html">Client VM</a></li>
-              <li><a tabindex="-1" href="/source.html">Source code</a></li>
+              <li><a tabindex="-1" href="https://github.com/gousiosg/github-mirror">Source code</a></li>
             </ul>
             </li>
             <li class="divider"></li>
@@ -55,16 +52,19 @@
           </div>
 
           <footer>
+          <!--<small>
+          <p>
           <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/gr/deed.en"><img hspace="4" align="left" alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png"/></a>
           &copy; {{ site.author.name }} 2012 &mdash; {{ site.time | date: '%Y' }}.
           Except where otherwise noted, all original material on this page
           created by Georgios Gousios is licensed under the Creative Commons
-          Attribution-Share Alike 3.0 Greece License.
+          Attribution-Share Alike 3.0 License.
           </p>
-          </footer>
+        </small>-->
+        </footer>
         </div>
       </div>
-    </div> <!-- /contaner -->
+    </div> 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <!-- Place this tag after the last +1 button tag. -->
     <script type="text/javascript">
@@ -81,7 +81,24 @@
         g.src = '//hnbutton.appspot.com/static/hn.min.js';
         s.parentNode.insertBefore(g, s);
     }(document, 'script'));
-</script>
-     {% include JB/analytics %}
+   </script>
+
+   <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38537159-1']);
+    _gaq.push(['_setDomainName', 'ghtorrent.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+     var ga = document.createElement('script'); ga.type =
+     'text/javascript'; ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+       : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(ga, s);
+     })();
+
+  </script>
    </body>
  </html>
