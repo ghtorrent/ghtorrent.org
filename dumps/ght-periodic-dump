@@ -1,0 +1,111 @@
+#!/bin/sh
+#
+# Create the periodic database dump files
+#
+
+# Directory to place compressed files and torrents
+OUTDIR=/data/downloads
+
+# Base URL for HTTP dir containing torrents and data
+WEBSEED=http://www.ghtorrent.org/downloads/
+
+usage()
+{
+	echo "Usage: $0 [-f 'yyyy-mm-dd hh:mm'] [-t 'yyyy-mm-dd hh:mm']"
+	echo "          [-c collection_to_dump]"
+	echo "Dump the database. -f earliest record timestamp"
+	echo "                   -t latest record timestamp"
+	echo "                   -c collection to dump (default: all)"
+}
+
+if [ -z $1 ]
+then
+	usage
+	exit 1
+fi
+
+while getopts "f:t:c:" o
+do
+	case $o in
+	f) 	timeStart=`date -d "$OPTARG" +%s` ;;
+	t) 	timeEnd=`date -d "$OPTARG" +%s` ;;
+	c) 	collection=$OPTARG ;;
+	\?)     echo "Invalid option: -$OPTARG" >&2
+		usage
+	        exit 1
+		;;
+	esac
+done
+
+
+# Time to start dumping from
+if [ -z $timeStart ]
+then
+	if [ -r lastrun ]
+	then
+		timeStart=`cat lastrun`
+	else
+		timeStart=0
+	fi
+fi
+
+# Time to end dumping
+if [ -z $timeEnd ]
+then
+	timeEnd=`date +%s`
+fi
+
+# Name used for the files
+dateName=`date -d @$timeEnd -u +'%Y-%m-%d'`
+
+# _id example:
+# 4f208c3e08d69a1835000077
+# 000102030405060708091011
+# |      ||    ||  ||    |
+# time    mach  pid count
+
+endId=`printf '%08x0000000000000000' $timeEnd`
+startId=`printf '%08x0000000000000000' $timeStart`
+
+
+if [ -z $collection ]
+then
+	collections=`echo "show collections"|mongo --quiet dutihr/github|egrep -v "system|bye"`
+else
+	collections=$collection
+fi
+
+echo "Dumping database from `date -d @$timeStart` to `date -d @$timeEnd`"
+
+rm -rf dump
+mkdir -p dump/github
+
+for col in $collections; do
+
+	echo "Dumping $col"
+	mongodump --host dutihr --db github --collection $col -q '{"_id" : {"$gte" : ObjectId("'$startId'"), "$lt"  : ObjectId("'$endId'")} }' || exit 1
+done
+
+# Do the same per collection
+for col in $collections; do
+	echo "Archiving $col.bson"
+	if [ ! -s dump/github/$col.bson ]; then
+		echo "Collection empty, skipping"
+		continue
+	fi
+
+	if ! tar zcf $OUTDIR/$col-dump.$dateName.tar.gz dump/github/$col.bson
+	then
+		rm -f $OUTDIR/$col-dump.$dateName.tar.gz
+		exit 1
+	fi
+
+	mktorrent -a udp://tracker.openbittorrent.com:80 -a udp://tracker.publicbt.com:80/announce -a http://tracker.bittorrent.am/announce -w $WEBSEED/$col-dump.$dateName.tar.gz -o $OUTDIR/$col-dump.$dateName.torrent $OUTDIR/$col-dump.$dateName.tar.gz
+done
+
+# Update last run info
+echo $timeEnd >lastrun || exit 1
+
+# Clean up
+rm -rf dump
+
