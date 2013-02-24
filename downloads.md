@@ -12,7 +12,7 @@ dump.
 * [2013-02-23](/downloads/mysql-2013-02-23.sql.gz)
 
 ### Available Torrents
-List of available torrents (Last dump date: 2012-03-30)
+List of available torrents (Last dump date: 2012-05-30)
 
 <table>
 <tr>
@@ -27,6 +27,15 @@ List of available torrents (Last dump date: 2012-03-30)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/events-dump.2012-03-30.torrent">events</a> (1221 MB)
+</td>
+</tr>
+<tr>
+<td>2012-05-30</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commits-dump.2012-05-30.torrent">commits</a> (17962 MB)
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/events-dump.2012-05-30.torrent">events</a> (1945 MB)
 </td>
 </tr>
 </table>
