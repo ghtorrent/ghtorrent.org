@@ -4,6 +4,10 @@ title: Downloads
 tagline: 
 ---
 
-Under construction! For the moment, please see:
+#### MySQL Downloads
 
-https://github.com/gousiosg/github-mirror/wiki/Available-Torrents
+Coming soon! For the moment please use [Query MySQL](mysql.html)
+
+#### Available Torrents
+
+
