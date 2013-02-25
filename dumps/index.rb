@@ -70,7 +70,7 @@ torrents = Dir.entries("#{dir}").map do |f|
 
   # Go through all torrent files and extract name of
   # dumped collection and dump date
-  matches = /([a-z0-9]+)-[a-z]+\.(.*)\.torrent/.match(f)
+  matches = /([a-z0-9_]+)-[a-z]+\.(.*)\.torrent/.match(f)
   next if matches.nil?
 
   # Calculate original file size

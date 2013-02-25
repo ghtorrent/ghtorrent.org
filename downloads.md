@@ -17,7 +17,7 @@ List of available torrents (Last dump date: 2012-07-30)
 <table>
 <tr>
 <th>Dump date</th>
-<th>comments </th>
+<th>commit_comments </th>
 <th>commits </th>
 <th>events </th>
 <th>followers </th>
@@ -69,7 +69,7 @@ List of available torrents (Last dump date: 2012-07-30)
 <tr>
 <td>2012-07-30</td>
 <td>
-<a href="http://ghtorrent.org/downloads/commit_comments-dump.2012-07-30.torrent">comments</a> (1 MB)
+<a href="http://ghtorrent.org/downloads/commit_comments-dump.2012-07-30.torrent">commit_comments</a> (1 MB)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/commits-dump.2012-07-30.torrent">commits</a> (34533 MB)
