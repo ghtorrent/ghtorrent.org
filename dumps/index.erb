@@ -9,10 +9,10 @@ List of available torrents (Last dump date: <%= @last_update %>)
    <th><%= c %> </th>
      <% end %>
   </tr>
-  <% for @d in @dumps.sort{ |a,b| a.date <=> b.date} %>
   </thead>
   <tbody>
-    <tr>
+   <% for @d in @dumps.sort{ |a,b| a.date <=> b.date} %>
+   <tr>
     <td><%= @d.date %></td>
     <% for @col in @collections.sort %>
     <% @t = @d.torrents[@col] %>

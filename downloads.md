@@ -47,8 +47,6 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>2012-05-30</td>
 <td>
@@ -70,8 +68,6 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td>2012-07-30</td>
 <td>
