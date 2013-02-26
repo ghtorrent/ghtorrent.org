@@ -13,8 +13,8 @@ dump.
 
 ### Available Torrents
 List of available torrents (Last dump date: 2012-07-30)
-
-<table>
+<table class="table table-hover table-condensed">
+<thead>
 <tr>
 <th>Dump date</th>
 <th>commit_comments </th>
@@ -24,6 +24,8 @@ List of available torrents (Last dump date: 2012-07-30)
 <th>repos </th>
 <th>users </th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>2012-03-30</td>
 <td>
@@ -45,6 +47,8 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>2012-05-30</td>
 <td>
@@ -66,6 +70,8 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>2012-07-30</td>
 <td>
@@ -87,4 +93,5 @@ List of available torrents (Last dump date: 2012-07-30)
 <a href="http://ghtorrent.org/downloads/users-dump.2012-07-30.torrent">29 MB</a>
 </td>
 </tr>
+</tbody>
 </table>
