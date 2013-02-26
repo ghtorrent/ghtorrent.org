@@ -16,9 +16,7 @@ List of available torrents (Last dump date: <%= @last_update %>)
     <td><%= @d.date %></td>
     <% for @col in @collections.sort %>
     <% @t = @d.torrents[@col] %>
-      <td><% if @t.nil? %>
-    	 ---
-        <% else %>
+      <td><% unless @t.nil? %>
           <a href="<%= @t.url %>"><%= @t.size%> MB</a>
         <% end %>
       </td>

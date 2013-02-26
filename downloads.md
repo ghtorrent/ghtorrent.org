@@ -29,7 +29,6 @@ List of available torrents (Last dump date: 2012-07-30)
 <tr>
 <td>2012-03-30</td>
 <td>
----
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/commits-dump.2012-03-30.torrent">810 MB</a>
@@ -38,19 +37,15 @@ List of available torrents (Last dump date: 2012-07-30)
 <a href="http://ghtorrent.org/downloads/events-dump.2012-03-30.torrent">1221 MB</a>
 </td>
 <td>
----
 </td>
 <td>
----
 </td>
 <td>
----
 </td>
 </tr>
 <tr>
 <td>2012-05-30</td>
 <td>
----
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/commits-dump.2012-05-30.torrent">17962 MB</a>
@@ -59,13 +54,10 @@ List of available torrents (Last dump date: 2012-07-30)
 <a href="http://ghtorrent.org/downloads/events-dump.2012-05-30.torrent">1945 MB</a>
 </td>
 <td>
----
 </td>
 <td>
----
 </td>
 <td>
----
 </td>
 </tr>
 <tr>
