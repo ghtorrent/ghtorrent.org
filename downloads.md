@@ -30,10 +30,10 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/commits-dump.2012-03-30.torrent">commits</a> (810 MB)
+<a href="http://ghtorrent.org/downloads/commits-dump.2012-03-30.torrent">810 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/events-dump.2012-03-30.torrent">events</a> (1221 MB)
+<a href="http://ghtorrent.org/downloads/events-dump.2012-03-30.torrent">1221 MB</a>
 </td>
 <td>
 ---
@@ -51,10 +51,10 @@ List of available torrents (Last dump date: 2012-07-30)
 ---
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/commits-dump.2012-05-30.torrent">commits</a> (17962 MB)
+<a href="http://ghtorrent.org/downloads/commits-dump.2012-05-30.torrent">17962 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/events-dump.2012-05-30.torrent">events</a> (1945 MB)
+<a href="http://ghtorrent.org/downloads/events-dump.2012-05-30.torrent">1945 MB</a>
 </td>
 <td>
 ---
@@ -69,22 +69,22 @@ List of available torrents (Last dump date: 2012-07-30)
 <tr>
 <td>2012-07-30</td>
 <td>
-<a href="http://ghtorrent.org/downloads/commit_comments-dump.2012-07-30.torrent">commit_comments</a> (1 MB)
+<a href="http://ghtorrent.org/downloads/commit_comments-dump.2012-07-30.torrent">1 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/commits-dump.2012-07-30.torrent">commits</a> (34533 MB)
+<a href="http://ghtorrent.org/downloads/commits-dump.2012-07-30.torrent">34533 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/events-dump.2012-07-30.torrent">events</a> (1951 MB)
+<a href="http://ghtorrent.org/downloads/events-dump.2012-07-30.torrent">1951 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/followers-dump.2012-07-30.torrent">followers</a> (35 MB)
+<a href="http://ghtorrent.org/downloads/followers-dump.2012-07-30.torrent">35 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/repos-dump.2012-07-30.torrent">repos</a> (18 MB)
+<a href="http://ghtorrent.org/downloads/repos-dump.2012-07-30.torrent">18 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/users-dump.2012-07-30.torrent">users</a> (29 MB)
+<a href="http://ghtorrent.org/downloads/users-dump.2012-07-30.torrent">29 MB</a>
 </td>
 </tr>
 </table>

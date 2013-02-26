@@ -16,7 +16,7 @@ List of available torrents (Last dump date: <%= @last_update %>)
       <td><% if @t.nil? %>
     	 ---
         <% else %>
-    	  <a href="<%= @t.url %>"><%= @t.name %></a> (<%= @t.size%> MB)
+          <a href="<%= @t.url %>"><%= @t.size%> MB</a>
         <% end %>
       </td>
     <% end %>
