@@ -17,21 +17,21 @@ List of available torrents (Last dump date: 2013-01-29)
 <thead>
 <tr>
 <th>Dump date</th>
-<th>commit_comments </th>
-<th>commits </th>
-<th>events </th>
-<th>followers </th>
-<th>forks </th>
-<th>issue_comments </th>
-<th>issue_events </th>
-<th>issues </th>
-<th>org_members </th>
-<th>pull_request_comments </th>
-<th>pull_requests </th>
-<th>repo_collaborators </th>
-<th>repos </th>
-<th>users </th>
-<th>watchers </th>
+<th>commit comments</th>
+<th>commits</th>
+<th>events</th>
+<th>followers</th>
+<th>forks</th>
+<th>issue comments</th>
+<th>issue events</th>
+<th>issues</th>
+<th>org members</th>
+<th>pull request comments</th>
+<th>pull requests</th>
+<th>repo collaborators</th>
+<th>repos</th>
+<th>users</th>
+<th>watchers</th>
 </tr>
 </thead>
 <tbody>

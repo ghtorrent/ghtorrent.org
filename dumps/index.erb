@@ -6,7 +6,7 @@ List of available torrents (Last dump date: <%= @last_update %>)
   <tr>
    <th>Dump date</th>
    <% @collections.sort.each do |c| %>
-   <th><%= c %> </th>
+   <th><%=c.gsub("_", " ") %></th>
      <% end %>
   </tr>
   </thead>
