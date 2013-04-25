@@ -37,12 +37,12 @@ GHTorrent needs contributions on the following fronts:
 
 * Workers: Github is huge and it is growing bigger every day. Our networking
 and Github account resources are struggling to keep up. 
-To help, you can setup a [mirroring cluster](https://github.com/gousiosg/github-mirror/wiki/Setting-up-a-mirroring-cluster), that uses our queues and
+To help, you can setup a [mirroring client](docs.html), that uses our queues and
 databases for retrieval and storage. Don't hesitate to [contact
 us](mailto:gousiosg@gmail.com) to help you with that.
-Alternatively, you can download our preconfigured [virtual machine](vm.html);
+<!--Alternatively, you can download our preconfigured [virtual machine](vm.html);
 it should then be trivial to insert your Github login details and let it
-do the rest!
+do the rest!-->
 
 * Linking and analysis: GHTorrent currently does not do any analysis and linking
 in the dataset, for example the linking of commits to issues.
