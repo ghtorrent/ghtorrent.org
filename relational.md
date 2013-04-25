@@ -4,4 +4,6 @@ title: The relational DB schema
 tagline: 
 ---
 
-Under Construction!
+<img src="files/schema.png"/> 
+
+[Download PDF version](files/schema.pdf)
