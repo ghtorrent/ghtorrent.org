@@ -1,0 +1,28 @@
+
+List of available torrents (Last dump date: <%= @last_update %>)
+
+<table class="table table-hover table-condensed">
+  <thead>
+  <tr>
+   <th>Dump date</th>
+   <% @collections.sort.each do |c| %>
+   <th><%=c.gsub("_", " ") %></th>
+     <% end %>
+  </tr>
+  </thead>
+  <tbody>
+   <% for @d in @dumps.sort{ |a,b| a.date <=> b.date} %>
+   <tr>
+    <td><%= @d.date %></td>
+    <% for @col in @collections.sort %>
+    <% @t = @d.torrents[@col] %>
+      <td><% unless @t.nil? %>
+          <a href="<%= @t.url %>"><%= @t.size%> MB</a>
+        <% end %>
+      </td>
+    <% end %>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
