@@ -35,7 +35,7 @@ recorded history of important projects.
 
 GHTorrent needs contributions on the following fronts:
 
-* Workers: Github is huge and it is groing bigger every day. Our networking
+* Workers: Github is huge and it is growing bigger every day. Our networking
 and Github account resources are struggling to keep up. 
 To help, you can setup a [mirroring cluster](https://github.com/gousiosg/github-mirror/wiki/Setting-up-a-mirroring-cluster), that uses our queues and
 databases for retrieval and storage. Don't hesitate to [contact
@@ -44,11 +44,13 @@ Alternatively, you can download our preconfigured [virtual machine](vm.html);
 it should then be trivial to insert your Github login details and let it
 do the rest!
 
-* Linking and analysis: GHTorrent currently does not do any analysis and linking in the dataset. Low hanging fruits can be the linking of commits to issues
-and that of 
+* Linking and analysis: GHTorrent currently does not do any analysis and linking
+in the dataset, for example the linking of commits to issues.
 
 ### Why did you do it?
 
 We are doing research on [software repositories](http://www.msrconf.org/).
 Github is an exciting new data source for us, one that has several of the
-problems we are facing as data miners solved. 
+problems we are facing as data miners solved. The uniformity of data 
+will allow scaling of research to hundreds of repositories.
+
