@@ -24,6 +24,12 @@ Every two months, the project releases the data collected during that period as
 [downloadable archives](downloads.html), also shared with the Bittorent
 protocol.
 
+See the following presentation for a short introduction.
+
+<div style="width: 60%;margin-left:auto;margin-right:auto;">
+<script class="speakerdeck-embed" data-id="75bea5909fbb0130f0eb364613f6f036" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
+
 ### How much data do you have?
 
 Currently, MongoDB stores around 900 GB of JSON data, while MySQL more than
