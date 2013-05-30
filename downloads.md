@@ -14,7 +14,7 @@ dump.
 * [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
 
 ### Available Torrents
-List of available torrents (Last dump date: 2013-03-29)
+List of available torrents (Last dump date: 2013-05-29)
 <table class="table table-hover table-condensed">
 <thead>
 <tr>
@@ -330,6 +330,53 @@ List of available torrents (Last dump date: 2013-03-29)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/watchers-dump.2013-03-29.torrent">74 MB</a>
+</td>
+</tr>
+<tr>
+<td>2013-05-29</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commit_comments-dump.2013-05-29.torrent">4 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commits-dump.2013-05-29.torrent">30935 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/events-dump.2013-05-29.torrent">5083 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/followers-dump.2013-05-29.torrent">24 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/forks-dump.2013-05-29.torrent">160 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_comments-dump.2013-05-29.torrent">236 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_events-dump.2013-05-29.torrent">57 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-05-29.torrent">228 MB</a>
+</td>
+<td>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-05-29.torrent">394 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-05-29.torrent">296 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-05-29.torrent">12 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repos-dump.2013-05-29.torrent">492 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/users-dump.2013-05-29.torrent">26 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/watchers-dump.2013-05-29.torrent">68 MB</a>
 </td>
 </tr>
 </tbody>
