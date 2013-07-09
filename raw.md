@@ -7,7 +7,8 @@ tagline:
 While the GHTorrent project offers downloadable versions of the MongoDB raw
 dataset, downloading and restoring them to MongoDB can be very time consuming.
 For this reason, we have created a publicly available, almost live, version 
-of the data as they are collected by our main MongoDB server. 
+of the data as they are collected by our main MongoDB server. The only
+prerequisite is to have the MongoDB client and SSH installed on your machine. 
 
 1. [Send us your](mailto:gousiosg@gmail.com) public SSH key (usually in `.ssh/id_rsa.pub`)
 2. When we contact you back, you will be able to setup an SSH tunnel with the
