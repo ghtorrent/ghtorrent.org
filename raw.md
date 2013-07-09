@@ -11,7 +11,7 @@ of the data as they are collected by our main MongoDB server.
 
 1. [Send us your](mailto:gousiosg@gmail.com) public SSH key (usually in `.ssh/id_rsa.pub`)
 2. When we contact you back, you will be able to setup an SSH tunnel with the
-following command: `ssh -L 27107:dutiht.st.ewi.tudelft.nl:27017 dutiht.st.ewi.tudelft.nl`. 
+following command: `ssh -L 27107:dutiht.st.ewi.tudelft.nl:27017 ghtorrent@dutiht.st.ewi.tudelft.nl`. 
 3. You will then be able to connect to our server using the command: `mongo
 ghtorrent/github`. There is no password, and the login account offers
 read-only access.
