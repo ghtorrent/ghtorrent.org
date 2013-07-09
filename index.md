@@ -32,8 +32,9 @@ See the following presentation for a short introduction.
 
 ### How much data do you have?
 
-Currently, MongoDB stores around 900 GB of JSON data, while MySQL more than
-300 million rows of extracted metadata. A big part of the activity of 2012
+Currently, MongoDB stores around 1.8 TB of JSON data, while MySQL more than
+500 million rows of extracted metadata. A big part of the activity of 2012
+and half of 2013
 has been retrieved, while we are also going backwards to retrieve the full
 recorded history of important projects.
 
@@ -58,5 +59,6 @@ in the dataset, for example the linking of commits to issues.
 We are doing research on [software repositories](http://www.msrconf.org/).
 Github is an exciting new data source for us, one that has several of the
 problems we are facing as data miners solved. The uniformity of data 
-will allow scaling of research to hundreds of repositories.
+will allow scaling of research to hundreds or thousands of repositories
+spanning across multiple languages and application domains.
 
