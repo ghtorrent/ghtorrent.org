@@ -10,13 +10,15 @@ For this reason, we have created a publicly available, almost live, version
 of the data as they are collected by our main MongoDB server. The only
 prerequisite is to have the MongoDB client and SSH installed on your machine. 
 
-1. [Send us your](mailto:gousiosg@gmail.com) public SSH key (usually in `.ssh/id_rsa.pub`)
+### Obtaining access
+
+1. [Send us your](mailto:gousiosg@gmail.com) public SSH key (usually in `~/.ssh/id_rsa.pub`)
 2. When we contact you back, you will be able to setup an SSH tunnel with the
-following command: `ssh -L 27107:dutiht.st.ewi.tudelft.nl:27017 ghtorrent@dutiht.st.ewi.tudelft.nl`. 
+following command: `ssh -L 27107:dutiht.st.ewi.tudelft.nl:27017 ghtorrent@dutiht.st.ewi.tudelft.nl`. Keep in mind that no shell will be allocated in the open SSH session. 
 3. You will then be able to connect to our server using the command: `mongo
-ghtorrent/github`. There is no password, and the login account offers
+github`. There is no password, and the login account offers
 read-only access.
-4. The MongoDB server you are querying is delayed replica set of our master
+4. The MongoDB database you are querying is a delayed replica set of our master
 server. As per MongoDB requirements, you need to [permit slave queries](http://docs.mongodb.org/manual/reference/method/rs.slaveOk/) every time you connect
 to it.
 
