@@ -62,3 +62,30 @@ problems we are facing as data miners solved. The uniformity of data
 will allow scaling of research to hundreds or thousands of repositories
 spanning across multiple languages and application domains.
 
+
+### How can I cite this work? 
+
+If you find this dataset useful and want to use it in your work, please cite the
+following paper:
+
+Georgios Gousios: [The GHTorrent dataset and tool
+suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
+
+{%highlight text%}
+@inproceedings{Gousi13,
+  author = {Gousios, Georgios},
+  title = {The GHTorrent dataset and tool suite},
+  booktitle = {Proceedings of the 10th Working Conference on Mining Software
+    Repositories},
+  series = {MSR '13},
+  year = {2013},
+  isbn = {978-1-4673-2936-1},
+  location = {San Francisco, CA, USA},
+  pages = {233--236},
+  numpages = {4},
+  url = {http://dl.acm.org/citation.cfm?id=2487085.2487132},
+  acmid = {2487132},
+  publisher = {IEEE Press},
+  address = {Piscataway, NJ, USA},
+} 
+{%endhighlight%}
