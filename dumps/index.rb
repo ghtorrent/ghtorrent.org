@@ -80,7 +80,7 @@ torrents = Dir.entries("#{dir}").map do |f|
   date = Date.parse(matches[2])  
   
   if size > 0
-    Torrent.new(dump, matches[1], size, date)
+    Torrent.new(url_prefix + "/" + dump, matches[1], size, date)
   end
 end.select{|x| !x.nil?}
 
