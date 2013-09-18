@@ -101,12 +101,13 @@ same
 An event in the pull request lifetime
 
 The `action` field can take the following values
-* opened: When the pull request has been opened
-* closed: When the pull request has been closed
-* merged: When Github detected that the pull request has been merged. No merges
+
+* `opened`: When the pull request has been opened
+* `closed`: When the pull request has been closed
+* `merged`: When Github detected that the pull request has been merged. No merges
 outside Github (i.e. Git based) are reported
-* reoponed: When a pull request is opened after being closed
-* syncrhonized: When new commits are added/removed to the head repository
+* `reoponed`: When a pull request is opened after being closed
+* `syncrhonized`: When new commits are added/removed to the head repository
 
 #### pull\_request\_commits
 A commit associated with a pull request
@@ -129,5 +130,37 @@ assigned at the time the issue was processed.
 `pull_request_id` field points to the associated pull request
 * The `issue_id` field is the unique identifier given to the issue by Github.
 
+#### issue\_events
+An event on an issue
+
+* The `action` field can have the following values: 
+  * `subscribed`: When a user subscribes to receive notifications about the issue.
+  * `mentioned`: When a user is mentioned by another user (@user notation)
+  * `closed`: When the issue has been closed
+  * `referenced`: The issue was referenced in a commit (using the 
+   [fixes: conventions](https://github.com/blog/831-issues-2-0-the-next-generation))
+  * `assigned`: When the issue has been assigned to an actor.
+  * `reopened`: When a closed issue is reopened
+  * `unsubscribed`: When a user unsubscribed from issue.
+  * `merged`: When the pull request pointed by the issue has been merged.
+  * `head_ref_cleaned`:  (Not documented) When 
+  * `head_ref_deleted`: (Not documented) When the branch of the head repository has been deleted
+  * `head_ref_restored`: (Not documented) When the head repository of a pull
+  request has been restored (using the restore branch functionality).
+
+* The `action_specific` field gets filled in with the 
+
+#### issue\_comments
+An entry to the issue discussion. This table is always filled in with pull
+request (or issue) discussion comments, irrespective of whether the repo
+has issues enabled or not.
+
+#### repo\_labels
+A label to be assigned to an issue affecting this repository.
+
+#### issue\_labels
+A label that has been assigned to an issue
 
 ## Example queries
+
+
