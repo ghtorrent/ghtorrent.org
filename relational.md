@@ -107,7 +107,7 @@ The `action` field can take the following values
 * `merged`: When Github detected that the pull request has been merged. No merges
 outside Github (i.e. Git based) are reported
 * `reoponed`: When a pull request is opened after being closed
-* `syncrhonized`: When new commits are added/removed to the head repository
+* `syncrhonize`: When new commits are added/removed to the head repository
 
 #### pull\_request\_commits
 A commit associated with a pull request
@@ -143,12 +143,13 @@ An event on an issue
   * `reopened`: When a closed issue is reopened
   * `unsubscribed`: When a user unsubscribed from issue.
   * `merged`: When the pull request pointed by the issue has been merged.
-  * `head_ref_cleaned`:  (Not documented) When 
+  * `head_ref_cleaned`:  (Not documented) ?
   * `head_ref_deleted`: (Not documented) When the branch of the head repository has been deleted
   * `head_ref_restored`: (Not documented) When the head repository of a pull
   request has been restored (using the restore branch functionality).
 
-* The `action_specific` field gets filled in with the 
+* The `action_specific` field gets filled in with the `commit\_id` of the last
+commit when a pull request has been closed, merged or referenced.
 
 #### issue\_comments
 An entry to the issue discussion. This table is always filled in with pull
@@ -165,6 +166,58 @@ A label that has been assigned to an issue
 
 #### List commits for a repository
 
-{%highlight mysql%}
-select * from foo
+{%highlight sql%}
+select c.*
+from commits c, project_commits pc, projects p, users u
+where u.login = 'rails'
+  and p.name = 'rails'
+  and p.id = pc.project_id
+  and c.id = pc.commit_id
+order by c.created_at desc
 {%endhighlight%}
+
+#### Get all actions for a pull request
+
+{%highlight sql%}
+select user, action, created_at from
+(
+  select prh.action as action, prh.created_at as created_at, u.login as user
+  from pull_request_history prh, users u
+  where prh.pull_request_id = ?
+    and prh.actor_id = u.id
+  union
+  select ie.action as action, ie.created_at as created_at, u.login as user
+  from issues i, issue_events ie, users u
+  where ie.issue_id = i.id
+    and i.pull_request_id = ?
+    and ie.actor_id = u.id
+  union
+  select 'discussed' as action, ic.created_at as created_at, u.login as user
+  from issues i, issue_comments ic, users u
+  where ic.issue_id = i.id
+    and u.id = ic.user_id
+    and i.pull_request_id = ?
+  union
+  select 'reviewed' as action, prc.created_at as created_at, u.login as user
+  from pull_request_comments prc, users u
+  where prc.user_id = u.id
+    and prc.pull_request_id = ?
+) as actions
+order by created_at;
+{%endhighlight%}
+
+#### Get participants in an issue or pull request
+
+{%highlight sql%}
+select distinct(user_id) from
+(
+  select user_id
+  from pull_request_comments
+  where pull_request_id = ?
+  union
+  select user_id
+  from issue_comments ic, issues i
+  where i.id = ic.issue_id and i.pull_request_id = ?
+) as participants
+{%endhighlight%}
+
