@@ -163,4 +163,8 @@ A label that has been assigned to an issue
 
 ## Example queries
 
+#### List commits for a repository
 
+{%highlight mysql%}
+select * from foo
+{%endhighlight%}
