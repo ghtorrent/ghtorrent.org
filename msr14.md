@@ -73,4 +73,5 @@ $ ght-retrieve-repo -c config.yaml -s [github_username] -p [github_password] moj
 
 You can find more instructions [here](https://github.com/gousiosg/github-mirror/wiki), see an [example config.yaml](https://github.com/gousiosg/github-mirror/blob/master/config.yaml.tmpl) file or read a [related blog post](http://www.gousios.gr/blog/ghtorrent-project-statistics/).
 
-
+{% include comments.html%}
+    
