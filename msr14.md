@@ -57,21 +57,10 @@ Answers to frequently asked questions
 For practical reasons. The dataset is small enough to be used on a laptop,
 yet rich enough to do really interesting research with it.
 
-#### I would like to import more projects/fix missing data/update the dataset.
 
-You need Ruby 1.9.3 and the `ghtorrent` Gem. You also need to configure the `config.yaml` file. Here are a few tips:
+#### How can I ask a question about the dataset? 
 
-{%highlight bash%}
-# Install RVM
-$ \curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
-$ rvm use 1.9.3
-$ gem install ghtorrent mysql bson_ext
-# Edit config.yaml
-$ vi config.yaml
-$ ght-retrieve-repo -c config.yaml -s [github_username] -p [github_password] mojombo jekyll
-{%endhighlight %}
-
-You can find more instructions [here](https://github.com/gousiosg/github-mirror/wiki), see an [example config.yaml](https://github.com/gousiosg/github-mirror/blob/master/config.yaml.tmpl) file or read a [related blog post](http://www.gousios.gr/blog/ghtorrent-project-statistics/).
+Your question and the potential answer might be useful for other people as well, so please use the form below. 
 
 {% include comments.html%}
     
