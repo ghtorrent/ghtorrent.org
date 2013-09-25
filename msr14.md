@@ -8,10 +8,13 @@ tagline:
 
 The MSR 2014 challenge dataset is a (very) trimmed down version of the original
 GHTorrent dataset. It includes data from the top-10 starred software projects
-for the top-10 programming languages on Github, which gives 100 projects and
-their forks.
+for the top programming languages on Github, which gives 90 projects and their
+forks. For each project, we retrieved all data including issues, pull requests
+organizations, followers, stars and labels (milestones and events not
+included). The dataset was constructed from scratch to ensure the latest
+information is in it.
 
-Similarily to GHTorrent itself, the MSR challenge dataset comes in two flavours:
+Similarly to GHTorrent itself, the MSR challenge dataset comes in two flavours:
 
 * A [MongoDB database dump](http://ghtorrent.org/downloads/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](http://ghtorrent.org/raw.html).
 * A [MySQL database dump](http://ghtorrent.org/downloads/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](http://ghtorrent.org/relational.html).
@@ -32,7 +35,11 @@ The following instructions assume an OSX or Linux based host.
 $ wget http://ghtorrent.org/data/msr14-mongo.tar.gz
 $ tar zxvf msr14-mongo.tar.gz
 $ mongorestore
-$ mongo github
+$ mongo msr14
+mongo> db.commits.count()
+423604
+mongo> db.issues.count()
+126308
 {%endhighlight %}
 
 #### MySQL
@@ -47,6 +54,25 @@ mysql> flush privileges;
 # Exit MySQL prompt
 $ zcat msr14-mysql.gz |mysql -u msr14 -p msr14
 $ mysql -u msr14 -p msr14
+mysql> select language,count(*) from projects where forked_from is null group by language;
++------------+----------+
+| language   | count(*) |
++------------+----------+
+| C          |       10 |
+| C#         |        8 |
+| C++        |        8 |
+| CSS        |        3 |
+| Go         |        1 |
+| Java       |        8 |
+| JavaScript |        9 |
+| PHP        |        9 |
+| Python     |       10 |
+| R          |        4 |
+| Ruby       |       10 |
+| Scala      |        9 |
+| TypeScript |        1 |
++------------+----------+
+13 rows in set (0.01 sec)
 {%endhighlight %}
 
 ### FAQ
@@ -54,13 +80,24 @@ $ mysql -u msr14 -p msr14
 Answers to frequently asked questions
 
 #### Why a new dataset?
+
 For practical reasons. The dataset is small enough to be used on a laptop,
 yet rich enough to do really interesting research with it.
 
+#### What are the hardware requirements?
+
+We have succesfully imported and used both dumps into a 2011 MacBookAir with 4GB
+of RAM. Your mileage may vary, but relatively new systems with more than 4GB RAM should have no trouble with both databases. If you only need to use the MySQL data dump, the hardware requirements are even lower.
+
+#### Why two databases? Do I need both?
+
+Not necessarily. The MySQL database can readily cover many aspects of activity
+on Github. Perhaps the only reason to use the MongoDB dump is to analyse commit contents, branches affected by pull requests or milestones, which are not included in MySQL.
 
 #### How can I ask a question about the dataset? 
 
-Your question and the potential answer might be useful for other people as well, so please use the form below. 
+Your question and the potential answer might be useful for other people as well,
+so please use the form below. 
 
 {% include comments.html%}
     
