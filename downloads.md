@@ -4,6 +4,12 @@ title: Downloads
 tagline: 
 ---
 
+### Achtung!!
+
+Due to a hard drive failure the dumps are not temporarily not available. The
+dumps are currently being regenerated. In the mean time, you might be interested
+into the [MSR14](msr14.html) version of the dataset.
+
 ### MySQL database dumps 
 
 You can also [query MySQL](/dblite). It is always loaded with the latest

@@ -13,7 +13,7 @@ their forks.
 
 Similarily to GHTorrent itself, the MSR challenge dataset comes in two flavours:
 
-* A [MongoDB database dump](http://ghtorrent.org/downloads/msr14-mongo.gz) containing the results of querying the Github API. See [format here](http://ghtorrent.org/raw.html).
+* A [MongoDB database dump](http://ghtorrent.org/downloads/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](http://ghtorrent.org/raw.html).
 * A [MySQL database dump](http://ghtorrent.org/downloads/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](http://ghtorrent.org/relational.html).
 
 The included projects are the following:
