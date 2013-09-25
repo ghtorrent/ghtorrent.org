@@ -7,7 +7,7 @@ tagline:
 ## Data
 
 * [The relational data schema](relational.html)
-* [Collections in the MongoDB database](raw.html)
+* [Collections in the MongoDB database](mongo.html)
 
 ## Setting up a mirroring client
 

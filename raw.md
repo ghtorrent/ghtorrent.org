@@ -6,11 +6,10 @@ tagline:
 
 While the GHTorrent project offers downloadable versions of the MongoDB raw
 dataset, downloading and restoring them to MongoDB can be very time consuming.
-For this reason, we have created a publicly available version 
-of the data as they are collected by our main MongoDB server. 
-The data is always updated to the latest available MongoDB dump.
-The only
-prerequisite is to have the MongoDB client and SSH installed on your machine. 
+For this reason, we have created a publicly available version of the data as
+they are collected by our main MongoDB server.  The data is always updated to
+the latest available MongoDB dump.  The only prerequisite is to have the MongoDB
+client and SSH installed on your machine. 
 
 ### Obtaining access
 
@@ -24,29 +23,7 @@ wait for a full restore. The real live database is stored on another machine.
 
 ### Collections available in MongoDB
 
-Here is a list of collections along with the Github API URL they cache data
-from. All URLs need to be prefixed with `https://api.github.com/`
-
-{%highlight bash%}
-Collection name          Github API URL
-----------------         --------------
-commit_comments          repos/#{user}/#{repo}/commits/#{sha}/comments
-commits                  repos/#{user}/#{repo}/commits
-events                   events
-followers                users/#{user}/followers
-forks                    repos/#{user}/#{repo}/forks
-issue_comments           repos/#{owner}/#{repo}/issues/comments/#{comment_id}
-issue_events             repos/#{owner}/#{repo}/issues/events/#{event_id} 
-issues                   repos/#{user}/#{repo}/issues
-org_members              orgs/#{org}/members
-pull_request_comments    repos/#{owner}/#{repo}/pulls/#{pullreq_id}/comments
-pull_requests            repos/#{user}/#{repo}/pulls
-repo_collaborators       repos/#{user}/#{repo}/collaborators
-repo_labels              repos/#{owner}/#{repo}/issues/#{issue_id}/labels
-repos                    repos/#{user}/#{repo}
-users                    users/#{user}
-watchers                 repos/#{user}/#{repo}/stargazers
-{%endhighlight%}
+Have a look [here](mongo.html).
 
 ### Things to keep in mind
 
