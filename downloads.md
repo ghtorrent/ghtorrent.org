@@ -4,12 +4,6 @@ title: Downloads
 tagline: 
 ---
 
-### Achtung!!
-
-Due to a hard drive failure the dumps are not temporarily not available. The
-dumps are currently being regenerated. In the mean time, you might be interested
-into the [MSR14](msr14.html) version of the dataset.
-
 ### MySQL database dumps 
 
 You can also [query MySQL](/dblite). It is always loaded with the latest
@@ -19,7 +13,7 @@ dump.
 * [2013-04-17](/downloads/mysql-2013-04-17.sql.gz)
 * [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
 
-### Available Torrents
+### Available downloads 
 List of available torrents (Last dump date: 2013-05-29)
 <table class="table table-hover table-condensed">
 <thead>
