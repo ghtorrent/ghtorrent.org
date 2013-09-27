@@ -13,8 +13,13 @@ dump.
 * [2013-04-17](/downloads/mysql-2013-04-17.sql.gz)
 * [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
 
+<<<<<<< Updated upstream
 ### Available downloads 
 List of available torrents (Last dump date: 2013-05-29)
+=======
+### Available Torrents
+List of available torrents (Last dump date: 2013-07-29)
+>>>>>>> Stashed changes
 <table class="table table-hover table-condensed">
 <thead>
 <tr>
@@ -31,6 +36,7 @@ List of available torrents (Last dump date: 2013-05-29)
 <th>pull request comments</th>
 <th>pull requests</th>
 <th>repo collaborators</th>
+<th>repo labels</th>
 <th>repos</th>
 <th>users</th>
 <th>watchers</th>
@@ -46,6 +52,8 @@ List of available torrents (Last dump date: 2013-05-29)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/events-dump.2012-03-30.tar.gz">1221 MB</a>
+</td>
+<td>
 </td>
 <td>
 </td>
@@ -106,6 +114,8 @@ List of available torrents (Last dump date: 2013-05-29)
 </td>
 <td>
 </td>
+<td>
+</td>
 </tr>
 <tr>
 <td>2012-07-30</td>
@@ -120,6 +130,8 @@ List of available torrents (Last dump date: 2013-05-29)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/followers-dump.2012-07-30.tar.gz">35 MB</a>
+</td>
+<td>
 </td>
 <td>
 </td>
@@ -175,10 +187,12 @@ List of available torrents (Last dump date: 2013-05-29)
 <td>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_requests-dump.2012-09-29.tar.gz">30 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2012-09-29.tar.gz">8 MB</a>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2012-09-29.tar.gz">11 MB</a>
+</td>
+<td>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repos-dump.2012-09-29.tar.gz">34 MB</a>
@@ -214,18 +228,19 @@ List of available torrents (Last dump date: 2013-05-29)
 <a href="http://ghtorrent.org/downloads/issue_events-dump.2012-11-29.tar.gz">84 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/issues-dump.2012-11-29.tar.gz">360 MB</a>
+<a href="http://ghtorrent.org/downloads/issues-dump.2012-11-29.tar.gz">331 MB</a>
 </td>
 <td>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2012-11-29.tar.gz">12 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_requests-dump.2012-11-29.tar.gz">35 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2012-11-29.tar.gz">8 MB</a>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2012-11-29.tar.gz">14 MB</a>
+</td>
+<td>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repos-dump.2012-11-29.tar.gz">60 MB</a>
@@ -261,18 +276,19 @@ List of available torrents (Last dump date: 2013-05-29)
 <a href="http://ghtorrent.org/downloads/issue_events-dump.2013-01-29.tar.gz">172 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/issues-dump.2013-01-29.tar.gz">335 MB</a>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-01-29.tar.gz">328 MB</a>
 </td>
 <td>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-01-29.tar.gz">170 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-01-29.tar.gz">64 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-01-29.tar.gz">49 MB</a>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-01-29.tar.gz">70 MB</a>
+</td>
+<td>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repos-dump.2013-01-29.tar.gz">617 MB</a>
@@ -308,19 +324,20 @@ List of available torrents (Last dump date: 2013-05-29)
 <a href="http://ghtorrent.org/downloads/issue_events-dump.2013-03-29.tar.gz">54 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/issues-dump.2013-03-29.tar.gz">224 MB</a>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-03-29.tar.gz">219 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/org_members-dump.2013-03-29.tar.gz">2 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-03-29.tar.gz">353 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-03-29.tar.gz">22 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-03-29.tar.gz">786 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-03-29.tar.gz">458 MB</a>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-03-29.tar.gz">12 MB</a>
+</td>
+<td>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repos-dump.2013-03-29.tar.gz">1254 MB</a>
@@ -356,18 +373,20 @@ List of available torrents (Last dump date: 2013-05-29)
 <a href="http://ghtorrent.org/downloads/issue_events-dump.2013-05-29.tar.gz">57 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/issues-dump.2013-05-29.tar.gz">228 MB</a>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-05-29.tar.gz">221 MB</a>
 </td>
 <td>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-05-29.tar.gz">394 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-05-29.tar.gz">6 MB</a>
 </td>
 <td>
-<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-05-29.tar.gz">296 MB</a>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-05-29.tar.gz">189 MB</a>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-05-29.tar.gz">12 MB</a>
+</td>
+<td>
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/repos-dump.2013-05-29.tar.gz">492 MB</a>
@@ -377,6 +396,56 @@ List of available torrents (Last dump date: 2013-05-29)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/watchers-dump.2013-05-29.tar.gz">68 MB</a>
+</td>
+</tr>
+<tr>
+<td>2013-07-29</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commit_comments-dump.2013-07-29.tar.gz">4 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commits-dump.2013-07-29.tar.gz">53606 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/events-dump.2013-07-29.tar.gz">5297 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/followers-dump.2013-07-29.tar.gz">21 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/forks-dump.2013-07-29.tar.gz">181 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_comments-dump.2013-07-29.tar.gz">291 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_events-dump.2013-07-29.tar.gz">60 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-07-29.tar.gz">233 MB</a>
+</td>
+<td>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-07-29.tar.gz">238 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-07-29.tar.gz">245 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-07-29.tar.gz">9 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repo_labels-dump.2013-07-29.tar.gz">7 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repos-dump.2013-07-29.tar.gz">586 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/users-dump.2013-07-29.tar.gz">29 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/watchers-dump.2013-07-29.tar.gz">75 MB</a>
 </td>
 </tr>
 </tbody>
