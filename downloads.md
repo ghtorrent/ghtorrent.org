@@ -14,12 +14,8 @@ dump.
 * [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
 
 <<<<<<< Updated upstream
-### Available downloads 
-List of available torrents (Last dump date: 2013-05-29)
-=======
 ### Available Torrents
-List of available torrents (Last dump date: 2013-07-29)
->>>>>>> Stashed changes
+List of available torrents (Last dump date: 2013-09-29)
 <table class="table table-hover table-condensed">
 <thead>
 <tr>
@@ -446,6 +442,56 @@ List of available torrents (Last dump date: 2013-07-29)
 </td>
 <td>
 <a href="http://ghtorrent.org/downloads/watchers-dump.2013-07-29.tar.gz">75 MB</a>
+</td>
+</tr>
+<tr>
+<td>2013-09-29</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commit_comments-dump.2013-09-29.tar.gz">4 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/commits-dump.2013-09-29.tar.gz">33317 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/events-dump.2013-09-29.tar.gz">5900 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/followers-dump.2013-09-29.tar.gz">33 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/forks-dump.2013-09-29.tar.gz">174 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_comments-dump.2013-09-29.tar.gz">482 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issue_events-dump.2013-09-29.tar.gz">67 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/issues-dump.2013-09-29.tar.gz">246 MB</a>
+</td>
+<td>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_request_comments-dump.2013-09-29.tar.gz">84 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/pull_requests-dump.2013-09-29.tar.gz">880 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repo_collaborators-dump.2013-09-29.tar.gz">11 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repo_labels-dump.2013-09-29.tar.gz">1 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/repos-dump.2013-09-29.tar.gz">530 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/users-dump.2013-09-29.tar.gz">26 MB</a>
+</td>
+<td>
+<a href="http://ghtorrent.org/downloads/watchers-dump.2013-09-29.tar.gz">67 MB</a>
 </td>
 </tr>
 </tbody>
