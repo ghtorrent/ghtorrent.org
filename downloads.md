@@ -13,7 +13,7 @@ dump.
 * [2013-04-17](/downloads/mysql-2013-04-17.sql.gz)
 * [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
 
-### Available Downloads 
+### Available Downloads
 List of available torrents (Last dump date: 2013-09-29)
 <table class="table table-hover table-condensed">
 <thead>
