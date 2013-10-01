@@ -2,7 +2,7 @@
 ./index.rb downloads/ > torrents 
 cd ghtorrent.org
 cat downloads.md | sed -n '/### Available/q;p' > dl.tmp
-echo "### Available Torrents" >> dl.tmp
+echo "### Available Downloads" >> dl.tmp
 cat dl.tmp ../torrents > downloads.md
 git stash
 git pull
