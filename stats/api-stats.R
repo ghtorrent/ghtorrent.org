@@ -26,10 +26,11 @@ png("api-resp.png")
 print(p)
 dev.off()
 
+data$timebin <- cut.POSIXt(data$ts, breaks = "1 hour")
 count.interval <- aggregate(ms ~ timebin, data = data, length)
 count.interval$timebin <- as.POSIXct(count.interval$timebin, origin = "1970-01-01")
 p <- ggplot(count.interval) + aes(x = timebin, y = ms) + geom_line() + scale_x_datetime() + 
-  xlab('time') + ylab('Num API calls') + ggtitle('Num API calls per timeslot (10 min intervals)')
+  xlab('time') + ylab('Num API calls') + ggtitle('Num API calls per timeslot (1 hour interval)')
 
 png("num-reqs.png")
 print(p)
