@@ -4,6 +4,10 @@ title: MSR 2014 Mining Challenge Dataset
 tagline: 
 ---
 
+*Note: the first version of the dataset was missing commit comments and some
+commits. If you have downloaded this dataset before 9 Oct 2013, and you plan to
+do research with commits and comments, you are advised to download the latest version.*
+
 ### Dataset description
 
 The MSR 2014 challenge dataset is a (very) trimmed down version of the original
@@ -120,7 +124,7 @@ The following instructions assume an OSX or Linux based host.
 #### MongoDB
 
 {%highlight bash%}
-$ wget http://ghtorrent.org/data/msr14-mongo.tar.gz
+$ wget http://ghtorrent.org/downloads/msr14-mongo.tar.gz
 $ tar zxvf msr14-mongo.tar.gz
 $ mongorestore
 $ mongo msr14
@@ -133,7 +137,7 @@ mongo> db.issues.count()
 #### MySQL
 
 {%highlight bash%}
-$ wget http://ghtorrent.org/data/msr14-mysql.gz
+$ wget http://ghtorrent.org/downloads/msr14-mysql.gz
 $ mysql -u root -p
 mysql > create user 'msr14'@'localhost' identified by 'msr14';
 mysql> create database msr14;
