@@ -44,6 +44,11 @@ URL (see also the actual [default indexes](https://github.com/gousiosg/github-mi
       <td><a href="http://developer.github.com/v3/repos/forks/#list-forks">forks list</a></td>
     </tr>
     <tr>
+      <td>issues</td>
+      <td><tt>/repos/#{owner}/#{repo}/issues</tt></td>
+      <td><a href="http://developer.github.com/v3/issues/#list-issues-for-a-repository">issues for a repo</a></td>
+    </tr>
+    <tr>
       <td>issue_comments</td>
       <td><tt>repos/#{owner}/#{repo}/issues/comments/#{comment_id}</tt></td>
       <td><a href="http://developer.github.com/v3/issues/comments/#list-comments-on-an-issue">issue comments</a></td>
@@ -56,7 +61,7 @@ URL (see also the actual [default indexes](https://github.com/gousiosg/github-mi
     <tr>
       <td>org_members</td>
       <td><tt>orgs/#{org}/members</tt></td>
-      <td><a href="http://developer.github.com/v3/orgs/members/">issues for a repo</a></td>
+      <td><a href="http://developer.github.com/v3/orgs/members/">organization members</a></td>
     </tr>
     <tr>
       <td>pull_request_comments</td>
