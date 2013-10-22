@@ -25,6 +25,7 @@ data$timebin <- cut.POSIXt(data$ts, breaks = "10 mins")
 
 mean.interval <- aggregate(ms ~ timebin, data = data, mean)
 mean.interval$timebin <- as.POSIXct(mean.interval$timebin, origin = "1970-01-01")
+
 p <- ggplot(mean.interval) + aes(x = timebin, y = ms) + geom_line() + scale_x_datetime() +
   xlab('time') + ylab('Mean API resp in ms') + ggtitle('Mean API response time timeseries (10 min intervals)')
 
@@ -35,7 +36,7 @@ dev.off()
 data$timebin <- cut.POSIXt(data$ts, breaks = "30 mins")
 count.interval <- aggregate(ms ~ timebin, data = data, length)
 count.interval$timebin <- as.POSIXct(count.interval$timebin, origin = "1970-01-01")
-p <- ggplot(count.interval) + aes(x = timebin, y = ms) + geom_line() + scale_x_datetime() + 
+p <- ggplot(count.interval) + aes(x = timebin, y = ms) + geom_line() + scale_x_datetime() + scale_y_continuous(labels = comma) +  
   xlab('time') + ylab('Num API calls') + ggtitle('Num API calls per timeslot (30 mins interval)')
 
 png("num-reqs.png")

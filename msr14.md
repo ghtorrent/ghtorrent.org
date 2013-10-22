@@ -189,7 +189,8 @@ on Github. Perhaps the only reason to use the MongoDB dump is to analyse commit 
 #### How can I ask a question about the dataset? 
 
 Your question and the potential answer might be useful for other people as well,
-so please use the form below. 
+so please use the form below. *Please note that I will not answer
+questions sent to my email.*
 
 {% include comments.html%}
     
