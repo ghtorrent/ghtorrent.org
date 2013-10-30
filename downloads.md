@@ -9,9 +9,7 @@ tagline:
 You can also [query MySQL](/dblite). It is always loaded with the latest
 dump.
 
-* [2013-02-23](/downloads/mysql-2013-02-23.sql.gz)
-* [2013-04-17](/downloads/mysql-2013-04-17.sql.gz)
-* [2013-05-29](/downloads/mysql-2013-05-29.sql.gz)
+* [2013-10-12](/downloads/mysql-2013-10-12.sql.gz)
 
 ### Available Downloads
 List of available torrents (Last dump date: 2013-09-29)

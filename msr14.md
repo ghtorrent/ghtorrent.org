@@ -12,12 +12,12 @@ below. Only the latest version is offered for download.
 *You are advised to always run queries against the newest version.* If you have already downloaded an older version and the described fix does not
 affect your experiment, you could skip the update. 
 
-<table>
+<table class="table table-hover table-condensed">
   <thead>
   <tr>
-      <td>Version</td>
-      <td>Release date</td>
-      <td>Fixed error</td>
+      <th>Version</th>
+      <th>Release date</th>
+      <th>Fixed error</th>
   </tr>
   </thead> 
   <tbody>
@@ -163,7 +163,7 @@ $ tar zxvf msr14-mongo.tar.gz
 $ mongorestore
 $ mongo msr14
 mongo> db.commits.count()
-423604
+601080
 mongo> db.issues.count()
 126308
 {%endhighlight %}
