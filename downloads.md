@@ -4,6 +4,17 @@ title: Downloads
 tagline: 
 ---
 
+### What am I downloading?
+
+* The MySQL dump is a full, up to date database dump. You can safely use it for querying the latest available data.
+* The MongoDB dumps are provided mostly for reference and backup purposes, as they may contain duplicates. The reasons for this are the following:
+  * When refreshing project data, old records are deleted and new are added. This cannot be reflected in the dumps (it is not practical to regenerate all dumps every time).
+  * The dumps have already been restored once, hence the dump dates do not
+represent the actual data generation dates.
+
+For those reasons, we recommend using the MongoDB data through our [query
+service](http://ghtorrent.org/raw.html). 
+
 ### MySQL database dumps 
 
 You can also [query MySQL](/dblite). It is always loaded with the latest
