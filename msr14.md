@@ -22,6 +22,11 @@ affect your experiment, you could skip the update.
   </thead> 
   <tbody>
   <tr>
+      <td>1.3</td>
+      <td>13 Dec 2013</td>
+      <td><a href="http://ghtorrent.org/msr14.html#comment-1161196386">Missing project members</a> for some projects is now fixed</td>
+  </tr>
+   <tr>
       <td>1.2</td>
       <td>22 Oct 2013</td>
       <td>user_id in table commit_comments <a href="http://ghtorrent.org/msr14.html#comment-1087775543">not set correctly</a>.</td>

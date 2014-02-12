@@ -8,7 +8,7 @@ tagline: Github's data from a firehose
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
-###What does GHTorrent do?
+##What does GHTorrent do?
 
 GHTorrent monitors the [Github public event time
 line](https://api.github.com/events). For each event, it retrieves its contents
@@ -54,6 +54,8 @@ do the rest!-->
 * Linking and analysis: GHTorrent currently does not do any analysis and linking
 in the dataset, for example the linking of commits to issues.
 
+* Reporting bugs: Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found. 
+
 ### Why did you do it?
 
 We are doing research on [software repositories](http://www.msrconf.org/).
@@ -89,3 +91,20 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
   address = {Piscataway, NJ, USA},
 } 
 {%endhighlight%}
+
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Thu Jan  2 10:38:27 CET 2014</td> 
+      <td>New backups are being created. Services may be offline for the next couple of days.</td>
+    </tr>
+  </tbody>
+</table>
+#d
