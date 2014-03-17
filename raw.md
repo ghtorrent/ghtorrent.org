@@ -20,6 +20,10 @@ following command: `ssh -L 27017:dutiap.st.ewi.tudelft.nl:27017 ghtorrent@dutiap
 Keep in mind that no shell will be allocated in the open SSH session. 
 3. You will then be able to connect to our server using the command: `mongo
 github`. There is no password.
+4. By default, you will not be able to query directly. You need to run the 
+following command prior to querying: `rs.slaveOk()`. You can automate
+running this command on `mongo` shell startup as per instructions 
+[here](http://stackoverflow.com/a/15623540/51681).
 
 ### Collections available in MongoDB
 
