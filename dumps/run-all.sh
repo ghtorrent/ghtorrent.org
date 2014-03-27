@@ -18,9 +18,21 @@
 #./ght-periodic-dump -f '2012-11-30 00:00' -t '2013-01-30 00:00'
 #./update-downloads.sh
 
-./ght-periodic-dump -f '2013-01-30 00:00' -t '2013-03-30 00:00'
-./update-downloads.sh
+#./ght-periodic-dump -f '2013-01-30 00:00' -t '2013-03-30 00:00'
+#./update-downloads.sh
 
-./ght-periodic-dump -f '2013-03-30 00:00' -t '2013-05-30 00:00'
-./update-downloads.sh
+#./ght-periodic-dump -f '2013-03-30 00:00' -t '2013-05-30 00:00'
+#./update-downloads.sh
+
+#./ght-periodic-dump -f '2013-05-30 00:00' -t '2013-07-30 00:00'
+#./update-downloads.sh
+
+#./ght-periodic-dump -f '2013-07-30 00:00' -t '2013-09-30 00:00'
+#./update-downloads.sh
+
+./ght-periodic-dump -f '2013-09-30 00:00' -t '2013-11-30 00:00'
+#./update-downloads.sh
+
+./ght-periodic-dump -f '2013-11-30 00:00' -t '2014-01-30 00:00'
+#./update-downloads.sh
 

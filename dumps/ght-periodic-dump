@@ -70,7 +70,7 @@ startId=`printf '%08x0000000000000000' $timeStart`
 
 if [ -z $collection ]
 then
-	collections=`echo "show collections"|mongo --quiet dutihr/github|egrep -v "system|bye"`
+	collections=`echo "show collections"|mongo --quiet rs0/github|egrep -v "system|bye"`
 else
 	collections=$collection
 fi
@@ -83,10 +83,10 @@ mkdir -p dump/github
 for col in $collections; do
 
 	echo "Dumping $col"
-	mongodump --host dutihr --db github --collection $col -q '{"_id" : {"$gte" : ObjectId("'$startId'"), "$lt"  : ObjectId("'$endId'")} }' || exit 1
+	mongodump --host rs0 --db github --collection $col -q '{"_id" : {"$gte" : ObjectId("'$startId'"), "$lt"  : ObjectId("'$endId'")} }' || exit 1
 done
 
-# Do the same per collection
+# Archive collections and create torrents 
 for col in $collections; do
 	echo "Archiving $col.bson"
 	if [ ! -s dump/github/$col.bson ]; then
@@ -94,15 +94,15 @@ for col in $collections; do
 		continue
 	fi
 
-	if ! tar zcf $OUTDIR/$col-dump.$dateName.tar.gz dump/github/$col.bson
-	then
-		rm -f $OUTDIR/$col-dump.$dateName.tar.gz
-		exit 1
-	fi
-
-	mktorrent -a udp://tracker.openbittorrent.com:80 -a udp://tracker.publicbt.com:80/announce -a http://tracker.bittorrent.am/announce -w $WEBSEED/$col-dump.$dateName.tar.gz -o $OUTDIR/$col-dump.$dateName.torrent $OUTDIR/$col-dump.$dateName.tar.gz
-done
-
+if ! tar zcf $OUTDIR/$col-dump.$dateName.tar.gz dump/github/$col.bson
+then
+  rm -f $OUTDIR/$col-dump.$dateName.tar.gz
+  exit 1
+fi
+#
+#	mktorrent -a udp://tracker.openbittorrent.com:80 -a udp://tracker.publicbt.com:80/announce -a http://tracker.bittorrent.am/announce -w $WEBSEED/$col-dump.$dateName.tar.gz -o $OUTDIR/$col-dump.$dateName.torrent $OUTDIR/$col-dump.$dateName.tar.gz
+#done
+#
 # Update last run info
 echo $timeEnd >lastrun || exit 1
 
