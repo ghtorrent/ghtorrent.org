@@ -7,6 +7,9 @@ group: navigation
 {% include JB/setup %}
 
 
+Lean GHTorrent allows researchers to get a slice of the full GHTorrent
+dataset 
+
 <script>
 
 function checkRepos(repos) {
@@ -36,7 +39,15 @@ function checkRepos(repos) {
 
 $(document).ready(function() {
 
+    function resetErrors() {
+      $("#errors").hide();
+      $("#missname").hide();
+      $("#missemail").hide();
+      $("#missrepo").hide();
+    }
+
     function displayErrors(errors) {
+      resetErrors();
       $("#leansubmit").hide();
       if (errors.length > 0) {
         errors.forEach(function(x) {
@@ -46,6 +57,10 @@ $(document).ready(function() {
       } else {
         $("#leansubmit").show("fast");
       }
+    }
+
+    function checkForm() {
+      if ()
     }
 
     $("#leanform").load("http://localhost:4567", function() {
@@ -62,6 +77,10 @@ $(document).ready(function() {
 </script>
 
 <div id="leanform"></div>
+
+<div id="missname" style="display:none; color: rgb(173, 63, 63);">Missing name</div>
+<div id="missemail" style="display:none; color: rgb(173, 63, 63);">Missing email</div>
+<div id="missrepo" style="display:none; color: rgb(173, 63, 63);">No repositories were specified</div>
 
 <div id="errors" style="display:none">
   The following are not valid repository names:
