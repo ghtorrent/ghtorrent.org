@@ -32,7 +32,7 @@ original GHTorrent dataset. It includes data from the
 requests, collaborators, issues etc) along with all its forks (including the
 forks' own commits, pull requests etc if any).
 
-Similarly to GHTorrent itself, the MSR challenge dataset comes in two flavours:
+Similarly to GHTorrent itself, the VISSOFT challenge dataset comes in two flavours:
 
 * A MongoDB database dump containing the results of querying the Github API. See [format here](mongo.html).
 * A MySQL database dump containing a queriable version of important fields extracted from the raw data. See [schema here](relational.html).
