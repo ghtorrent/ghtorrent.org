@@ -22,6 +22,7 @@ dump.
 
 * [2013-10-12](/downloads/mysql-2013-10-12.sql.gz)
 * [2014-01-02](/downloads/mysql-2014-01-02.sql.gz)
+* [2014-04-02](/downloads/mysql-2014-04-02.sql.gz)
 
 ### Available Downloads
 List of available torrents (Last dump date: 2014-01-29)

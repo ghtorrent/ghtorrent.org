@@ -32,11 +32,10 @@ See the following presentation for a short introduction.
 
 ### How much data do you have?
 
-Currently, MongoDB stores around 1.8 TB of JSON data, while MySQL more than
-500 million rows of extracted metadata. A big part of the activity of 2012
-and half of 2013
-has been retrieved, while we are also going backwards to retrieve the full
-recorded history of important projects.
+Currently (Apr 2014), MongoDB stores around 3.5 TB of JSON data, while MySQL
+more than 600 million rows of extracted metadata. A big part of the activity of
+2012, 2013 and 2014 has been retrieved, while we are also going backwards to
+retrieve the full recorded history of important projects.
 
 ### How can I help?
 
@@ -47,9 +46,6 @@ and Github account resources are struggling to keep up.
 To help, you can setup a [mirroring client](docs.html), that uses our queues and
 databases for retrieval and storage. Don't hesitate to [contact
 us](mailto:gousiosg@gmail.com) to help you with that.
-<!--Alternatively, you can download our preconfigured [virtual machine](vm.html);
-it should then be trivial to insert your Github login details and let it
-do the rest!-->
 
 * Linking and analysis: GHTorrent currently does not do any analysis and linking
 in the dataset, for example the linking of commits to issues.
@@ -92,7 +88,7 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
 } 
 {%endhighlight%}
 
-
+#### Service info
 <table class="table table-hover table-condensed">
   <thead>
     <tr>
@@ -105,6 +101,9 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
       <td>Thu Jan  2 10:38:27 CET 2014</td> 
       <td>New backups are being created. Services may be offline for the next couple of days.</td>
     </tr>
+    <tr>
+      <td>Mon Mar 31 14:07:42 CEST 2014</td>
+      <td>New MongoDB and MySQL backups uploaded.</td>
+    </tr>
   </tbody>
 </table>
-#d
