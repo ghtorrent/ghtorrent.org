@@ -14,5 +14,5 @@ R --no-save < api-stats.R
 rm foo
 
 cd ..
-jekyll
+jekyll build
 
