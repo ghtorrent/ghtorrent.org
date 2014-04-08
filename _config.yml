@@ -1,7 +1,6 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: false 
 pygments: true
 markdown: rdiscount
 #markdown: kramdown
@@ -58,7 +57,7 @@ scholar:
   order: ascending
 
   source: ./_bibliography
-  bibliography: bibliography.bib
+  bibliography: references 
   bibliography_template: "{{reference}}"
 
   replace_strings: true
