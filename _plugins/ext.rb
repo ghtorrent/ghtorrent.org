@@ -15,14 +15,14 @@ module Jekyll
           entry["title"] = "[#{entry['title']}](#{entry['url']})"
           entry.delete('url')
           entry = entry.convert(*bibtex_filters) unless bibtex_filters.empty?
-            
-          reference = CiteProc.process entry.to_citeproc, :style => style,
-            :locale => config['locale'],
-            :format => 'html'
-
-          content_tag reference_tagname, reference, 
-            :id => [prefix, entry.key].compact.join('-')
         end
+
+        reference = CiteProc.process entry.to_citeproc, :style => style,
+          :locale => config['locale'],
+          :format => 'html'
+
+        content_tag reference_tagname, reference, 
+          :id => [prefix, entry.key].compact.join('-')
       end
     end
   end

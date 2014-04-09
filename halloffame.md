@@ -26,4 +26,3 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
   1. {% reference VSF12 %}
   2. {% reference GVSZ14 %}
   3. {% reference PVS14 %}
-
