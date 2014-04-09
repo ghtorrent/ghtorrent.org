@@ -1,0 +1,34 @@
+---
+layout: page
+header: Lean GHTorrent
+group: navigation
+---
+{% include JB/setup %}
+
+<script>
+
+  if (!Array.prototype.last){
+    Array.prototype.last = function(){
+      return this[this.length - 1];
+    };
+  };
+
+  var req_id = document.URL.split("/").last(); 
+
+  if (req_id == null) {
+    $("#progress").val = "No request specified";
+    return;
+  }
+
+  $.ajax({
+    url: "http://ghtorrent.org/lean/requests/" + req_id,
+    success: results 
+  });
+
+  function results(data, status, xhr) {
+    alert(data.size);
+  }
+
+</script>
+
+<div id="progress"></div>
