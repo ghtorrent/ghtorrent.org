@@ -28,4 +28,4 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
   3. {% reference PVS14 %}
 
 #### [University of Victoria/SEGAL](http://thesegalgroup.org)
-* [Kelly Blincoe] (http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
+* [Kelly Blincoe](http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
