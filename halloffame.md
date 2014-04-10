@@ -29,3 +29,5 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 
 #### [University of Victoria/SEGAL](http://thesegalgroup.org)
 * [Kelly Blincoe] (http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
+* [Eirini Kalliamvakou] (http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
+  1. {% reference KGBSGD14 %}
