@@ -951,6 +951,7 @@ fabpot Silex
 fabpot Twig
 fabric8io fabric8
 fabric fabric
+facebook buck
 facebook facebook-android-sdk
 facebook facebook-ios-sdk
 facebook facebook-php-sdk
