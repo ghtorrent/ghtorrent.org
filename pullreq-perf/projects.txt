@@ -2880,6 +2880,7 @@ sonata-project SonataPageBundle
 sonata-project SonataUserBundle
 sonatype nexus
 sonatype nexus-oss
+sonyxperiadev pygerrit
 sorin-ionescu prezto
 sosreport sosreport
 sourcefabric Ally-Py
