@@ -21,3 +21,13 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
   4. {% reference GZ14 %}
   5. {% reference GVSZ14 %}
 
+#### [TU Eindhoven/SET](http://www.tue.nl/en/university/departments/mathematics-and-computer-science/research/research-programs-computer-science/section-model-driven-software-engineering-mdse/set/)
+* [Bogdan Vasilescu](http://www.win.tue.nl/~bvasiles/): Integration of GitHub and Stack Overflow data. Research on productivity of GitHub developers. Sentiment analysis of GitHub discussions. Lean GHTorrent.
+  1. {% reference VSF12 %}
+  2. {% reference GVSZ14 %}
+  3. {% reference PVS14 %}
+
+#### [University of Victoria/SEGAL](http://thesegalgroup.org)
+* [Kelly Blincoe](http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
+* [Eirini Kalliamvakou](http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
+  1. {% reference KGBSGD14 %}
