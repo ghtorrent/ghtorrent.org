@@ -1,6 +1,6 @@
 ---
 layout: page
-header: Lean GHTorrent
+title: Request results
 group: navigation
 ---
 {% include JB/setup %}
@@ -13,22 +13,105 @@ group: navigation
     };
   };
 
-  var req_id = document.URL.split("/").last(); 
+  Function.prototype.extractComment = function() {
+    var startComment = "/*!";
+    var endComment = "*/";
+    var str = this.toString();
 
-  if (req_id == null) {
-    $("#progress").val = "No request specified";
+    var start = str.indexOf(startComment);
+    var end = str.lastIndexOf(endComment);
+
+    return str.slice(start + startComment.length, -(str.length - end));
+  };
+
+  String.prototype.format = function() {
+    var newStr = this, i = 0;
+    while (/%s/.test(newStr))
+        newStr = newStr.replace("%s", arguments[i++])
+
+    return newStr;
+  }
+
+  var accTmpl = function() { /*!
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+      <i class="fa fa-%s"></i>
+      <a data-toggle="collapse" data-parent="#accordion" href="#%s">
+      %s
+      </a>
+      </h4>
+    </div>
+    <div id="%s" class="panel-collapse collapse">
+      <div class="panel-body">
+      %s
+      </div>
+    </div>
+  </div>*/}.extractComment();
+
+$(document).ready(function() {
+
+  //var req_id = document.URL.split("/").last();
+  var req_id = "3d0e1d23727d77b8a09c1169f1c50aeba73994d2";
+
+  if (req_id == null || req_id.length != 40) {
+    $("#progress").text("No request specified or invalid request id");
     return;
   }
 
   $.ajax({
     url: "http://ghtorrent.org/lean/requests/" + req_id,
-    success: results 
+    success: results,
+    error: function(xhr, status, exception) {
+       $("#progress").text("Invalid request id");
+    }
   });
 
   function results(data, status, xhr) {
-    alert(data.size);
-  }
+    
+    function idGen() {
+      return (Math.random() + 1).toString(36).substr(2, 5);
+    }
 
+    var toAppend = Object.keys(data).reduce(function(acc, project, x, y) {
+
+      var id = idGen();
+
+      var content = data[project].items.reduce(function(acc, item, x, y) {
+        var itemFmt = '<li><i class="fa-li fa fa-%s"></i>%s: %s</li>';
+
+        var d = new Date(item.created_at * 1000);
+        var ts = "%s/%s/%s %s:%s:%s".format(d.getFullYear(), d.getMonth() + 1,
+          d.getDay(), d.getHours(), d.getMinutes(), d.getSeconds());
+
+        var icon = "";
+        if (item.status == "ok"){
+          icon = "check-square";
+        } else {
+          icon = "frown-o warncolor";
+        }
+
+        return (acc + itemFmt.format(icon, ts, item.item));
+      }, '<ul class="fa-ul">');
+      content = content + "</ul>";
+
+      if (data[project].req_status.status == "finished") {
+        statusIcon = "check-circle";
+      } else {
+        statusIcon = "cogs";
+      }
+
+      return (acc + accTmpl.format(statusIcon, id, project, id, content));
+    }, "");
+
+    $("#accordion").append(toAppend);
+  }
+});
 </script>
 
-<div id="progress"></div>
+
+<div class="panel-group" id="accordion">
+  <style type = "text/css" scoped>
+    .warncolor {color:red;}
+  </style>
+</div>
