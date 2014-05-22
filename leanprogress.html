@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Request results
+title: Lean Request Results
 group: navigation
 ---
 {% include JB/setup %}
@@ -36,7 +36,7 @@ group: navigation
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-      <i class="fa fa-%s"></i>
+      <i data-toggle="tooltip" title="%s" data-placement="top" class="fa fa-%s"></i>
       <a data-toggle="collapse" data-parent="#accordion" href="#%s">
       %s
       </a>
@@ -49,10 +49,14 @@ group: navigation
     </div>
   </div>*/}.extractComment();
 
+  function param(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+  }
+
 $(document).ready(function() {
 
-  //var req_id = document.URL.split("/").last();
-  var req_id = "3d0e1d23727d77b8a09c1169f1c50aeba73994d2";
+  var req_id = param('id');
 
   if (req_id == null || req_id.length != 40) {
     $("#progress").text("No request specified or invalid request id");
@@ -97,21 +101,44 @@ $(document).ready(function() {
 
       if (data[project].req_status.status == "finished") {
         statusIcon = "check-circle";
-      } else {
+      } else if (data[project].req_status.status == "working") {
         statusIcon = "cogs";
+      } else if (data[project].req_status.status == "stopped") {
+        statusIcon = "stop";
+      } else if (data[project].req_status.status == "error") {
+        statusIcon = "frown-o warncolor";
+      } else  {
+        statusIcon = "question-circle";
       }
 
-      return (acc + accTmpl.format(statusIcon, id, project, id, content));
+      var tooltip = "status: %s, last update: %s";
+      var updts = new Date(data[project].req_status.created_at * 1000);
+      var upd = "%s/%s/%s %s:%s:%s".format(updts.getFullYear(),
+            updts.getMonth() + 1, updts.getDay(), updts.getHours(),
+            updts.getMinutes(), updts.getSeconds());
+      tooltip = tooltip.format(data[project].req_status.status, upd);
+
+      return (acc + accTmpl.format(tooltip, statusIcon, id, project, id, content));
     }, "");
 
     $("#accordion").append(toAppend);
+    $("#expander").show();
+    $('.fa').tooltip();
   }
+
+  $("#expander").click(function() {
+     $('.panel-collapse').collapse({'toggle': true, 'parent': '#accordion'});
+  });
+
 });
 </script>
 
+<a class="btn btn-primary" id="expander" style="display:none"><i class="fa fa-expand fa-fw"></i>Expand all</a>
 
 <div class="panel-group" id="accordion">
   <style type = "text/css" scoped>
     .warncolor {color:red;}
   </style>
 </div>
+
+<div id="#progress"></div>
