@@ -45,7 +45,7 @@ Unique commits.
 
 * Each commit is identified globally through its `sha` field. If the author or
 the committer has not configured his [Github email address](https://help.github.com/articles/setting-your-email-in-git), no resolution to
-a User is possible. In that case, GHTorrent generates artificial users using
+a User enty is possible. In that case, GHTorrent generates artificial users using
 the provided email in the Git commit author or committer fields. If the user
 then configures his Github account, GHTorrent will update the artificial user
 accordingly.
@@ -55,8 +55,13 @@ been first associated with. This might not be the project this commit was
 initially pushed to, e.g. in case the fork is processed before the parent.
 See [project\_commits](relational.html#project_commits).
 
+* The `project_id` field may be null when the repository has been
+deleted at the time the commit is processed. This situation might happen when
+retrospectively processing pull requests for a repository and the 
+repository which the pull request originates from has been deleted.
+
 #### commit\_parents
-The parent commit(s) for each commit, as specified by Git. 
+The parent commit(s) for each commit, as specified by Git.
 
 #### project\_commits
 The commits belonging to the history of a project.
@@ -87,15 +92,12 @@ latest date that the corresponding user or project has been created.
 #### pull\_requests
 A pull request initiated from `head_repo_id`:`head_commit_id` to `base_repo_id`:`base_commit_id`
 
-
-* Pull requests can be in various states. The states are recorded in the
-[pull\_request\_history](relational.html#pull_request_history) table.
-* The `merged` field is TRUE if Github has detected a merge on the pull request.
-Pull requests merged outside Github are not marked as merged here.
+* Pull requests can be in various states. The states and their transitions
+are recorded in the [pull\_request\_history](relational.html#pull_request_history) table.
 * The `pullreq_id` field is Github's pull request unique identifier
 * The `intra_branch` field signifies that the head and base repositories are the
 same
-* If the head repository is NULL, this means that the corresponding project had been deleted when GHTorrent processed the pull request
+* If the head repository is NULL, this means that the corresponding project had been deleted when GHTorrent processed the pull request.
 
 #### pull\_request\_history
 An event in the pull request lifetime
