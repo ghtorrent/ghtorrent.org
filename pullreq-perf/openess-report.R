@@ -12,7 +12,9 @@ if (! "RMySQL" %in% installed.packages()) install.packages("RMySQL")
 if (! "ggplot2" %in% installed.packages()) install.packages("ggplot2")
 if (! "reshape" %in% installed.packages()) install.packages("reshape")
 if (! "sqldf" %in% installed.packages()) install.packages("sqldf")
-if (!"optparse" %in% installed.packages()) install.packages("optparse")
+if (! "optparse" %in% installed.packages()) install.packages("optparse")
+if (! "foreach" %in% installed.packages()) install.packages("foreach")
+if (! "doMC" %in% installed.packages()) install.packages("doMC")
 
 library(optparse)
 
@@ -49,13 +51,20 @@ library(RMySQL)
 library(knitr)
 
 stats <- function(owner, repo) {
+
+  db <- dbConnect(dbDriver("MySQL"),
+                  user = mysql.user,
+                  password = mysql.passwd,
+                  dbname = mysql.db,
+                  host = mysql.host)
+
   dirname = sprintf("%s-%s", owner,repo)
   print(sprintf("Running in %s", dirname))
   cwd <- getwd()
   dir.create(dirname)
   file.copy("report.Rmd", sprintf("%s/%s", dirname, "index.Rmd"))
   setwd(dirname)
-  
+
   tryCatch({
     knit("index.Rmd")
     file.remove(sprintf("%s/%s", dirname, "index.Rmd"))
@@ -64,21 +73,26 @@ stats <- function(owner, repo) {
     setwd(cwd)
     unlink(dirname, TRUE, TRUE)
   }, finally = {
+    dbDisconnect(db)
     setwd(cwd)
   })
 }
 
-db <<- dbConnect(dbDriver("MySQL"), 
-                 user = mysql.user, 
-                 password = mysql.passwd, 
-                 dbname = mysql.db,
-                 host = mysql.host)
-
 if (length(args$args) == 0) {
+  library(doMC)
+  registerDoMC(4)
+
   projects <- read.csv('projects.txt', sep = ' ')
   print(sprintf("%s projects to analyze", nrow(projects)))
   knit("index.Rmd")
-  projects$done <- apply(projects, 1, function(x){stats(x[1],x[2])})
+
+  result <- foreach(n=1:nrow(projects), .combine='+') %dopar% {
+    project <- projects[n, ]
+    stats(project[,1], project[,2])
+    1
+  }
+  print(sprintf("processed %d projects", result))
+
 } else {
   stats(strsplit(args$args, " ")[1], strsplit(args$args, " ")[2]) 
 }
