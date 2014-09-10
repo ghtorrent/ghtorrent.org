@@ -11,7 +11,6 @@ echo "ts event" >events.txt
 cat foo >> events.txt
 
 R --no-save < api-stats.R
-rm foo
 
 cd ..
 jekyll build

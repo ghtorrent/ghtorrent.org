@@ -5,6 +5,10 @@ tagline: Github's data from a firehose
 ---
 {% include JB/setup %}
 
+<div class="alert alert-danger" role="alert">The GHTorrent project is
+experiencing storage space issues. The Lean GHTorrent service is currently
+unavailabe because of this.</div>
+
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
@@ -98,12 +102,16 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
   </thead>
   <tbody>
     <tr>
-      <td>Thu Jan  2 10:38:27 CET 2014</td> 
-      <td>New backups are being created. Services may be offline for the next couple of days.</td>
+      <td>Mon Aug 18 13:25:45 CEST 2014</td>
+      <td>New MongoDB and MySQL backups uploaded.</td>
     </tr>
-    <tr>
+     <tr>
       <td>Mon Mar 31 14:07:42 CEST 2014</td>
       <td>New MongoDB and MySQL backups uploaded.</td>
     </tr>
-  </tbody>
+     <tr>
+      <td>Thu Jan  2 10:38:27 CET 2014</td> 
+      <td>New backups are being created. Services may be offline for the next couple of days.</td>
+    </tr>
+ </tbody>
 </table>
