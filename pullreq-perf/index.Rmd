@@ -1,0 +1,128 @@
+---
+layout: page
+title: Pull Request Performance reports
+tagline: 
+---
+
+```{r preample, include=FALSE}
+
+#
+# (c) 2012 -- 2014 Georgios Gousios <gousiosg@gmail.com>
+#
+# BSD licensed, see LICENSE in top level dir
+#
+
+projectsjs = paste(apply(projects, 1, function(x){sprintf("'%s-%s'", x[1], x[2])}), collapse = ",")
+projectsmd = paste(apply(projects, 1, function(x){sprintf("[%s/%s](/pullreq-perf/%s-%s/)", x[1], x[2], x[1], x[2])}), collapse="\n")
+```
+
+See here some reports for popular repositories:
+
+<div class="btn-toolbar">
+<a class="btn" href="/pullreq-perf/rails-rails/">Ruby on Rails</a>
+<a class="btn"  href="/pullreq-perf/ipython-ipython/">IPython</a>
+<a  class="btn" href="/pullreq-perf/angular-angular.js/">Angular.js</a>
+<a  class="btn" href="/pullreq-perf/joyent-node/">Node.js</a>
+<a  class="btn" href="/pullreq-perf/jquery-jquery/">JQuery</a>
+<a  class="btn" href="/pullreq-perf/mxcl-homebrew/">Homebrew</a>
+<a  class="btn" href="/pullreq-perf/akka-akka/">Akka</a>
+</div>
+<div class="btn-toolbar">
+<a  class="btn" href="/pullreq-perf/mbostock-d3/">D3.js</a>
+<a  class="btn" href="/pullreq-perf/bartaz-impress.js/">impress.js</a>
+<a  class="btn" href="/pullreq-perf/mojombo-jekyll/">Jekyll</a>
+<a  class="btn" href="/pullreq-perf/django-django/">Django</a>
+<a  class="btn" href="/pullreq-perf/antirez-redis/">Redis</a>
+<a  class="btn" href="/pullreq-perf/bitcoin-bitcoin/">Bitcoin</a>
+<a  class="btn" href="/pullreq-perf/Netflix-RxJava/">RxJava</a>
+</div>
+
+<label for="projectSearch">Or search for project repository (e.g. akka-akka): </label>
+<span>
+<input id="projectSearch" type="search" data-provide="typeahead" />
+<button id="go" type="button" class="btn btn-default">Go</button>
+</span>
+<script type="text/javascript">
+  projects = [`r projectsjs`];
+
+  $("#projectSearch").typeahead({
+    source: projects
+  });
+
+  $("#go").click(function(){
+    if ($("#projectSearch").val() != "") {
+      window.location = "http://ghtorrent.org/pullreq-perf/" + $("#projectSearch").val();
+    }
+  });
+
+</script>
+
+### What is this report about?
+
+The report presents data on various aspects of pull request related activity 
+within a project repository, with a special focus on how open the project
+is to external contributions.
+
+### How did you choose the projects to analyze?
+
+As a starting point, I used the 
+[repository set](https://github.com/gousiosg/pullreqs/blob/master/projects.txt) 
+that I also use for my
+[research](http://www.gousios.gr/bibliography/GPD14.html) 
+[work](http://www.gousios.gr/bibliography/GZ14.html).
+Then, I added to this selection, the top 1000 repositories by number of stars
+as reported by the GHTorrent database. I also added the top 50 projects in
+terms of 
+[total contributions received](http://www.gousios.gr/blog/The-triumph-of-online-collaboration/).
+The actual list of projects can be found 
+[here](https://github.com/gousiosg/ghtorrent.org/blob/master/pullreq-perf/projects.txt) 
+or by clicking on the "Show all repos" button below.
+
+### How did you build it?
+
+I used R to query GHTorrent's main MySQL database, then piped the results
+through [knitr](http://yihui.name/knitr/) templates which use 
+[ggplot2](ggplot2.org/) for generating the nice plots.
+You can find the code [here](https://github.com/gousiosg/pullreqs/tree/master/R/report.Rmd):
+
+### My repository is not included!
+
+You can [send me an email](mailto:gousiosg@gmail.com) and I will make sure your
+repository will be included in the next round of report generation.
+
+### The report for my project is just plain wrong!
+
+If you have time to explain to me what is wrong, I would appreciate if 
+[send me an email](mailto:gousiosg@gmail.com) and I will fix
+the issue.
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#allrepos">
+  Show all repos
+</button>
+
+<div id="allrepos" class="collapse">
+<small>
+{% markdown %}
+`r projectsmd`
+{% endmarkdown %}
+</small>
+</div>
+
+
+<div id="disqus_thread"></div>
+
+
+<script type="text/javascript">
+var disqus_shortname = 'ghtorrent'; 
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+ var dsq = document.createElement('script');
+ dsq.type = 'text/javascript'; dsq.async = true;
+ dsq.src = '//' + disqus_shortname +
+ '.disqus.com/embed.js';
+ (document.getElementsByTagName('head')[0]
+  ||
+  document.getElementsByTagName('body')[0]).appendChild(dsq);
+ })();
+</script>

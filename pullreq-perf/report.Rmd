@@ -1,0 +1,333 @@
+---
+layout: page
+title: Performance report for `r owner`/`r repo`
+tagline: 
+---
+
+```{r preample, include=FALSE}
+
+#
+# (c) 2012 -- 2014 Georgios Gousios <gousiosg@gmail.com>
+#
+# BSD licensed, see LICENSE in top level dir
+#
+
+library(RMySQL)
+library(ggplot2)
+library(reshape)
+library(plyr)
+library(sqldf)
+
+unwrap <- function(str) {
+    strwrap(str, width=10000, simplify=TRUE)
+}
+
+# Get the project id
+  q <- "
+    select p.id 
+    from projects p, users u 
+    where u.id = p.owner_id 
+      and u.login='%s' 
+      and p.name = '%s' 
+      and p.forked_from is null
+  "
+
+  res <- dbSendQuery(db, sprintf(unwrap(q), owner, repo))
+  df <- fetch(res, n = -1)
+  pid <- df$id[[1]]
+```
+
+### Pull request backlog
+```{r plot6, message=FALSE, fig.align='center', echo=FALSE, fig.width=9, warning=FALSE}
+
+  q <- "
+    select pr.pullreq_id, prh1.created_at as opened, ifnull(prh2.created_at, now()) as closed
+    from pull_request_history prh1,
+      pull_requests pr left outer join pull_request_history prh2
+        on pr.id = prh2.pull_request_id
+        and prh2.action = 'closed'
+    where pr.id = prh1.pull_request_id
+      and prh1.action = 'opened'
+      and pr.base_repo_id = %d
+    group by pr.id
+    order by pr.pullreq_id desc
+  "
+
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid))
+  pullreq.open.close <- fetch(res, n = -1)
+  pullreq.open.close$opened <- as.POSIXct(pullreq.open.close$opened)
+  pullreq.open.close$closed <- as.POSIXct(pullreq.open.close$closed)
+
+  pullreq.open.close$mopen <- strftime(pullreq.open.close$opened, format="%m-%Y")
+  pullreq.open.close$mclose <- strftime(pullreq.open.close$closed, format="%m-%Y")
+  
+  backlog.stats <- aggregate(pullreq_id ~ mopen, pullreq.open.close, length)
+  backlog.stats <- rename(backlog.stats, c('mopen' = 'month', 'pullreq_id' = 'New pullreqs'))
+
+  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen == mclose), length)
+  backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
+  backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and closed in month'))
+
+  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen > mclose), length)
+  backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
+  backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and closed later'))
+  
+  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen < mclose), length)
+  backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
+  backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'Old and closed in month'))
+
+  backlog.stats$month <- sprintf("01-%s", backlog.stats$month)
+  backlog.stats$month <- strptime(backlog.stats$month, "%d-%m-%Y")
+  backlog.stats$month <- as.POSIXct(backlog.stats$month)
+  backlog.stats <- backlog.stats[!names(backlog.stats) %in% c("New pullreqs")]
+
+  backlog.stats <- melt(backlog.stats, id=c("month"))
+
+  ggplot(backlog.stats) + 
+    aes(x = month, y = value, fill = variable) + 
+    geom_bar(stat = "identity") + 
+    scale_x_datetime("Date")
+
+```
+
+The pull request backlog presents the number of pull requests processed
+per month.
+Even though a month is relatively coarse-grained period for pull requests
+(where review and acceptance/rejection 
+[happen very fast](http://www.gousios.gr/bibliography/GPD14.html)), the 
+backlog view can be helpful to get an idea of the overall activity within the
+project.
+
+### Slow Pull Request lifelines
+```{r plot5, message=FALSE, fig.align='center', echo=FALSE, fig.width=9, warning=FALSE}
+
+  perc.09 <- as.numeric(quantile(pullreq.open.close$closed - pullreq.open.close$opened, 0.9))
+  num.slow10 <- nrow(subset(pullreq.open.close, closed - opened > perc.09))
+  num.fast90 <- nrow(subset(pullreq.open.close, closed - opened <= perc.09))
+  slow.10 <- subset(pullreq.open.close, closed - opened > perc.09)
+
+  ggplot(slow.10) +
+    geom_point(aes(y = pullreq_id, x = closed), colour = "red") +
+    geom_point(aes(y = pullreq_id, x = opened), colour = "green") +
+    geom_segment(aes(y=pullreq_id, yend = pullreq_id, x = opened, xend = closed), alpha = 0.4) +
+    scale_y_discrete("Pull Request Number", breaks = NULL) +
+    scale_x_datetime("Time (open/close)")
+```
+In this plot, we can see the lifelines of the slowest 10% of pull requests.
+For this project, the cutoff is `r perc.09 / 3600 /24 ` days. `r num.slow10` 
+pull requests where processed slower than that, while `r num.fast90` were 
+faster. The line represents the time between opening and closing the pull request.
+Pull requests whose end time aligns at the right edge of the plot are still open
+at the time of building this report. Generally, it is considered good practice
+to avoid having pull requests open for long.
+
+
+### Source of commits
+```{r plot1, echo=FALSE, fig.align='center', warning=FALSE}
+
+  q <- "
+    select a.month, a.total_commits - b.commits_from_pull_reqs as direct, b.commits_from_pull_reqs as pullreq 
+    from (
+      select last_day(c.created_at) as month, p.id as prid, count(c.id) as total_commits 
+      from commits c, projects p, project_commits pc 
+      where p.id=%d  
+        and p.id = pc.project_id 
+        and c.id = pc.commit_id 
+      group by month(c.created_at),year(c.created_at), p.id
+    ) as a, (
+      select last_day(c.created_at) as month, p.id as prid, count(prc.commit_id) as commits_from_pull_reqs 
+      from projects p, pull_requests pr, pull_request_commits prc, commits c, project_commits pc 
+      where p.id = %d 
+        and exists(
+          select prh.action 
+          from pull_request_history prh 
+          where prh.pull_request_id = pr.id 
+            and last_day(prh.created_at) between last_day(c.created_at) and 
+                                                 date_add(last_day(c.created_at), INTERVAL 1 MONTH) 
+            and prh.action='merged') 
+        and p.id = pr.base_repo_id and prc.commit_id = c.id 
+        and pc.project_id = p.id 
+        and pc.commit_id = c.id 
+        and pr.id = prc.pull_request_id 
+      group by month(c.created_at),year(c.created_at), p.id) as b 
+    where a.prid = b.prid and a.month = b.month 
+    order by a.month desc"
+
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid, pid))
+  df <- fetch(res, n = -1)
+  df$month <- as.POSIXct(df$month)
+  df$commit_source <- df$value
+  df <- melt(df, id=c('month'))
+  df <- rename(df, c("variable"="commit_source"))
+
+  ggplot(df) + 
+    aes(x = month, y = value, fill = commit_source) + 
+    scale_x_datetime() + 
+    geom_bar(stat="identity") + 
+    xlab("Date") + 
+    ylab("Commits") + 
+    scale_colour_identity(name = "source")
+```
+
+This figure presents the source of commits in your project. The more commits 
+come from pull requests, the more open the project process is to accepting 
+contributions. However, pull requests may be used internally (across project 
+branches) so this might not entirely reflect the actual situation. 
+
+### Commits from the project community as percentage of total
+```{r plot2, fig.keep='last', echo=FALSE, fig.align='center', warning=FALSE}
+  q <- "
+    select a.mon as date, a.intern as intern, b.extern as extern 
+    from (
+      select last_day(c.created_at) as mon, count(*) as intern 
+      from commits c, project_commits pc, project_members pm 
+      where c.id = pc.commit_id  
+        and pm.repo_id = pc.project_id 
+        and c.author_id = pm.user_id 
+        and pc.project_id = %d 
+      group by mon order by mon) as a, 
+    (select last_day(c.created_at) as mon, count(*) as extern 
+    from commits c, project_commits pc 
+    where c.id = pc.commit_id  
+        and not exists (
+          select * 
+          from project_members pm 
+          where c.author_id = pm.user_id 
+            and pm.repo_id = pc.project_id) 
+        and pc.project_id = %d 
+        group by mon 
+        order by mon) as b 
+    where a.mon = b.mon
+      and a.mon > from_unixtime(1312156800)"
+  
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid, pid))
+  df <- fetch(res, n = -1)
+  df$date <- as.POSIXct(df$date)
+  df$ratio <- (df$extern / (df$inter + df$extern)) * 100
+
+  ggplot(df) + 
+    aes(x = date, y = ratio) + 
+    scale_x_datetime() + 
+    geom_line(size = 2) + 
+    stat_smooth(method = "loess", formula = y ~ x^2, size = 2, alpha = 0) + 
+    xlab("Date") +  ylab("Percentage of commits from community")
+
+```
+
+Percentage of total commits (and trendline) coming from the community. The more 
+commits coming from the community, the more this project is a community effort.
+
+### Comments and commenters from the community
+```{r plot3, message=FALSE, fig.align='center', echo=FALSE, fig.width=9, warning=FALSE}
+  q <- "
+    select last_day(a.mon) as mon, (
+      select count(pm.user_id) 
+      from project_members pm 
+      where pm.user_id = a.user_id and pm.repo_id = a.p_id) as is_member, 
+      count(distinct user_id) as num_users, 
+      sum(a.cnt) as num_comments  
+    from (
+      select last_day(ic.created_at) as mon, pr.base_repo_id as p_id, ic.user_id as user_id, count(ic.comment_id) as cnt 
+      from projects p 
+        join pull_requests pr on p.id = pr.base_repo_id 
+        left outer join issues i on pr.pullreq_id = i.issue_id 
+        left outer join issue_comments ic on i.id = ic.issue_id 
+      where p.forked_from is null 
+        and p.id = %d 
+        and pr.base_repo_id = i.repo_id 
+        group by mon, pr.base_repo_id, ic.user_id) as a, 
+      projects p 
+    where p.id = a.p_id 
+    group by mon, is_member
+  "
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid))
+  df <- fetch(res, n = -1)
+  df <- subset(df, !is.na(mon))
+  df$is_member <- factor(df$is_member)
+  df$mon <- as.POSIXct(df$mon)
+  
+  q <- "
+    select d.mon, (
+      select sum(df1.num_comments) 
+      from df df1 
+      where df1.mon = d.mon 
+        and df1.is_member = 0) *100/sum(d.num_comments) as comments, 
+      (select sum(df1.num_users) 
+      from df df1 
+      where df1.mon = d.mon 
+        and df1.is_member = 0) * 100/sum(d.num_users) as commenters 
+    from df d 
+    group by d.mon
+  "
+
+  df <- sqldf(q, drv="SQLite")
+  df <- melt(df, 'mon', na.rm = TRUE)
+  df$variable <- as.factor(df$variable)
+  df$value <- as.numeric(as.character(df$value))
+
+  ggplot(df, aes(x = mon, y = value, fill = variable)) + 
+    scale_x_datetime() + 
+    geom_bar(position = 'dodge', stat = "identity") + 
+    xlab("Date") + ylab("% from community") + 
+    facet_grid(. ~ variable) + 
+    theme(legend.position="none") +
+    scale_y_continuous(limits = c(0, 100))
+
+```
+Percentage of comments (left) and people that commented (right) coming from 
+outside the project's core development team. The more comments coming from the 
+community, the more welcoming the project is to outsiders.
+
+### Project forks: Total and contributing
+```{r plot4, message=FALSE, fig.align='center', echo=FALSE, fig.width=9, warning=FALSE}
+  q <- "
+    select last_day(p.created_at) as month, count(*) as created 
+    from projects p 
+    where p.forked_from = (
+      select p.id 
+      from projects p 
+      where p.id = %d) 
+    group by month"
+
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid))
+  forks <- fetch(res, n = -1)
+
+  q <- "
+    select last_day(p.created_at) as month, count(*) as contributing 
+    from projects p 
+    where p.forked_from = (
+      select p.id 
+      from projects p 
+      where p.id = %d) 
+    and exists (
+      select * 
+      from pull_requests pr 
+      where pr.head_repo_id = p.id) 
+    group by month
+  "
+
+  res <- dbSendQuery(db, sprintf(unwrap(q), pid))
+  contrib <- fetch(res, n = -1)
+  
+  df <- merge(forks, contrib, by = 'month')
+  df$month <- as.POSIXct(df$month)
+  df <- melt(df, id=c('month'))
+  df <- rename(df, c("variable"="forks"))
+
+  ggplot(df) + 
+    aes(x = month, y = value, fill = forks) + 
+    scale_x_datetime() + 
+    geom_freqpoly(aes(group = forks, colour = forks), stat="identity", size = 2) + 
+    xlab("Date") + ylab("Number of forks")
+```
+
+This is a plot of forks created per month versus forks contributing code back 
+(in the form of pull requests) per month. Ideally, all forks should contribute 
+back. In healty community, the montly number of forks contributing should be 
+increasing, as the total number of forks increases.
+
+<br/>
+<small>Generated at: `r date()`</small>

@@ -2576,7 +2576,6 @@ ReadUpCode readup
 ReadyTalk avian
 realtalk403 realtalk
 realXtend naali
-rebar rebar
 rebol rebol
 reciprocity ggrc-core
 redding mr
