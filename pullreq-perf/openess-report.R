@@ -35,16 +35,14 @@ args <- parse_args(OptionParser(option_list = option_list),
                                 print_help_and_exit = FALSE, 
                                 positional_arguments = TRUE) 
 
-if (!is.null(args$help)) {
+if (args$options$help == TRUE) {
     parse_args(OptionParser(option_list = option_list))
 }
 
-mysql.user    = args$mysql.user
-mysql.passwd  = args$mysql.passwd
-mysql.db      = args$mysql.db
-mysql.host    = args$mysql.host
-
-print(args$args)
+mysql.user    = args$options$mysql.user
+mysql.passwd  = args$options$mysql.passwd
+mysql.db      = args$options$mysql.db
+mysql.host    = args$options$mysql.host
 
 # Genearte stats
 library(RMySQL)
@@ -76,9 +74,9 @@ db <<- dbConnect(dbDriver("MySQL"),
                  dbname = mysql.db,
                  host = mysql.host)
 
-
-if (is.null(args$args)) {
+if (length(args$args) == 0) {
   projects <- read.csv('projects.txt', sep = ' ')
+  print(sprintf("%s projects to analyze", nrow(projects)))
   knit("index.Rmd")
   projects$done <- apply(projects, 1, function(x){stats(x[1],x[2])})
 } else {
