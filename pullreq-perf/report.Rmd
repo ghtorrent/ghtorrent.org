@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Performance report for `r owner`/`r repo`
-tagline: 
 ---
 
 ```{r preample, include=FALSE}
@@ -54,12 +53,13 @@ unwrap <- function(str) {
   "
 
   res <- dbSendQuery(db, sprintf(unwrap(q), pid))
+
   pullreq.open.close <- fetch(res, n = -1)
   pullreq.open.close$opened <- as.POSIXct(pullreq.open.close$opened)
   pullreq.open.close$closed <- as.POSIXct(pullreq.open.close$closed)
 
-  pullreq.open.close$mopen <- strftime(pullreq.open.close$opened, format="%m-%Y")
-  pullreq.open.close$mclose <- strftime(pullreq.open.close$closed, format="%m-%Y")
+  pullreq.open.close$mopen <- strftime(pullreq.open.close$opened, format="%Y-%m")
+  pullreq.open.close$mclose <- strftime(pullreq.open.close$closed, format="%Y-%m")
   
   backlog.stats <- aggregate(pullreq_id ~ mopen, pullreq.open.close, length)
   backlog.stats <- rename(backlog.stats, c('mopen' = 'month', 'pullreq_id' = 'New pullreqs'))
@@ -67,29 +67,33 @@ unwrap <- function(str) {
   a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen == mclose), length)
   backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
   backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
-  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and closed in month'))
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and closed'))
 
-  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen > mclose), length)
-  backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
+  a <- aggregate(pullreq_id ~ mopen, subset(pullreq.open.close, mopen != mclose), length)
+  backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mopen', sort = FALSE, all = T)
   backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
-  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and closed later'))
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'New and left open'))
   
-  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen < mclose), length)
+  a <- aggregate(pullreq_id ~ mclose, subset(pullreq.open.close, mopen != mclose), length)
   backlog.stats <- merge(backlog.stats, a, by.x = 'month', by.y = 'mclose', sort = FALSE, all = T)
   backlog.stats[c("pullreq_id")][is.na(backlog.stats[c("pullreq_id")])] <- 0
-  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'Old and closed in month'))
+  backlog.stats <- rename(backlog.stats, c('pullreq_id' = 'Old and closed'))
 
-  backlog.stats$month <- sprintf("01-%s", backlog.stats$month)
-  backlog.stats$month <- strptime(backlog.stats$month, "%d-%m-%Y")
+  backlog.stats$month <- sprintf("%s-01", backlog.stats$month)
+  backlog.stats$month <- strptime(backlog.stats$month, "%Y-%m-%d")
   backlog.stats$month <- as.POSIXct(backlog.stats$month)
   backlog.stats <- backlog.stats[!names(backlog.stats) %in% c("New pullreqs")]
+  backlog.stats <- backlog.stats[order(backlog.stats[,1]),]
+  backlog.stats <- backlog.stats[-nrow(backlog.stats),]
 
   backlog.stats <- melt(backlog.stats, id=c("month"))
 
   ggplot(backlog.stats) + 
     aes(x = month, y = value, fill = variable) + 
+    scale_fill_discrete(name = "Per month") +
     geom_bar(stat = "identity") + 
     scale_x_datetime("Date")
+
 
 ```
 
