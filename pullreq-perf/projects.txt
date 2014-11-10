@@ -622,6 +622,7 @@ Constellation taberareloo
 contao core
 contiki-os contiki
 ContinuumIO Bokeh
+ContinuumIO blaze 
 ControlSystemStudio cs-studio
 coolfluid coolfluid3
 cooperative-computing-lab cctools

@@ -5,10 +5,6 @@ tagline: Github's data from a firehose
 ---
 {% include JB/setup %}
 
-<div class="alert alert-danger" role="alert">The GHTorrent project is
-experiencing storage space issues. The Lean GHTorrent service is currently
-unavailabe because of this.</div>
-
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
