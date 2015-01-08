@@ -1,3 +1,14 @@
+```{r db}
+library(RMySQL)
+owner <- 'rails'
+repo <- 'rails'
+db <- dbConnect(dbDriver("MySQL"),
+                  user = 'ghtorrent',
+                  password = 'ghtorrent',
+                  dbname = 'ghtorrent',
+                  host = '127.0.0.1')
+```
+
 ---
 layout: page
 title: Performance report for `r owner`/`r repo`
@@ -11,7 +22,6 @@ title: Performance report for `r owner`/`r repo`
 # BSD licensed, see LICENSE in top level dir
 #
 
-library(RMySQL)
 library(ggplot2)
 library(reshape)
 library(plyr)
