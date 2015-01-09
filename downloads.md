@@ -7,7 +7,7 @@ tagline:
 ### What am I downloading?
 
 * The MySQL dump is a full, up to date database dump. You can safely use it for querying the latest available data.
-* The MongoDB dumps are provided mostly for reference and backup purposes, as they may contain duplicates. The reasons for this are the following:
+* The MongoDB dumps are incremental. They are provided mostly for reference and backup purposes, as they may contain duplicates. The reasons for this are the following:
   * When refreshing project data, old records are deleted and new are added. This cannot be reflected in the dumps (it is not practical to regenerate all dumps every time).
   * The dumps have already been restored once, hence the dump dates do not
 represent the actual data generation dates.
@@ -25,6 +25,7 @@ dump.
 * [2014-04-02](/downloads/mysql-2014-04-02.sql.gz)
 * [2014-08-18](/downloads/mysql-2014-08-18.sql.gz)
 * [2014-11-10](/downloads/mysql-2014-11-10.sql.gz)
+* [2015-01-04](/downloads/mysql-2015-01-04.sql.gz)
 
 ### Available Downloads
 List of available torrents (Last dump date: 2014-11-29)
