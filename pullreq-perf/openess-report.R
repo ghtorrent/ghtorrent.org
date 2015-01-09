@@ -7,7 +7,7 @@
 
 rm(list = ls(all = TRUE))
 
-if (! "knitr" %in% installed.packages()) install.packages("knitr", src=TRUE)
+if (! "knitr" %in% installed.packages()) install.packages("knitr")
 if (! "RMySQL" %in% installed.packages()) install.packages("RMySQL")
 if (! "ggplot2" %in% installed.packages()) install.packages("ggplot2")
 if (! "reshape" %in% installed.packages()) install.packages("reshape")
@@ -18,10 +18,11 @@ if (! "doMC" %in% installed.packages()) install.packages("doMC")
 
 library(optparse)
 
-mysql.user =  "foo"
+mysql.user   =  "foo"
 mysql.passwd = "bar"
-mysql.db = "ghtorrent"
-mysql.host = "127.0.0.1"
+mysql.db     = "ghtorrent"
+mysql.host   = "127.0.0.1"
+paralll      = 4
 
 option_list <- list(
   make_option(c("-s", "--mysql-host"), default=mysql.host, dest = 'mysql.host',
@@ -30,12 +31,14 @@ option_list <- list(
               help = "MySQL database [\"%default\"]"),
   make_option(c("-u", "--mysql-user"), default=mysql.user, dest = 'mysql.user',
               help = "MySQL user [\"%default\"]"),
-  make_option(c("-p", "--mysql-passwd"), default=mysql.passwd, dest = 'mysql.passwd', help = "MySQL password [\"%default\"]")
+  make_option(c("-p", "--mysql-passwd"), default=mysql.passwd, dest = 'mysql.passwd', help = "MySQL password [\"%default\"]"),
+  make_option(c("-a", "--parallel"), default=paralll, dest = 'paralll', help = "Number of processes [\"%default\"]")
+
 )
 
-args <- parse_args(OptionParser(option_list = option_list), 
-                                print_help_and_exit = FALSE, 
-                                positional_arguments = TRUE) 
+args <- parse_args(OptionParser(option_list = option_list),
+                                print_help_and_exit = FALSE,
+                                positional_arguments = TRUE)
 
 if (args$options$help == TRUE) {
     parse_args(OptionParser(option_list = option_list))
@@ -45,6 +48,7 @@ mysql.user    = args$options$mysql.user
 mysql.passwd  = args$options$mysql.passwd
 mysql.db      = args$options$mysql.db
 mysql.host    = args$options$mysql.host
+paralll       = args$options$paralll
 
 # Genearte stats
 library(RMySQL)
@@ -67,7 +71,7 @@ stats <- function(owner, repo) {
 
   tryCatch({
     knit("index.Rmd")
-    file.remove(sprintf("%s/%s", dirname, "index.Rmd"))
+    file.remove("index.Rmd")
   }, error = function(e) {
     print(e)
     setwd(cwd)
@@ -80,10 +84,12 @@ stats <- function(owner, repo) {
 
 if (length(args$args) == 0) {
   library(doMC)
-  registerDoMC(4)
+  registerDoMC(paralll)
 
   projects <- read.csv('projects.txt', sep = ' ')
+
   print(sprintf("%s projects to analyze", nrow(projects)))
+  print(sprintf("Running %d parallel processes", paralll))
   knit("index.Rmd")
 
   result <- foreach(n=1:nrow(projects), .combine='+') %dopar% {
@@ -94,5 +100,5 @@ if (length(args$args) == 0) {
   print(sprintf("processed %d projects", result))
 
 } else {
-  stats(strsplit(args$args, " ")[1], strsplit(args$args, " ")[2]) 
+  stats(strsplit(args$args, " ")[1], strsplit(args$args, " ")[2])
 }
