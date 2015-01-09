@@ -1,20 +1,19 @@
-permalink: /:categories/:year/:month/:day/:title 
+permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: "pygments"
 markdown: rdiscount
-#markdown: kramdown
 
-# Themes are encouraged to use these universal variables 
+# Themes are encouraged to use these universal variable
 # so be sure to set them if your theme uses them.
-title : GHTorrent 
-tagline: Github data from a firehose 
+title : GHTorrent
+tagline: Query Github data!
 author :
-  name : Georgios Gousios 
-  email : g.gousios@tudelft.nl 
+  name : Georgios Gousios
+  email : georgios@cs.ru.nl
   github : gousiosg
-  twitter : gousiosg 
-  feedburner : 
+  twitter : gousiosg
+  feedburner :
 
 production_url : http://www.ghtorrent.org
 
@@ -28,7 +27,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : ghtorrent 
+      short_name : ghtorrent
     livefyre :
       site_id : 123
     intensedebate :
@@ -39,16 +38,16 @@ JB :
       width: 580
       colorscheme: light
   analytics :
-    provider : google 
-    google : 
+    provider : google
+    google :
         tracking_id : 'UA-38537159-1'
     getclicky :
-      site_id : 
+      site_id :
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
   sharing :
-    provider : addthis 
-    
+    provider : addthis
+
 scholar:
   style: apa
   locale: en
@@ -57,14 +56,14 @@ scholar:
   order: ascending
 
   source: ./_bibliography
-  bibliography: references 
+  bibliography: references
   bibliography_template: "{{reference}}"
 
   replace_strings: true
 
   details_dir:    bibliography
   details_layout: bib_details.html
-  details_link:   more... 
+  details_link:   more...
 
   query: "@*"
 
