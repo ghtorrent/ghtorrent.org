@@ -28,7 +28,7 @@ dump.
 * [2015-01-04](/downloads/mysql-2015-01-04.sql.gz)
 
 ### Available Downloads
-List of available torrents (Last dump date: 2014-11-29)
+List of available downloads (Last dump date: 2014-11-29)
 <table class="table table-hover table-condensed">
 <thead>
 <tr>
