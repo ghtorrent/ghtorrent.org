@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
----
 layout: page
 title: Downloads 
 tagline: 
@@ -30,10 +28,7 @@ dump.
 
 ### Available Downloads
 List of available downloads (Last dump date: 2015-01-29)
-=======
-### Available Downloads
-List of available torrents (Last dump date: 2013-11-29)
->>>>>>> Stashed changes
+
 <table class="table table-hover table-condensed">
 <thead>
 <tr>
