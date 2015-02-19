@@ -13,6 +13,10 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 
 * If you are interested to link your publications referencing GHTorrent, you should include a Bibtex record in [this file](https://github.com/gousiosg/ghtorrent.org/blob/master/_bibliography/references.bib) on Github. You can then reference them in [this file](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md).
 
+#### [NUDT/Trustie](http://www.trustie.com/)
+* [Yue Yu](http://fisher.trustie.net/): Research on reviewer recommendation of pull requests. Used GHTorrent to extract our dataset.
+  1. {% reference YuRR14 %}
+  
 #### [TU Delft/SERG](http://swerl.tudelft.nl/bin/view/Main/WebHome)
 * [Georgios Gousios](http://www.gousios.gr): Initial design and implementation. Project hosting. Lean GHTorrent. Research on pull requests. Project openess reports.
   1. {% reference GS12 %}
@@ -32,7 +36,3 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 * [Kelly Blincoe](http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
 * [Eirini Kalliamvakou](http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
   1. {% reference KGBSGD14 %}
-  
-### [NUDT/Trustie](http://www.trustie.com/)
-* [Yue Yu](http://fisher.trustie.net/): Research on reviewer recommendation of pull requests. Used GHTorrent to extract our dataset.
-  1. {% reference YuRR14 %}
