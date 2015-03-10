@@ -13,7 +13,7 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 
 * If you are interested to link your publications referencing GHTorrent, you should include a Bibtex record in [this file](https://github.com/gousiosg/ghtorrent.org/blob/master/_bibliography/references.bib) on Github. You can then reference them in [this file](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md).
 
-#### [AtlanMod, Inria/Mines Nantes/LINA](http://www.emn.fr/z-info/atlanmod/index.php/Main_Page)
+#### [Inria/Mines Nantes/LINA/AtlanMod](http://www.emn.fr/z-info/atlanmod/index.php/Main_Page)
 * [Jordi Cabot](http://modeling-languages.com): Research on usage of issue labels in GitHub.
   1. {% reference cabotSaner2015 %}
   2. {% reference canovasSaner2015 %}
