@@ -1,12 +1,15 @@
 ---
 layout: page
-title: The GHTorrent project 
-tagline: Github's data from a firehose 
+title: The GHTorrent project
+tagline:
 ---
 {% include JB/setup %}
 
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
+
+Follow [@ghtorrent](https://twitter.com/ghtorrent) on Twitter for project
+updates and [exiting research](halloffame.html) done with GHTorrent.
 
 ##What does GHTorrent do?
 
@@ -26,31 +29,30 @@ protocol.
 
 See the following presentation for a short introduction.
 
-<div style="width: 60%;margin-left:auto;margin-right:auto;">
+<div style="width: 50%;margin-left:auto;margin-right:auto;">
 <script class="speakerdeck-embed" data-id="75bea5909fbb0130f0eb364613f6f036" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 ### How much data do you have?
 
-Currently (Apr 2014), MongoDB stores around 3.5 TB of JSON data, while MySQL
+Currently (Apr 2015), MongoDB stores around 6.5 TB of JSON data, while MySQL
 more than 600 million rows of extracted metadata. A big part of the activity of
-2012, 2013 and 2014 has been retrieved, while we are also going backwards to
+2012, 2013, 2014 and 2015 has been retrieved, while we are also going backwards to
 retrieve the full recorded history of important projects.
 
 ### How can I help?
 
 GHTorrent needs contributions on the following fronts:
 
-* Workers: Github is huge and it is growing bigger every day. Our networking
-and Github account resources are struggling to keep up. 
-To help, you can setup a [mirroring client](docs.html), that uses our queues and
-databases for retrieval and storage. Don't hesitate to [contact
-us](mailto:gousiosg@gmail.com) to help you with that.
+* **API keys:** We can run multiple GHTorrent worker instances concurrently. To
+go over Github's API rate limit, we need multiple Github API keys provided by
+users.  If you use GHTorrent for your reseach, please consider [donating a
+key](raw.html).
 
-* Linking and analysis: GHTorrent currently does not do any analysis and linking
+* **Linking and analysis:** GHTorrent currently does not do any analysis and linking
 in the dataset, for example the linking of commits to issues.
 
-* Reporting bugs: Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found. 
+* **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found.
 
 ### Why did you do it?
 
