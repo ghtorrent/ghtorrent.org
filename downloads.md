@@ -26,6 +26,7 @@ dump.
 * [2014-08-18](/downloads/mysql-2014-08-18.sql.gz)
 * [2014-11-10](/downloads/mysql-2014-11-10.sql.gz)
 * [2015-01-04](/downloads/mysql-2015-01-04.sql.gz)
+* [2015-04-01](/downloads/mysql-2015-04-01.sql.gz)
 
 ### Available Downloads
 List of available downloads (Last dump date: 2015-01-29)
