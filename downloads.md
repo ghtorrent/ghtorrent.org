@@ -11,6 +11,7 @@ tagline:
   * When refreshing project data, old records are deleted and new are added. This cannot be reflected in the dumps (it is not practical to regenerate all dumps every time).
   * The dumps have already been restored once, hence the dump dates do not
 represent the actual data generation dates.
+* You can verify the downloaded dumps using SHA256. Here are the signatures: [SHA256SUM](/downloads/SHA256SUM)
 
 For those reasons, we recommend using the MongoDB data through our [query
 service](http://ghtorrent.org/raw.html). 
