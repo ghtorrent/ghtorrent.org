@@ -38,7 +38,7 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
   3. {% reference PVS14 %}
   4. {% reference vasilescu2014ci %}
 
-#### [University of California, Davis/DECAL](http://www.cs.ucdavis.edu)
+#### [University of California, Davis/DECAL](http://decallab.cs.ucdavis.edu)
 * [Bogdan Vasilescu](http://bvasiles.github.io/): Research on effects of diversity in GitHub teams.
   1. {% reference vasilescu2015gender %}
   2. {% reference vasilescu2015chase %}
