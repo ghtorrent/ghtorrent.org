@@ -47,6 +47,19 @@ of keys is not enough to keep up, we might turn this into an obligatory step.
 
 Have a look [here](mongo.html).
 
+
+Due to its heavy load, the MongoDB server cannot process non-indexed field
+searches within the 100 sec time limit. To address this situation, we
+recommend querying MySQL first to get references to the data you want and
+then use MongoDB to get the raw data.
+
+Below are the fields that MongoDB uses as indexes. Make sure your query hits
+those, otherwise querying is going to be extremely slow (and will overload our
+server as well).
+
+<script src="http://gist-it.appspot.com/https://github.com/gousiosg/github-mirror/blob/master/lib/ghtorrent/adapters/mongo_persister.rb?slice=21:40">
+</script>
+
 ### Things to keep in mind
 
 1. The hosting machine, while powerful, is not capable of processing the data
