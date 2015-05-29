@@ -21,7 +21,13 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 #### [NUDT/Trustie](http://www.trustie.com/)
 * [Yue Yu](http://fisher.trustie.net/): Research on reviewer recommendation of pull requests. Used GHTorrent to extract our dataset.
   1. {% reference YuRR14 %}
-  
+
+#### [Radboud University Nijmegen/DS](http://www.ru.nl/ds/)
+* [Georgios Gousios](http://www.gousios.gr): Maintentance, qualitative research on pull requests, [pull request prioritization](http://ghtorrent.org/prioritizer),developer profiles
+  1. {% reference GZSD15 %}
+  2. {% reference HG15 %}
+  3. {% reference VGZ15 %}
+
 #### [TU Delft/SERG](http://swerl.tudelft.nl/bin/view/Main/WebHome)
 * [Georgios Gousios](http://www.gousios.gr): Initial design and implementation. Project hosting. Lean GHTorrent. Research on pull requests. Project openess reports.
   1. {% reference GS12 %}

@@ -2,7 +2,7 @@
 
 ````
 su
-apt-get install ruby 
+apt-get install ruby
 gem install jekyll jekyll-scholar
 ````
 
