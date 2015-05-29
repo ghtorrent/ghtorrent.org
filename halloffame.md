@@ -47,3 +47,41 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 * [Kelly Blincoe](http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
 * [Eirini Kalliamvakou](http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
   1. {% reference KGBSGD14 %}
+
+
+### API keys contributors
+
+The following people's contributions of GitHub OAuth API keys has allowed
+the data collection process to catch on with GitHub's 10x growth since the
+GHTorrent project started. If you would like to contribute and API key,
+please follow the process specified [here](raw.html).
+
+[Bram Adams](http://mcis.polymtl.ca/bram.html),
+[Efthimia Aivaloglou](https://www.linkedin.com/pub/efthimia-aivaloglou/4/244/966),
+[Alberto Bacchelli](http://sback.it),
+[Moritz Beller](http://www.st.ewi.tudelft.nl/~mbeller/),
+Erik Bowers,
+[Frederic Gingras](http://fredericgingras.ca),
+[Roberta de Souza Coelho](https://www.dimap.ufrn.br/~roberta/),
+Jos Demmers,
+[Arie van Deursen](http://www.st.ewi.tudelft.nl/~arie/),
+[Niel Ernst](http://neilernst.net),
+[Joe Fleming](http://joefleming.net),
+[Georgios Gousios](http://gousios.gr),
+[Samarendra M Hedaoo](http://fortyplustwo.net),
+[Mark Hills](http://www.cs.ecu.edu/hillsma/),
+Lindsey Lanier,
+Pablo Loyola,
+Yao Lu,
+[Mahdi Moqri](http://www.moqri.com),
+[Matteo Orrù](),
+[Gustavo Pinto](http://gustavopinto.org),
+[Dominic Safaric](https://github.com/dsafaric),
+[Alexander Serebrenik](http://www.win.tue.nl/~aserebre/),
+[Diomidis Spinellis](http://www.dmst.aueb.gr/dds/),
+[Bogdan Vasilescu](http://bvasiles.github.io),
+[Meike Wiemann](https://twitter.com/weidenfreak),
+[Yue Yu](http://fisher.trustie.net/),
+[Alexey Zagalsky](http://alexeyza.com),
+[Andy Zaidman](http://www.st.ewi.tudelft.nl/~zaidman/),
+[Nosheen Zaza](http://www.people.usi.ch/zazan/)
