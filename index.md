@@ -17,10 +17,10 @@ GHTorrent monitors the [Github public event time
 line](https://api.github.com/events). For each event, it retrieves its contents
 and their dependencies, exhaustively. It then stores the raw JSON responses to a
 [MongoDB database](raw.html), while also extracting their structure in a [MySQL
-database](relational.html). 
+database](relational.html).
 
 GHTorrent works in a distributed manner. A [RabbitMQ](http://www.rabbitmq.com/)
-message queue sits between the event mirroring and data retrieval phases, 
+message queue sits between the event mirroring and data retrieval phases,
 so that both can be run on a cluster of machines.
 
 Every two months, the project releases the data collected during that period as
@@ -58,12 +58,12 @@ in the dataset, for example the linking of commits to issues.
 
 We are doing research on [software repositories](http://www.msrconf.org/).
 Github is an exciting new data source for us, one that has several of the
-problems we are facing as data miners solved. The uniformity of data 
+problems we are facing as data miners solved. The uniformity of data
 will allow scaling of research to hundreds or thousands of repositories
 spanning across multiple languages and application domains.
 
 
-### How can I cite this work? 
+### How can I cite this work?
 
 If you find this dataset useful and want to use it in your work, please cite the
 following paper:
@@ -87,33 +87,14 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
   acmid = {2487132},
   publisher = {IEEE Press},
   address = {Piscataway, NJ, USA},
-} 
+}
 {%endhighlight%}
 
-#### Service info
-<table class="table table-hover table-condensed">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Info</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Fri Jan  9 15:07:46 CET 2015</td>
-      <td>New MongoDB and MySQL backups uploaded.</td>
-    </tr>
-     <tr>
-      <td>Mon Aug 18 13:25:45 CEST 2014</td>
-      <td>New MongoDB and MySQL backups uploaded.</td>
-    </tr>
-     <tr>
-      <td>Mon Mar 31 14:07:42 CEST 2014</td>
-      <td>New MongoDB and MySQL backups uploaded.</td>
-    </tr>
-     <tr>
-      <td>Thu Jan  2 10:38:27 CET 2014</td> 
-      <td>New backups are being created. Services may be offline for the next couple of days.</td>
-    </tr>
- </tbody>
-</table>
+### Latest news
+
+<a class="twitter-timeline"
+  data-widget-id="608916912693751808"
+  href="https://twitter.com/ghtorrent"
+  data-screen-name="ghtorrent">
+Latest news
+</a>
