@@ -11,6 +11,10 @@ tagline:
 
 ## How to run GHTorrent locally
 
+<button type="button" class="btn btn-success">New!</button> You can now use the
+[GHTorrent Vagrant](https://github.com/ghtorrent/ghtorrent-vagrant) box to setup a testing/development environment for GHTorrent! The GHTorrent Vagrant box
+completely automates the process below.
+
 Depending on the size of the local mirror you have the following
 configuration simplification options:
 

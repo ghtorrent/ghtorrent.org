@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Downloads 
-tagline: 
+title: Downloads
+tagline:
 ---
 
 ### What am I downloading?
 
-* The MySQL dump is a full, up to date database dump. You can safely use it for querying the latest available data.
+* The MySQL dump is a full, up to date database dump. You can use it for querying the latest available data.
 * The MongoDB dumps are incremental. They are provided mostly for reference and backup purposes, as they may contain duplicates. The reasons for this are the following:
   * When refreshing project data, old records are deleted and new are added. This cannot be reflected in the dumps (it is not practical to regenerate all dumps every time).
   * The dumps have already been restored once, hence the dump dates do not
@@ -14,9 +14,14 @@ represent the actual data generation dates.
 * You can verify the downloaded dumps using SHA256. Here are the signatures: [SHA256SUM](/downloads/SHA256SUM)
 
 For those reasons, we recommend using the MongoDB data through our [query
-service](http://ghtorrent.org/raw.html). 
+service](http://ghtorrent.org/raw.html).
 
-### MySQL database dumps 
+### MySQL database dumps
+<button type="button" class="btn btn-success">New!</button> As of MySQL dump
+`mysql-2015-09-25`, we are distributing CSV files (one file per table) instead
+of `mysqldump` based backups. The provided archive expands to a directory
+including a restore script and instructions on how to do the restore. See more
+information [here](https://github.com/gousiosg/github-mirror/tree/master/sql).
 
 You can also [query MySQL](/dblite). It is always loaded with the latest
 dump.
@@ -28,6 +33,7 @@ dump.
 * [2014-11-10](/downloads/mysql-2014-11-10.sql.gz)
 * [2015-01-04](/downloads/mysql-2015-01-04.sql.gz)
 * [2015-04-01](/downloads/mysql-2015-04-01.sql.gz)
+* [2015-09-25](/downloads/mysql-2015-09-25.tar.gz)
 
 ### Available Downloads
 List of available downloads (Last dump date: 2015-03-29)
