@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The relational DB schema
-tagline: 
+tagline:
 ---
 
 <img width="20%" src="files/schema.png"/>
@@ -23,12 +23,34 @@ Github users.
 * Users may be marked as `deleted`. This means that the user was once active on
 GitHub but GHTorrent can no longer get his/her details.
 
+*Update Nov 2015:* User entries are now geocoded. The location field remains
+intact, while 5 fields have been added with information about the
+geographic location of the user. The Open Street Maps API has been used
+to do the mapping of the location field to the user's geocode. As a result,
+the state and city fields are stored in the local language of the geocoded
+area. Also, many users do not report their location or their location
+is field in with random information; in those cases, no geocoding information
+is available.
+
+{% highlight sql %}
+--- See where most commits are commit from today
+select u.country_code, count(*)
+from commits c, users u
+where c.author_id = u.id
+and date(c.created_at) = date(now())
+group by u.country_code
+{% endhighlight %}
+
 #### organization\_members
 Users that are members of an organization.
 
 * The `created_at` field is only filled in accurately for memberships for which
 GHTorrent has recorded a corresponding event. Otherwise, it is filled in with the
 latest date that the corresponding user or organization has been created.
+
+*Update Nov 2015:* Organizations can now select wheather membership information
+is revealed to external parties. This means that information about this
+table can no longer be accurate.
 
 #### projects
 Information about repositories. A repository is always owned by a user.
@@ -38,6 +60,9 @@ project is a fork in which case it contains the `id` of the project the project
 is forked from.
 
 * The `deleted` field means that the project has been deleted from Github.
+
+* The `updated_at` field indicates when the last full update was done for
+this project.
 
 #### project\_members
 Users that have commit access to the repository.
@@ -52,17 +77,47 @@ approximate memberships, but this is not always accurate. You are thus advised
 to use heuristics (e.g. the  committers + mergers of pull) to calculate membership.
 
 {% highlight sql %}
+--- Get active core team participants for the last 3 months
 select distinct(u.login) as login
     from commits c, users u, project_commits pc, users u1, projects p
     where u.id = c.committer_id
       and u.fake is false
       and pc.commit_id = c.commit_id
       and pc.project_id = p.id
-      and c.created_at > DATE_SUB(prh.created_at, INTERVAL 3 MONTH)
-      and c.created_at < NOW()
-      a
+      and p.owner_id = u1.id
+      and p.name = 'rails'
+      and u1.login = 'rails'
+      and c.created_at > DATE_SUB(NOW(), INTERVAL 3 MONTH)
 union
+select distinct(u.login) as login
+  from pull_requests pr, projects p, users u, users u1, pull_request_history prh
+  where u.id = prh.actor_id
+    and prh.action = 'merged'
+    and u1.id = p.owner_id
+    and prh.pull_request_id = pr.id
+    and pr.base_repo_id = p.id
+    and prh.created_at > DATE_SUB(NOW(), INTERVAL 3 MONTH)
+    and p.name = 'rails'
+    and u1.login = 'rails'
+{% endhighlight %}
 
+
+### project\_languages
+Languages that are used in the repository along with **byte counts** for
+all files in those languages.
+
+Multiple entries can exist per project. The `created_at` field is filled in with
+the latest timestamp the query for a specific `project_id` was done.
+
+The table is filled in when the project has been first inserted on when
+an update round for all projects is made.
+
+{% highlight sql %}
+-- Get the latest byte count for languges in Ruby on Rails
+select *
+from project_languages
+where project_id = 1334
+order by created_at desc
 
 {% endhighlight %}
 
@@ -248,4 +303,19 @@ select distinct(user_id) from
 ) as participants
 {%endhighlight%}
 
+#### Get all users in NL that committed to a Java project today
+
+{%highlight sql%}
+select u.login
+from users u, commits c, projects p, project_commits pc
+where date(c.created_at) = date(now())
+and pc.commit_id = c.id
+and c.author_id = u.id
+and u.country_code = 'nl'
+and 'java' = (select pl.language
+              from project_langauges pl
+              where pl.project_id = p.id
+              order by pl.created_at desc, pl.bytes desc
+              limit 1)
+{%endhighlight%}
 
