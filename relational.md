@@ -126,7 +126,7 @@ Unique commits.
 
 * Each commit is identified globally through its `sha` field. If the author or
 the committer has not configured his [Github email address](https://help.github.com/articles/setting-your-email-in-git), no resolution to
-a `user` enty is possible. In that case, GHTorrent generates artificial users using the provided email in the Git commit author or committer fields. If the user
+a `user` entry is possible. In that case, GHTorrent generates artificial users using the provided email in the Git commit author or committer fields. If the user
 then configures his Github account, GHTorrent will update the artificial user
 accordingly. 
 
@@ -235,7 +235,7 @@ commit when a pull request has been closed, merged or referenced.
 
 #### issue\_comments
 An entry to the issue discussion. This table is always filled in with pull
-request (or issue) discussion comments, irrespective of whether the repo
+request (or issue) discussion comments, irrespective of whether the repository
 has issues enabled or not.
 
 #### repo\_labels
