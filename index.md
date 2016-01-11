@@ -21,24 +21,19 @@ database](relational.html).
 
 GHTorrent works in a distributed manner. A [RabbitMQ](http://www.rabbitmq.com/)
 message queue sits between the event mirroring and data retrieval phases,
-so that both can be run on a cluster of machines.
+so that both can be run on a cluster of machines. Have a look at this
+[presentation](https://speakerdeck.com/gousiosg/mining-github-for-fun-and-profit)
+and read [this paper](http://gousios.gr/bibliography/GS12.html) if you want to know more. Here is the [source code](https://github.com/gousiosg/github-mirror).
 
-Every two months, the project releases the data collected during that period as
-[downloadable archives](downloads.html), also shared with the Bittorent
-protocol.
-
-See the following presentation for a short introduction.
-
-<div style="width: 50%;margin-left:auto;margin-right:auto;">
-<script class="speakerdeck-embed" data-id="75bea5909fbb0130f0eb364613f6f036" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
-</div>
+The project releases the data collected during that period as
+[downloadable archives](downloads.html).
 
 ### How much data do you have?
 
-Currently (Apr 2015), MongoDB stores around 6.5 TB of JSON data, while MySQL
-more than 600 million rows of extracted metadata. A big part of the activity of
-2012, 2013, 2014 and 2015 has been retrieved, while we are also going backwards to
-retrieve the full recorded history of important projects.
+Currently (Jan 2015), MongoDB stores around 4TB of JSON data (compressed), while
+MySQL more than 1.5 billion rows of extracted metadata.  A large part of the
+activity of 2012, 2013, 2014 and 2015 has been retrieved, while we are also
+going backwards to retrieve the full recorded history of important projects.
 
 ### How can I help?
 
@@ -49,8 +44,9 @@ go over Github's API rate limit, we need multiple Github API keys provided by
 users.  If you use GHTorrent for your reseach, please consider [donating a
 key](raw.html).
 
-* **Linking and analysis:** GHTorrent currently does not do any analysis and linking
-in the dataset, for example the linking of commits to issues.
+* **Linking and analysis:** GHTorrent currently only does limited analysis and
+linking withing the the dataset (user geolocation). There are many possibilities
+for expansion. One could for example think of linking commits to issues.
 
 * **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found.
 
@@ -62,6 +58,20 @@ problems we are facing as data miners solved. The uniformity of data
 will allow scaling of research to hundreds or thousands of repositories
 spanning across multiple languages and application domains.
 
+### Why the name?
+
+Initially the project offered the data through the Bittorrent network (gh: from
+GitHub, torrent: from Bittorrent). As currently the data is only offered through
+HTTP, the name signifies a [torrent](https://en.wiktionary.org/wiki/torrent) of
+data coming from GitHub.
+
+### Can I know more?
+
+Have a look at the following presentation for a short introduction.
+
+<div style="width: 50%;margin-left:auto;margin-right:auto;">
+<script class="speakerdeck-embed" data-id="75bea5909fbb0130f0eb364613f6f036" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
 
 ### How can I cite this work?
 
