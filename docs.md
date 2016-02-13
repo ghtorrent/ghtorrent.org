@@ -8,6 +8,7 @@ tagline:
 
 * [The relational data schema](relational.html)
 * [Collections in the MongoDB database](mongo.html)
+* [The GHTorrent cookbook](cookbook.html)
 
 ## How to run GHTorrent locally
 
