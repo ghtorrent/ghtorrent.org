@@ -44,7 +44,7 @@ you have a running MongoDB or/and MySQL instance.
 
 {%highlight bash%}
 # Download and extract
-$ wget http://ghtorrent.org/downloads/vissoft14-01032014.tar.gz
+$ wget https://ghtstorage.blob.core.windows.net/downloads/vissoft14-01032014.tar.gz
 $ du -b vissoft14-01032014.tar.gz 
 49178639  vissoft14-01032014.tar.gz
 $ md5sum vissoft14-01032014.tar.gz 

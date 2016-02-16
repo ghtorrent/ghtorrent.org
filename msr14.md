@@ -59,8 +59,8 @@ information is in it.
 
 Similarly to GHTorrent itself, the MSR challenge dataset comes in two flavours:
 
-* A [MongoDB database dump](http://ghtorrent.org/downloads/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](mongo.html).
-* A [MySQL database dump](http://ghtorrent.org/downloads/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](relational.html).
+* A [MongoDB database dump](https://ghtstorage.blob.core.windows.net/downloads/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](mongo.html).
+* A [MySQL database dump](https://ghtstorage.blob.core.windows.net/downloads/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](relational.html).
 
 The included projects are the following:
 
@@ -163,7 +163,8 @@ The following instructions assume an OSX or Linux based host.
 #### MongoDB
 
 {%highlight bash%}
-$ wget http://ghtorrent.org/downloads/msr14-mongo.tar.gz
+
+$ wget https://ghtstorage.blob.core.windows.net/downloads/msr14-mongo.tar.gz
 $ tar zxvf msr14-mongo.tar.gz
 $ mongorestore
 $ mongo msr14
@@ -176,7 +177,7 @@ mongo> db.issues.count()
 #### MySQL
 
 {%highlight bash%}
-$ wget http://ghtorrent.org/downloads/msr14-mysql.gz
+$ wget https://ghtstorage.blob.core.windows.net/downloads/msr14-mysql.gz
 $ mysql -u root -p
 mysql > create user 'msr14'@'localhost' identified by 'msr14';
 mysql> create database msr14;
