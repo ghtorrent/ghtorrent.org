@@ -1,126 +1,22 @@
 ---
 layout: page
-title: The GHTorrent project documentation 
-tagline: 
+title: The GHTorrent documentation
+tagline:
 ---
 
-## Data
+## Data formats
 
 * [The relational data schema](relational.html)
 * [Collections in the MongoDB database](mongo.html)
-* [The GHTorrent cookbook](cookbook.html)
 
-## How to run GHTorrent locally
+## Instaling and running
 
 <button type="button" class="btn btn-success">New!</button> You can now use the
-[GHTorrent Vagrant](https://github.com/ghtorrent/ghtorrent-vagrant) box to setup a testing/development environment for GHTorrent! The GHTorrent Vagrant box
+[GHTorrent Vagrant](https://github.com/ghtorrent/ghtorrent-vagrant) box to setup
+a testing/development environment for GHTorrent! The GHTorrent Vagrant box
 completely automates the process below.
 
-Depending on the size of the local mirror you have the following
-configuration simplification options:
+* [Generic installation instructions](geninst.html)
+* [Installing on Ubuntu 10.10](ght-ubuntu.html)
+* [The GHTorrent cookbook](cookbook.html)
 
-* You can skip using MongoDB if you only need to query the relational
-database and/or you just need to do use GHTorrent once.
-
-* You can use SQLite3 instead of MySQL if your setup only contains a few
-(say, less than 1000) projects.
-
-####Install Ruby and dependencies
-
-Make sure you run the latest release of Ruby. On the main server, GHTorrent
-runs on Ruby 2. If you are on Mac or Linux, you can use [RVM](https://rvm.io/)  to manage Ruby versions.
-
-Install the necessary dependencies
-
-{% highlight bash%}
-sudo apt-get install build-essential curl libmysqlclient-dev
-# Install RVM and Ruby 2.2
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -L https://get.rvm.io | bash -s stable --ruby=2.2
-rvm use 2.2
-gem install bundler sqlite3 #or mysql2
-{% endhighlight %}
-
-#### Install the source code
-
-Checkout the latest version of the
-[ghtorrent](https://github.com/gousiosg/github-mirror.git) Gem through Github.
-By default, it will be checked out in the directory `github-mirror`. The
-released versions of the Gem represent good states in the project's lifetime;
-the main mirror always works on the bleeding edge, which contains error fixes
-and updates to comply with changes to Github's API. You then need to install
-the dependencies:
-
-```
-cd github-mirror
-bundle install
-```
-
-Alternatively, you can just install the latest version of the GHTorrent gem:
-
-```
-gem install ghtorrent
-```
-
-#### Configure
-
-**If you are using MySQL**, you need to create a user and a database, like so
-
-```
-# Login as MySQL root user
-mysql> create user ghtorrentuser@'localhost' identified by 'ghtorrentpassword';
-mysql> create user ghtorrentuser@'*' identified by 'ghtorrentpassword';
-mysql> grant all privileges on *.* to 'ghtorrentuser'@'localhost';
-mysql> grant all privileges on *.* to 'ghtorrentuser'@'*';
-
-# Login as the ghtorrent user
-mysql> CREATE SCHEMA IF NOT EXISTS `ghtorrent` DEFAULT CHARACTER SET utf8 ;
-```
-
-**If you are using MongoDB**, you can just disable
-authentication (run `mongod` with `--noauth`). If you do want to create a user,
-it can be a bit more involved, see below:
-
-```
-> db.createUser(
-  {
-    user: "root",
-    pwd: "admin",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-  }
-)
-
-> use ghtorrent
-> db.createUser(
-    {
-      user: "ghtorrent",
-      pwd: "ghtorrent",
-      roles: [
-         { role: "dbOwner", db: "ghtorrent" }
-      ]
-    }
-)
-
-```
-
-**Download the [sample configuration file](https://raw.githubusercontent.com/gousiosg/github-mirror/master/config.yaml.tmpl)**, save it as `config.yaml`
-and change options as necessary. Important things to configure are:
-
-* The database connection string
-* The MongoDB connection details (if you are using it)
-* Your GitHub username/password or an API token. See [instructions here](raw.html) on how to obtain an API key
-
-#### Run and profit!
-
-To download the data for your first project, run:
-
-```
-# git checkout
-ruby -Ilib bin/ght-retrieve-repo -c config.yaml gousiosg github-mirror
-
-# gem install
-ght-retrieve-repo -c config.yaml gousiosg github-mirror
-```
-
-You should see lots of output. After a while, you will have 1/2 databases
-full of data!
