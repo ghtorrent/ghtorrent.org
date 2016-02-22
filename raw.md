@@ -11,11 +11,28 @@ they are collected by our main MongoDB server.
 The only prerequisite is to have a MongoDB client (command line, graphical
 or program library) and SSH installed on your machine.
 
-### Obtaining access
+## Obtaining access
 
-1. [Send us](mailto:gousiosg@gmail.com) you public SSH key (usually in `~/.ssh/id_rsa.pub`). To create one, use `ssh-keygen`. We need your API key *as a file attachment*, because various email clients tend to break key strings at arbitraty locations.
+1. [Send us](mailto:gousiosg@gmail.com) you public SSH key (usually in
+`~/.ssh/id_rsa.pub`). To create one, use `ssh-keygen`. We need your SSH key *as
+a file attachment*, because various email clients tend to break key strings at
+arbitraty locations. We also require your SSH key to be on a single line. Here
+are some hints on how to generate GHTorrent compatible SSH keys:
+
+    * **On Mac or Linux**: You can use the distribution provided `ssh-keygen`
+    command and it should work fine.
+
+    * **On Windows:** Keys generated with
+the popular Putty program cannot be used by GHTorrent. Please use
+[CygWin](https://www.cygwin.com) or an equivalent environment to install OpenSSH
+and use the `ssh-keygen` command as provided by OpenSSH to generate a GHTorrent
+compatible key.
+
 2. When we contact you back, you will be able to setup an SSH tunnel with the
-following command: `ssh -L 27017:dutihr.st.ewi.tudelft.nl:27017 ghtorrent@dutihr.st.ewi.tudelft.nl`. Keep in mind that no shell will be allocated in the open SSH session.
+following command: `ssh -L 27017:dutihr.st.ewi.tudelft.nl:27017
+ghtorrent@dutihr.st.ewi.tudelft.nl`. Keep in mind that no shell will be
+allocated in the open SSH session.
+
 3. You will then be able to connect to our server using the command: `mongo
 -u ghtorrentro -p ghtorrentro github`.
 
@@ -26,7 +43,6 @@ Here is an example session:
 # on terminal session 1
 $ ssh -L 27017:dutihr.st.ewi.tudelft.nl:27017 ghtorrent@dutihr.st.ewi.tudelft.nl
 PTY allocation request failed on channel 2
-
 #####
 # on a different terminal
 $ mongo -u ghtorrentro -p ghtorrentro github
@@ -41,7 +57,7 @@ connecting to: github
 {% endhighlight %}
 
 
-### Fair use
+## Fair use
 
 To address GitHub's growth and GHTorrent's growing demands in API calls and the
 community's demand for better, more rich data, we need more GitHub API keys. We
@@ -64,7 +80,7 @@ ban you indefinetely from the MongoDB access service.
 At the moment, this is a request in kind. If demand continues to grow and supply
 of keys is not enough to keep up, we might turn this into an obligatory step.
 
-### Collections available in MongoDB
+## Collections available in MongoDB
 
 Have a look [here](mongo.html).
 
@@ -78,10 +94,10 @@ Below are the fields that MongoDB uses as indexes. Make sure your query hits
 those, otherwise querying is going to be extremely slow (and will overload our
 server as well).
 
-<script src="http://gist-it.appspot.com/https://github.com/gousiosg/github-mirror/blob/master/lib/ghtorrent/adapters/mongo_persister.rb?slice=21:40">
+<script src="http://gist-it.appspot.com/https://github.com/gousiosg/github-mirror/blob/master/lib/ghtorrent/adapters/mongo_persister.rb?slice=21:41">
 </script>
 
-### Things to keep in mind
+## Things to keep in mind
 
 1. The hosting machine, while powerful, is not capable of processing the data
 very quickly. At the time of this writing, the data is more than 6.5TB.
