@@ -57,9 +57,9 @@ This allows clients to declare queues that selectively receive only
 the messages they are interested into. The routing key is structured as
 follows:
 
-```
+{% highlight ruby%}
 prefix.{entity|event}.action
-```
+{% endhighlight%}
 
 The `prefix` denotes the type of the updated item
 
@@ -130,7 +130,12 @@ collection
 * `ent.*.update`: This will retrieve all updates
 * `*.*.insert`: This will retrieve all new events and all MongoDB inserts
 
-
+{% highlight ruby%}
+q.bind(amqp.exchange, :routing_key => 'evt.gist.*')
+q.subscribe do |delivery_info, properties, payload|
+  puts "#{delivery_info.routing_key}: #{payload}"
+end
+{% endhighlight %}
 
 ## Things to consider
 
