@@ -27,7 +27,7 @@ The following examples are in Ruby.
 ### Connecting to the server
 
 Assuming your connection works as described above, you should have port
-5672 listening on localhost. You should connect and define the `ght-streamer`
+5672 listening on localhost. You should connect and define the `ght-streams`
 exchange (if you define other exchnages, you will receive no messages
 as nobody will post there).
 
@@ -37,7 +37,7 @@ conn = Bunny.new(:host => '127.0.0.1', :port => 5672,
                  :username => 'tbd', :password => 'tbd')
 conn.start
 ch  = conn.create_channel
-exchange = ch.topic('ght-streamer')
+exchange = ch.topic('ght-streams')
 {% endhighlight%}
 
 ### Declaring a queue
@@ -52,7 +52,7 @@ q = ch.queue(`gousiosg_queue`, :auto_delete => true)
 
 ### Binding queues to routing keys
 
-All messages posted to `ght-streamer` exchange have an attached routing key.
+All messages posted to `ght-streams` exchange have an attached routing key.
 This allows clients to declare queues that selectively receive only
 the messages they are interested into. The routing key is structured as
 follows:
@@ -143,5 +143,5 @@ end
 * Messages have a pre-configured Time-To-Live equal to 1 minute. If your client
 is not fast enough, they will be discarded. For this reason, we recommend
 client-side buffering of unprocessed messages.
-* All exchanges not named `ght-streamer` are deleted every 5 minutes.
+* All exchanges not named `ght-streams` are deleted every 5 minutes.
 * All queues not prefixed with `username_` are deleted every 5 minutes.
