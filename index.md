@@ -5,24 +5,6 @@ tagline:
 ---
 {% include JB/setup %}
 
-<div style="background-color: #ffcccc;">
-
-Following <a
-href="https://github.com/ghtorrent/ghtorrent.org/issues/32#issuecomment-189552452">this discussion</a> and considering the best interests of both GHTorrent, OSS
-developers and the research community, all access to GHTorrent data is suspended
-until a clear understanding of the legal implications of distributing data
-through the project has been obtained. A plan to resolve the issues raised will
-be communicated, hopefully soon.
-
-<br/>
-<br/>
-G.G.
-</div>
-
-
-<br/>
-<br/>
-<br/>
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
@@ -38,10 +20,11 @@ and their dependencies, exhaustively. It then stores the raw JSON responses to a
 database](relational.html).
 
 GHTorrent works in a distributed manner. A [RabbitMQ](http://www.rabbitmq.com/)
-message queue sits between the event mirroring and data retrieval phases,
-so that both can be run on a cluster of machines. Have a look at this
+message queue sits between the event mirroring and data retrieval phases, so
+that both can be run on a cluster of machines. Have a look at this
 [presentation](https://speakerdeck.com/gousiosg/mining-github-for-fun-and-profit)
-and read [this paper](http://gousios.gr/bibliography/GS12.html) if you want to know more. Here is the [source code](https://github.com/gousiosg/github-mirror).
+and read [this paper](http://gousios.gr/bibliography/GS12.html) if you want to
+know more. Here is the [source code](https://github.com/gousiosg/github-mirror).
 
 The project releases the data collected during that period as
 [downloadable archives](downloads.html).
