@@ -8,6 +8,13 @@ tagline:
 
 To obtain access, please send us your public key [as described here](services.html).
 
+```
+ssh -L 5672:streamer.ghtorrent.org:5672 ghtorrent@streamer.ghtorrent.org
+```
+
+This will create a local port 5672 to which you can connect your AMQP client.
+No shell is allocated for security reasons.
+
 ## Declaring queues
 
 Our queue server, [RabbitMQ](https://www.rabbitmq.com) implements the
