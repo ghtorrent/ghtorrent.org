@@ -41,6 +41,12 @@ and date(c.created_at) = date(now())
 group by u.country_code
 {% endhighlight %}
 
+
+*Update Mar 2016:* User personal data (emails and real names) are excluded
+from the downloaded dump, while configuration dissalows access to those
+fields for the online access services for the MySQL database.
+
+
 #### organization\_members
 Users that are members of an organization.
 
