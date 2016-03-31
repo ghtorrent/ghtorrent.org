@@ -7,7 +7,7 @@ tagline:
 ```{r preample, include=FALSE}
 
 #
-# (c) 2012 -- 2014 Georgios Gousios <gousiosg@gmail.com>
+# (c) 2012 -- 2016 Georgios Gousios <gousiosg@gmail.com>
 #
 # BSD licensed, see LICENSE in top level dir
 #
@@ -22,19 +22,22 @@ See here some reports for popular repositories:
 <a class="btn" href="/pullreq-perf/rails-rails/">Ruby on Rails</a>
 <a class="btn"  href="/pullreq-perf/ipython-ipython/">IPython</a>
 <a  class="btn" href="/pullreq-perf/angular-angular.js/">Angular.js</a>
-<a  class="btn" href="/pullreq-perf/joyent-node/">Node.js</a>
+<a  class="btn" href="/pullreq-perf/nodejs-node/">Node.js</a>
 <a  class="btn" href="/pullreq-perf/jquery-jquery/">JQuery</a>
-<a  class="btn" href="/pullreq-perf/mxcl-homebrew/">Homebrew</a>
+<a  class="btn" href="/pullreq-perf/Homebrew-homebrew/">Homebrew</a>
 <a  class="btn" href="/pullreq-perf/akka-akka/">Akka</a>
+<a  class="btn" href="/pullreq-perf/rstudio-shiny/">Shiny</a>
 </div>
 <div class="btn-toolbar">
 <a  class="btn" href="/pullreq-perf/mbostock-d3/">D3.js</a>
 <a  class="btn" href="/pullreq-perf/bartaz-impress.js/">impress.js</a>
-<a  class="btn" href="/pullreq-perf/mojombo-jekyll/">Jekyll</a>
+<a  class="btn" href="/pullreq-perf/jekyll-jekyll/">Jekyll</a>
 <a  class="btn" href="/pullreq-perf/django-django/">Django</a>
 <a  class="btn" href="/pullreq-perf/antirez-redis/">Redis</a>
 <a  class="btn" href="/pullreq-perf/bitcoin-bitcoin/">Bitcoin</a>
-<a  class="btn" href="/pullreq-perf/Netflix-RxJava/">RxJava</a>
+<a  class="btn" href="/pullreq-perf/ReactiveX-RxJava/">RxJava</a>
+<a  class="btn" href="/pullreq-perf/tensorflow-tensorflow/">Tensorflow</a>
+
 </div>
 
 <label for="projectSearch">Or search for project repository (e.g. akka-akka): </label>
@@ -74,25 +77,26 @@ Then, I added to this selection, the top 1000 repositories by number of stars
 as reported by the GHTorrent database. I also added the top 50 projects in
 terms of 
 [total contributions received](http://www.gousios.gr/blog/The-triumph-of-online-collaboration/).
-The actual list of projects can be found 
+The actual list of projects can be found
 [here](https://github.com/gousiosg/ghtorrent.org/blob/master/pullreq-perf/projects.txt) 
 or by clicking on the "Show all repos" button below.
 
 ### How did you build it?
 
 I used R to query GHTorrent's main MySQL database, then piped the results
-through [knitr](http://yihui.name/knitr/) templates which use 
+through [knitr](http://yihui.name/knitr/) templates which use
 [ggplot2](ggplot2.org/) for generating the nice plots.
-You can find the code [here](https://github.com/gousiosg/pullreqs/tree/master/R/report.Rmd):
+You can find the code [here](https://github.com/ghtorrent/ghtorrent.org/tree/master/pullreq-perf):
 
 ### My repository is not included!
 
 You can [send me an email](mailto:gousiosg@gmail.com) and I will make sure your
-repository will be included in the next round of report generation.
+repository will be included in the next round of report generation. You can
+also [edit this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/pullreq-perf/projects.txt) and send a pull request.
 
 ### The report for my project is just plain wrong!
 
-If you have time to explain to me what is wrong, I would appreciate if 
+If you have time to explain to me what is wrong, I would appreciate if
 [send me an email](mailto:gousiosg@gmail.com) and I will fix
 the issue.
 

@@ -13,11 +13,23 @@ GitHub.
 
 #### _What is GHTorrent?_
 
-#### _Why is GHTorrent named GHTorrent?_
+GHTorrent collects all information from the GitHub API and populates with it two
+databases: one with [raw data](mongo.html) and one with [linked
+entities](relational.html). Using this data, users can get insights just for
+their repositories or for the full state of OSS development on GitHub.
+
+GHTorrent has been extensively used by researchers, companies and OSS projects
+as a source of software process and product analytics.
 
 #### _Can I use GHTorrent for my research?_
 
-Absolutely!
+Absolutely! [Lots of
+researchers](https://scholar.google.gr/scholar?cites=11132126230347149781) have
+[done so](halloffame.html). You can [download](download.html) the database dumps
+or use the [online access services](services.html) to get access to the data.
+
+When using GHTorrent data for research or large scale repository analysis,
+please consider the perils reported in [this paper](http://gousios.gr/bibliography/KGBSGD15.html).
 
 #### _How is behind GHTorrent?_
 
@@ -27,6 +39,12 @@ Gousios](http://gousios.gr), with initial design support and ideas from
 ideas and support over time. Here is a (hopefuly not partial) list of them:
 
 Sebastian Bates, Derek Brown, Arie van Deursen, Daniel German, Bogdan Vasilescu
+
+Financial support has been provided by the following organizations:
+
+* TU Delft: purchace and running costs for initial servers (2012 -- late 2015)
+* Microsoft: donation of Azure tokens for running the project infrastructure
+  (late 2015 -- late 2016)
 
 ## How can I...?
 
@@ -43,20 +61,39 @@ the [downloads](downloads.html) page.
 
 ## Data processing
 
-#### _What types of privacy guarantees does GHTorrent offer?_
+### _What quality guarantees does GHTorrent offer?_
 
-GHTorrent collects publicly available data from the GitHub API. The
-guarantees it provides
+The GHTorrent data come as is with no quality guarantees. However, we are
+actively seeking to fix systematic (i.e. errors that are repeated across the
+whole dataset) data collection errors. Please [open an
+issue](https://github.com/gousiosg/github-mirror/issues) if you find one. As
+GHTorrent is essentially a data sync operation over unreliable networks,
+spurious inconsistencies such as (minor) holes in data collection are
+unavoidable.
 
-#### _How does GHTorrent handle my personal information?_
+### _I 've seen weird commit timestamps_
+
+Git records the commit timestamp on the developer's workstation. If the clock
+is missconfigured, timestamps will be weird. We have seen timestamps such
+as `0000-01-01 00:00` or `2034-12-31 23:59`. GitHub and GHTorrent do not
+process the timestamps in any way.
+
+## Ethical use
+
+### _What types of privacy guarantees does GHTorrent offer?_
+
+GHTorrent collects publicly available data from the GitHub API.
+
+### _How does GHTorrent handle my personal information?_
+
+By personal information, we mean data that identify a real person uniquely. In
+the context of GHTorrent, these are emails and real names.
 
 As of Mar 2016, GHTorrent does not distribute any personal information by
 default. Researchers whose research requires access to personal data
 can use [this form](pers-data.html) to obtain it.
 
-## Ethical use
-
-#### _Contacting users for surveys_
+### _Contacting users for surveys_
 
 (by @slang800)
 

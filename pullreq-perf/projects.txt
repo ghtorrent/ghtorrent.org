@@ -169,7 +169,7 @@ Connexions oer.exports
 Connexions webview
 Constellation taberareloo
 ContinuumIO Bokeh
-ContinuumIO blaze 
+ContinuumIO blaze
 ControlSystemStudio cs-studio
 Copia copia
 CorsixTH CorsixTH
@@ -524,7 +524,6 @@ NaturalNode natural
 Naxx13 BW2ita
 Netflix Hystrix
 Netflix Priam
-Netflix RxJava
 Netflix SimianArmy
 Netflix asgard
 Netflix astyanax
@@ -538,6 +537,7 @@ Nivekk KOS
 NixOS nixos
 NixOS nixpkgs
 NoamB sorcery
+nodejs node
 Normation rudder
 Normation rudder-packages
 Normation rudder-techniques
@@ -2741,7 +2741,6 @@ modxcms evolution
 modxcms revolution
 mojombo god
 mojombo grit
-mojombo jekyll
 mojombo toml
 molgenis molgenis
 molgenis molgenis-pipelines
@@ -2880,7 +2879,6 @@ musescore MuseScore
 musicbrainz picard
 mwarkentin lab
 mwaterfall MWPhotoBrowser
-mxcl homebrew
 mxe mxe
 mybb mybb
 mycozycloud cozy-home
