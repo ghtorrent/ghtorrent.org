@@ -50,6 +50,31 @@ Financial support has been provided by the following organizations:
 
 #### _...contribute to GHTorrent?_
 
+#### _... cite the GHTorrent data set?_
+
+Georgios Gousios: [The GHTorrent dataset and tool
+suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
+
+{%highlight text%}
+@inproceedings{Gousi13,
+  author = {Gousios, Georgios},
+  title = {The GHTorrent dataset and tool suite},
+  booktitle = {Proceedings of the 10th Working Conference on Mining Software
+    Repositories},
+  series = {MSR '13},
+  year = {2013},
+  isbn = {978-1-4673-2936-1},
+  location = {San Francisco, CA, USA},
+  pages = {233--236},
+  numpages = {4},
+  url = {http://dl.acm.org/citation.cfm?id=2487085.2487132},
+  acmid = {2487132},
+  publisher = {IEEE Press},
+  address = {Piscataway, NJ, USA},
+}
+{%endhighlight%}
+
+
 #### _...download the data?_
 
 You don't need to. GHTorrent offers a multitude of [online
