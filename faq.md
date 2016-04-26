@@ -61,7 +61,7 @@ the [downloads](downloads.html) page.
 
 ## Data processing
 
-### _What quality guarantees does GHTorrent offer?_
+#### _What quality guarantees does GHTorrent offer?_
 
 The GHTorrent data come as is with no quality guarantees. However, we are
 actively seeking to fix systematic (i.e. errors that are repeated across the
@@ -71,7 +71,7 @@ GHTorrent is essentially a data sync operation over unreliable networks,
 spurious inconsistencies such as (minor) holes in data collection are
 unavoidable.
 
-### _I 've seen weird commit timestamps_
+#### _I 've seen weird commit timestamps_
 
 Git records the commit timestamp on the developer's workstation. If the clock
 is missconfigured, timestamps will be weird. We have seen timestamps such
@@ -80,11 +80,11 @@ process the timestamps in any way.
 
 ## Ethical use
 
-### _What types of privacy guarantees does GHTorrent offer?_
+#### _What types of privacy guarantees does GHTorrent offer?_
 
 GHTorrent collects publicly available data from the GitHub API.
 
-### _How does GHTorrent handle my personal information?_
+#### _How does GHTorrent handle my personal information?_
 
 By personal information, we mean data that identify a real person uniquely. In
 the context of GHTorrent, these are emails and real names.
@@ -93,7 +93,7 @@ As of Mar 2016, GHTorrent does not distribute any personal information by
 default. Researchers whose research requires access to personal data
 can use [this form](pers-data.html) to obtain it.
 
-### _Contacting users for surveys_
+#### _Contacting users for surveys_
 
 (by @slang800)
 
