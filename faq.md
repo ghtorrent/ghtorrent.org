@@ -50,6 +50,8 @@ Financial support has been provided by the following organizations:
 
 #### _...contribute to GHTorrent?_
 
+#### _... cite the GHTorrent data set?_
+
 #### _...download the data?_
 
 You don't need to. GHTorrent offers a multitude of [online
