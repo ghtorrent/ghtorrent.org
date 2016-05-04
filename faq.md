@@ -46,6 +46,10 @@ Financial support has been provided by the following organizations:
 * Microsoft: donation of Azure tokens for running the project infrastructure
   (late 2015 -- late 2016)
 
+#### _How is GHTorrent different from Github Archive_
+
+[Github Archive](http://githubarchive.org) collects and stores the GitHub event stream. In addition to that, GHTorrent applies dependency based retrieval on all entities (e.g. commits, pull requests etc) that are linked from the events and stores the results in two databases: a raw data one (MongoDB) that stores the unprocessed responses from GitHub API and a relational one (MySQL) that stores links between the entities (e.g. commits are linked to projects). Using GHTorrent, developers can obtain an up-to-date, relational view of their project’s GitHub metadata, which can be used for answering questions regarding their project’s processes.
+
 ## How can I...?
 
 #### _...contribute to GHTorrent?_
