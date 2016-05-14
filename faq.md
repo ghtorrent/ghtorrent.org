@@ -46,13 +46,15 @@ Financial support has been provided by the following organizations:
 * Microsoft: donation of Azure tokens for running the project infrastructure
   (late 2015 -- late 2016)
 
-#### _How is GHTorrent different from Github Archive_
+#### _How is GHTorrent different from Github Archive?_
 
 [Github Archive](http://githubarchive.org) collects and stores the GitHub event stream. In addition to that, GHTorrent applies dependency based retrieval on all entities (e.g. commits, pull requests etc) that are linked from the events and stores the results in two databases: a raw data one (MongoDB) that stores the unprocessed responses from GitHub API and a relational one (MySQL) that stores links between the entities (e.g. commits are linked to projects). Using GHTorrent, developers can obtain an up-to-date, relational view of their project’s GitHub metadata, which can be used for answering questions regarding their project’s processes.
 
 ## How can I...?
 
 #### _...contribute to GHTorrent?_
+
+Please read the [contribution guide](contrib.html)
 
 #### _... cite the GHTorrent data set?_
 
@@ -77,7 +79,6 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
   address = {Piscataway, NJ, USA},
 }
 {%endhighlight%}
-
 
 #### _...download the data?_
 
@@ -121,6 +122,16 @@ the context of GHTorrent, these are emails and real names.
 As of Mar 2016, GHTorrent does not distribute any personal information by
 default. Researchers whose research requires access to personal data
 can use [this form](pers-data.html) to obtain it.
+
+### _How can I opt out?_
+
+We understand that being part of such a big dataset can have concequences for
+your online privacy. For this reason (and also to comply with legal data
+processing requirements), you can opt out data collection. If you want to
+opt out, please [send us an email](gousiosg@gmail.com).
+
+Opting out means that we will replace your email in the database with
+`no-spam@ghtorrent.org` and remove your real name.
 
 #### _Contacting users for surveys_
 

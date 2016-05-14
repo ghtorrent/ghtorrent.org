@@ -9,11 +9,8 @@ and third parties:
 
 * [Querying MongoDB](raw.html) programmatically
 * [Querying MySQL](/dblite/) through a web interface
+* [Querying MySQL](mysql.html) programmatically
 * [Streaming](streaming.html) of entries in MongoDB and MySQL
-
-Coming up:
-
-* [Querying MySQL](dblite) programmatically is currently in development.
 
 _The services are in kind and do not enail any quality or availability guarantee
 ._
@@ -23,12 +20,14 @@ _The services are in kind and do not enail any quality or availability guarantee
 All services are offered over SSH tunnelling. See at the page of each
 individual service for connection details.
 
-To obtain access to any of the services, [send us](mailto:gousiosg@gmail.com) your
-public SSH key (usually in `~/.ssh/id_rsa.pub`). To create one, use
-`ssh-keygen`. We need your SSH key *as a file attachment*, because various email
-clients tend to break key strings at arbitraty locations. We also require your
-SSH key to be on a single line. Here are some hints on how to generate GHTorrent
-compatible SSH keys:
+To obtain access to any of the services, [send us](mailto:gousiosg@gmail.com)
+your public SSH key (usually in `~/.ssh/id_rsa.pub`) or add it, using a pull
+request, to [this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/keys.txt).
+
+If you choose to send us an email, we need your SSH key *as a file attachment*,
+because various email clients tend to break key strings at arbitraty locations.
+To create a public/private key pair, use `ssh-keygen`. Here are some hints on
+how to generate GHTorrent compatible SSH keys:
 
 * **On Mac or Linux**: You can use the distribution provided `ssh-keygen`
   command and it should work fine.
@@ -63,8 +62,7 @@ Travis only uses a few requests per hour, even on busy projects.
 **If you do not want us to use your key any more, do let us know.** Do not
 just delete your key from GitHub as this will create holes in the data
 collection until we notice and remove your key. If this happens, we will also
-ban you indefinetely from the MongoDB access service.
+ban you indefinetely from the services (2 users have already been banned).
 
 At the moment, this is a request in kind. If demand continues to grow and supply
 of keys is not enough to keep up, we might turn this into an obligatory step.
-
