@@ -20,9 +20,9 @@ _The services are in kind and do not enail any quality or availability guarantee
 All services are offered over SSH tunnelling. See at the page of each
 individual service for connection details.
 
-To obtain access to any of the services, [send us](mailto:gousiosg@gmail.com)
-your public SSH key (usually in `~/.ssh/id_rsa.pub`) or add it, using a pull
-request, to [this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/keys.txt).
+To obtain access to any of the services, add your public SSH key 
+(usually in `~/.ssh/id_rsa.pub`), using a pull request, to 
+[this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/keys.txt).
 
 If you choose to send us an email, we need your SSH key *as a file attachment*,
 because various email clients tend to break key strings at arbitraty locations.
