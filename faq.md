@@ -108,11 +108,18 @@ is missconfigured, timestamps will be weird. We have seen timestamps such
 as `0000-01-01 00:00` or `2034-12-31 23:59`. GitHub and GHTorrent do not
 process the timestamps in any way.
 
-## Ethical use
+## Copyright and Privacy
+
+#### _Who owns the data that GHTorrent shares?_
+
+The copyright situation is very complicated; in essense, GitHub owns
+copyright to the data formats for the API responses, users own
+copyright of the content they create and GHTorrent has copyright on
+the GHTorrent MySQL database schema.
 
 #### _What types of privacy guarantees does GHTorrent offer?_
 
-GHTorrent collects publicly available data from the GitHub API.
+GHTorrent collects publicly available data from the GitHub API. 
 
 #### _How does GHTorrent handle my personal information?_
 
@@ -122,6 +129,13 @@ the context of GHTorrent, these are emails and real names.
 As of Mar 2016, GHTorrent does not distribute any personal information by
 default. Researchers whose research requires access to personal data
 can use [this form](pers-data.html) to obtain it.
+
+#### _Can I get more information?_
+
+Yes. Please read the following Slidedeck. If you are still in doubt,
+please contact us.
+
+<script async class="speakerdeck-embed" data-id="1c64fd1e7dfe4032aff246b2dd1195bf" data-ratio="0.6" src="//speakerdeck.com/assets/embed.js"></script>
 
 ### _How can I opt out?_
 
