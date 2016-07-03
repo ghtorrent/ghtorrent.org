@@ -11,8 +11,7 @@ As of Mar 2016, the GHTorrent project does not offer personal data
 you can request access to a file containing a mapping between
 logins and personal data.
 
-To access the file containing personal data, you will need to fill in
-the form below and [edit this page](https://github.com/ghtorrent/ghtorrent.org/blob/master/pers-data.md) to include the following details.
+To access the file containing personal data, you will need to [edit this page](https://github.com/ghtorrent/ghtorrent.org/blob/master/pers-data.md) to include the following details.
 When your pull request has been accepted, we will mail you the link
 to the data.
 
