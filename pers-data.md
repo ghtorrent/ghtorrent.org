@@ -48,6 +48,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Diomidis Spinellis, Professor, Athens University of Economics and Business, Greece,
+  <a href="dds@aueb.gr">dds@aueb.gr</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>July 1, 2016</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding commit practices of company employees.  Correlate projects with commits through git blame.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
