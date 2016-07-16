@@ -134,10 +134,11 @@ can use [this form](pers-data.html) to obtain it.
 
 Yes. Please read the following Slidedeck. If you are still in doubt,
 please contact us.
+<div style="width: 50%;margin-left:auto;margin-right:auto;">
+<script async class="speakerdeck-embed" data-id="1c64fd1e7dfe4032aff246b2dd1195bf" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
+</div>
 
-<script async class="speakerdeck-embed" data-id="1c64fd1e7dfe4032aff246b2dd1195bf" data-ratio="0.6" src="//speakerdeck.com/assets/embed.js"></script>
-
-### _How can I opt out?_
+#### _How can I opt out?_
 
 We understand that being part of such a big dataset can have concequences for
 your online privacy. For this reason (and also to comply with legal data
