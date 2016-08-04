@@ -43,7 +43,7 @@ GHTorrent needs contributions on the following fronts:
 * **API keys:** We can run multiple GHTorrent worker instances concurrently. To
 go over Github's API rate limit, we need multiple Github API keys provided by
 users.  If you use GHTorrent for your reseach, please consider [donating a
-key](raw.html).
+key](services.html).
 
 * **Linking and analysis:** GHTorrent currently only does limited analysis and
 linking withing the the dataset (user geolocation). There are many possibilities
