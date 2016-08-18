@@ -31,6 +31,14 @@ or use the [online access services](services.html) to get access to the data.
 When using GHTorrent data for research or large scale repository analysis,
 please consider the perils reported in [this paper](http://gousios.gr/bibliography/KGBSGD15.html).
 
+#### _Which license is GHTorrent distributed under?_
+
+ The GHTorrent dataset is distributed under a dual licensing scheme ([Creative Commons +](https://wiki.creativecommons.org/wiki/CCPlus)).
+
+For non-commercial uses (including, but not limited to, educational, research or personal uses), the dataset is distributed under the [CC-SA](https://creativecommons.org/licenses/by-sa/4.0/) license. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+
+For commercial uses, pleas [contact the maintainer](mailto:gousiosg@gmail.com) for more information.
+
 #### _How is behind GHTorrent?_
 
 GHTorrent was initially created and is currently maintained by [Georgios
@@ -48,7 +56,15 @@ Financial support has been provided by the following organizations:
 
 #### _How is GHTorrent different from Github Archive?_
 
-[Github Archive](http://githubarchive.org) collects and stores the GitHub event stream. In addition to that, GHTorrent applies dependency based retrieval on all entities (e.g. commits, pull requests etc) that are linked from the events and stores the results in two databases: a raw data one (MongoDB) that stores the unprocessed responses from GitHub API and a relational one (MySQL) that stores links between the entities (e.g. commits are linked to projects). Using GHTorrent, developers can obtain an up-to-date, relational view of their project’s GitHub metadata, which can be used for answering questions regarding their project’s processes.
+[Github Archive](http://githubarchive.org) collects and stores the GitHub event
+stream. In addition to that, GHTorrent applies dependency based retrieval on all
+entities (e.g. commits, pull requests etc) that are linked from the events and
+stores the results in two databases: a raw data one (MongoDB) that stores the
+unprocessed responses from GitHub API and a relational one (MySQL) that stores
+links between the entities (e.g. commits are linked to projects). Using
+GHTorrent, developers can obtain an up-to-date, relational view of their
+project’s GitHub metadata, which can be used for answering questions regarding
+their project’s processes.
 
 ## How can I...?
 
@@ -112,14 +128,14 @@ process the timestamps in any way.
 
 #### _Who owns the data that GHTorrent shares?_
 
-The copyright situation is very complicated; in essense, GitHub owns
-copyright to the data formats for the API responses, users own
-copyright of the content they create and GHTorrent has copyright on
-the GHTorrent MySQL database schema.
+The copyright situation is very complicated; in essense, GitHub owns copyright
+to the data formats for the API responses, users own copyright of the content
+they create and the GHTorrent creator has copyright on the GHTorrent database
+schemata.
 
 #### _What types of privacy guarantees does GHTorrent offer?_
 
-GHTorrent collects publicly available data from the GitHub API. 
+GHTorrent collects publicly available data from the GitHub API.
 
 #### _How does GHTorrent handle my personal information?_
 

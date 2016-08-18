@@ -15,6 +15,10 @@ represent the actual data generation dates.
 For those reasons, we recommend using the MongoDB data through our [query
 service](http://ghtorrent.org/raw.html).
 
+### Which is the applicable license?
+
+See [here](faq.html)
+
 ### MySQL database dumps
 <button type="button" class="btn btn-success">New!</button> As of MySQL dump
 `mysql-2015-09-25`, we are distributing CSV files (one file per table) instead
