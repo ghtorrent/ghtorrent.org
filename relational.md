@@ -80,7 +80,8 @@ latest date that the corresponding user or project has been created.
 *Update Nov 2014:* GitHub has disabled the API end point used to retrieve
 members to an organization. GHTorrent uses the `MemberEvent` event to
 approximate memberships, but this is not always accurate. You are thus advised
-to use heuristics (e.g. the  committers + mergers of pull) to calculate membership.
+to use heuristics (e.g. the  committers + mergers of pull) to calculate membership,
+such as the following:
 
 {% highlight sql %}
 --- Get active core team participants for the last 3 months
@@ -88,7 +89,7 @@ select distinct(u.login) as login
     from commits c, users u, project_commits pc, users u1, projects p
     where u.id = c.committer_id
       and u.fake is false
-      and pc.commit_id = c.commit_id
+      and pc.commit_id = c.id
       and pc.project_id = p.id
       and p.owner_id = u1.id
       and p.name = 'rails'
