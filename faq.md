@@ -105,6 +105,8 @@ the [downloads](downloads.html) page.
 
 #### _...use the data for my private project?_
 
+See the licensing information above.
+
 ## Data processing
 
 #### _What quality guarantees does GHTorrent offer?_
