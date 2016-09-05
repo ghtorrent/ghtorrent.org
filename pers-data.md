@@ -60,6 +60,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Tong WANG, Lecturer, University of Edinburgh
+  <a href="tong.wang@ed.ac.uk">tong.wang@ed.ac.uk</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>Aug. 30, 2016</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding Open Source software network, especially focus on the interaction between programming habitants and company employees</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
