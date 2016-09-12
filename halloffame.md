@@ -61,7 +61,7 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 The following people's contributions of GitHub OAuth API keys has allowed
 the data collection process to catch on with GitHub's 10x growth since the
 GHTorrent project started. If you would like to contribute and API key,
-please follow the process specified [here](raw.html).
+please follow the process specified [here](http://ghtorrent.org/services.html).
 
 [Bram Adams](http://mcis.polymtl.ca/bram.html),
 [Maryi Arciniegas Méndez](http://thechiselgroup.org/members/),

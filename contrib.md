@@ -13,7 +13,7 @@ request integrated.
 
 The first thing to do is to ensure that you have a working GHTorrent
 environment. To do so, please consult the top level
-[README.md](https://github.com/gousiosg/github-mirror/README.md) file with
+[README.md](https://github.com/gousiosg/github-mirror/blob/master/README.md) file with
 instructions on doing so.
 
 ## TODO list
@@ -28,7 +28,7 @@ Do you have a cool idea that will make GHTorrent 100x (or 0.01x) better? That's
 great!  We look forward to reviewing your pull requests! We however advise you
 to:
 
-1. Read the [open issue list](https://github.com/gousiosg/github-mirror)
+1. Read the [open issue list](https://github.com/gousiosg/github-mirror/issues)
 2. Contact the [GHTorrent mailing list](). The maintainers will help you
 implement your proposed feature as efficiently as possible and make sure
 that it does not conflict with any change currently planned.
