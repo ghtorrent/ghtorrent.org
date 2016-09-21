@@ -35,7 +35,7 @@ please consider the perils reported in [this paper](http://gousios.gr/bibliograp
 
  The GHTorrent dataset is distributed under a dual licensing scheme ([Creative Commons +](https://wiki.creativecommons.org/wiki/CCPlus)).
 
-For non-commercial uses (including, but not limited to, educational, research or personal uses), the dataset is distributed under the [CC-SA](https://creativecommons.org/licenses/by-sa/4.0/) license. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+For non-commercial uses (including, but not limited to, educational, research or personal uses), the dataset is distributed under the [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) license. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
 For commercial uses, pleas [contact the maintainer](mailto:gousiosg@gmail.com) for more information.
 
