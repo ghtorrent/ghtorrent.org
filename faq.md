@@ -18,7 +18,9 @@ databases: one with [raw data](mongo.html) and one with [linked
 entities](relational.html). Using this data, users can get insights just for
 their repositories or for the full state of OSS development on GitHub.
 
-GHTorrent has been extensively used by researchers, companies and OSS projects
+GHTorrent has been extensively used by 
+[researchers](halloffame.html),
+[companies](https://github.com/Microsoft/ghinsights) and OSS projects
 as a source of software process and product analytics.
 
 #### _Can I use GHTorrent for my research?_
@@ -42,11 +44,11 @@ For commercial uses, pleas [contact the maintainer](mailto:gousiosg@gmail.com) f
 #### _How is behind GHTorrent?_
 
 GHTorrent was initially created and is currently maintained by [Georgios
-Gousios](http://gousios.gr), with initial design support and ideas from
+Gousios](http://gousios.org), with initial design support and ideas from
 [Diomidis Spinellis](http://spinellis.gr). Several users have contributed code,
 ideas and support over time. Here is a (hopefuly not partial) list of them:
 
-Sebastian Bates, Derek Brown, Arie van Deursen, Daniel German, Bogdan Vasilescu
+Sebastian Bates, Derek Brown, Arie van Deursen, Daniel German, Jeff McAffer, Bogdan Vasilescu
 
 Financial support has been provided by the following organizations:
 
@@ -125,6 +127,10 @@ Git records the commit timestamp on the developer's workstation. If the clock
 is missconfigured, timestamps will be weird. We have seen timestamps such
 as `0000-01-01 00:00` or `2034-12-31 23:59`. GitHub and GHTorrent do not
 process the timestamps in any way.
+
+#### _My data is out of date_
+
+Github only creates events when an entity is created and not when it is updated or deleted. It is therefore not possible to be completely up-to-date with changes in users (e.g. updated location) and repositories (e.g. renames). GHTorrent tries its best to stay up to date by refreshing all users and all repos every X months. As the DB contains 12M+ users and 30M+ repos, this process may take a while and it can also fail due to spurious reasons.
 
 ## Copyright and Privacy
 
