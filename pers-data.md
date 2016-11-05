@@ -18,14 +18,13 @@ to the data.
 {%highlight html%}
 <dl>
   <dt>Researcher</dt>
-  <dd>List here your name, affiliation and contact details</dd>
+  <dd>Gias Uddin, PhD Candidate McGill University</dd>
 
   <dt>Date of request</dt>
-  <dd></dd>
+  <dd>Nov 4, 2016</dd>
 
   <dt>Intended use</dt>
-  <dd>Please be specific (e.g. "combining accounts with StackOverflow") as
-  to what the personal data will be used for. Generic descriptions (e.g. "research on GitHub") will be discarded.
+  <dd>To produce a small sample of github developers that are not in the do not contact list and that may be interested to provide feedback in my research.
   </dd>
 
 </dl>
