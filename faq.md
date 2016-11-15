@@ -41,7 +41,7 @@ For non-commercial uses (including, but not limited to, educational, research or
 
 For commercial uses, pleas [contact the maintainer](mailto:gousiosg@gmail.com) for more information.
 
-#### _How is behind GHTorrent?_
+#### _Who is behind GHTorrent?_
 
 GHTorrent was initially created and is currently maintained by [Georgios
 Gousios](http://gousios.org), with initial design support and ideas from
