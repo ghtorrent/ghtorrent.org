@@ -38,7 +38,7 @@ how to generate GHTorrent compatible SSH keys:
 ## Fair use
 
 To address GitHub's growth and GHTorrent's growing demands in API calls and the
-community's demand for betteemar, more rich data, we need more GitHub API keys. We
+community's demand for better, more rich data, we need more GitHub API keys. We
 therefore kindly ask you to send us a GitHub API key (a “personal access token”
 as Github describes it) with your SSH key.
 
