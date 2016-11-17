@@ -51,6 +51,11 @@ for expansion. One could for example think of linking commits to issues.
 
 * **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found.
 
+* **Donating:** We are trying to make GHTorrent a self-sustainable operation.
+If you are using GHTorrent, please consider donating (you can find a donation
+button on the left). All individual/companies that have donated will be listed
+in the Hall of Fame page.
+
 ### Why did you do it?
 
 We are doing research on [software repositories](http://www.msrconf.org/).
