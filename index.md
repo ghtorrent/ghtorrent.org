@@ -9,7 +9,7 @@ Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
 Follow [@ghtorrent](https://twitter.com/ghtorrent) on Twitter for project
-updates and [exiting research](halloffame.html) done with GHTorrent.
+updates and [exciting research](halloffame.html) done with GHTorrent.
 
 ##What does GHTorrent do?
 
