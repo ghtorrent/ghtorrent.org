@@ -73,6 +73,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Chris Chabot, Semmle.com
+  <a href="chabotc@semmle.com">chabotc@semmle.com</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>Dec. 11, 2016</dd>
+
+  <dt>Intended use</dt>
+  <dd>Normalizing and de-duplicating of author contribution data on our free for open source lgtm.com project, which provides source code analysis and fault detection, as well as showing coding velocity and quality per author and organization</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
