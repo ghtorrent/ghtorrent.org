@@ -1,6 +1,149 @@
----
-theme :
-  name : twitter
----
-{% include JB/setup %}
-{% include themes/twitter/default.html %}
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/Article">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.0/cosmo/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="syntax.css" type="text/css" rel="stylesheet" media="all">
+    <link href="local.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="shortcut icon" href="https://github.com/favicon.ico">
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          <ul class="nav" role="navigation">
+            <li><a href="/docs.html">Docs</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Downloads<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li><a href="/downloads.html">Downloads</a></li>
+              <li><a href="https://github.com/gousiosg/github-mirror">Source code</a></li>
+            </ul>
+            </li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li><a href="/services.html">Overview</a></li>
+              <li><a href="/dblite">MySQL web</a></li>
+              <li><a href="/mysql.html">MySQL</a></li>
+              <li><a href="/raw.html">MongoDB</a></li>
+              <li><a href="/streaming.html">Streaming</a></li>
+
+            </ul></li>
+
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visualizations<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li><a href="http://langpop.corger.nl/">Language Popularity</a></li>
+            </ul></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li><a href="/pullreq-perf/">Pull Request
+                performance</a></li>
+            </ul></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datasets<b class="caret"></b></a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+              <li><a href="/msr14.html">MSR 2014</a></li>
+              <li><a href="/vissoft14.html">VISSOFT 2014</a></li>
+              <li><a
+                href="https://github.com/gousiosg/pullreqs">Pull requests</a></li>
+              <li><a
+                href="http://travistorrent.testroots.org">TravisTorrent</a></li>
+            </ul></li>
+            <li><a href="/halloffame.html">Hall of Fame</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="page-header">
+            <iframe src="http://ghbtns.com/github-btn.html?user=gousiosg&repo=github-mirror&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe><br/>
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <br/>
+            <div class="g-plusone" data-size="medium"></div><br/>
+            <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a><br/>
+            <script type="text/javascript" src="http://en.reddit.com/buttonlite.js?i=1"></script>
+          </div>
+          <div>
+            Sponsors
+            <br/>
+            <br/>
+            <img src="/files/mslogo.png" class="img-responsive"
+            alt="Microsoft logo">
+            <br/>
+            <br/>
+            <img src="/files/rulogo.gif" class="img-responsive"
+            alt="Radboud University logo" width="100">
+            <br/>
+            <br/>
+            <img src="/files/tudelftlogo.png" class="img-responsive"
+            alt="TU Delft logo" width="100">
+          </div>
+          <div>
+            <br/>
+            Become a sponsor
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="PNTMMBP9UWUDN" />
+<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate" />
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+</form>
+          </div>
+        </div>
+        <div class="span10">
+          <div class="content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <!-- Place this tag after the last +1 button tag. -->
+    <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+       })();
+     </script>
+     <script>
+       (function(d, t) {
+         var g = d.createElement(t),
+         s = d.getElementsByTagName(t)[0];
+         g.src = '//hnbutton.appspot.com/static/hn.min.js';
+         s.parentNode.insertBefore(g, s);
+       }(document, 'script'));
+     </script>
+
+     <script type="text/javascript">
+
+       var _gaq = _gaq || [];
+       _gaq.push(['_setAccount', 'UA-38537159-1']);
+       _gaq.push(['_setDomainName', 'ghtorrent.org']);
+       _gaq.push(['_trackPageview']);
+
+       (function() {
+        var ga = document.createElement('script'); ga.type =
+        'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+        })();
+
+      </script>
+    </body>
+  </html>

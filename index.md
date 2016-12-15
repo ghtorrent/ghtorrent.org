@@ -3,7 +3,6 @@ layout: page
 title: The GHTorrent project
 tagline:
 ---
-{% include JB/setup %}
 
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
