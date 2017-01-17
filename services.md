@@ -39,14 +39,14 @@ how to generate GHTorrent compatible SSH keys:
 
 To address GitHub's growth and GHTorrent's growing demands in API calls and the
 community's demand for better, more rich data, we need more GitHub API keys. We
-therefore kindly ask you to send us a GitHub API key (a “personal access token”
-as Github describes it) with your SSH key.
+therefore kindly ask you to [send us](mailto:gousiosg@gmail.com) 
+a GitHub API key (a “personal access token” as Github describes it) along
+with your SSH key.
 
 The process to create a key is simple: First, go to the following URL (while
 logged in):
 
-[https://github.com/settings/tokens/new](https://github.com/settings/tokens/new
-)
+[https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
 
 deselect *all* checkboxes *except* from `public_repo`, set a token name and
 click on "Generate Token".
