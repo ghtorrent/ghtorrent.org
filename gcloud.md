@@ -6,9 +6,8 @@ tagline:
 
 GHTorrent can be accessed over Google Cloud services. To access the data
 requires you to have a Google Cloud account. Reasonable use is free of charge
-and [should no longer require a credit
-card](https://cloud.google.com/blog/big-data/2017/01/how-to-run-a-terabyte-of-google-bigquery-queries-each-month-without-a-credit-card). You
-can check what Google considers reasonable at any given moment
+and, in the case of BigQuery, it [should no longer require a credit
+card](https://cloud.google.com/blog/big-data/2017/01/how-to-run-a-terabyte-of-google-bigquery-queries-each-month-without-a-credit-card). (Pub/Sub still requires a credit card). You can check what Google considers reasonable at any given moment
 [here](https://cloud.google.com/pricing/free).
 
 * [Google BigQuery](https://bigquery.cloud.google.com/dataset/ghtorrent-bq:ght)
