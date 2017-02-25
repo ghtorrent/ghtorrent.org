@@ -17,15 +17,14 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Researcher</dt>
-  <dd>List here your name, affiliation and contact details</dd>
+  <dt>Master Student</dt>
+  <dd>Aditi Rawat, Masters Computer Science, Web Information Systems research group, EEMCS Faculty, Technical University, Delft. A.rawat@student.tudelft.nl</dd>
 
-  <dt>Date of request</dt>
+  <dt>23 February, 2017</dt>
   <dd></dd>
 
-  <dt>Intended use</dt>
-  <dd>Please be specific (e.g. "combining accounts with StackOverflow") as
-  to what the personal data will be used for. Generic descriptions (e.g. "research on GitHub") will be discarded.
+  <dt>Needed for Master Thesis</dt>
+  <dd>I am doing my master thesis on the topic 'personalised expetise recommendation in community question answering systems using data from multiple web collaborative platforms'. In order to do my analysis work, i need to combine github data with stackoverflow data and twitter data. Thus i require the email hash and other login details of all users. Kindly share the personal data with me. 
   </dd>
 
 </dl>
