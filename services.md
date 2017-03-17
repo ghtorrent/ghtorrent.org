@@ -23,6 +23,8 @@ individual service for connection details.
 To obtain access to any of the services, add your public SSH key
 (usually in `~/.ssh/id_rsa.pub`), using a pull request, to
 [this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/keys.txt).
+All pull requests are merged on Friday afternoon, so please wait a bit
+before firing a reminder email.
 
 To create a public/private key pair, use `ssh-keygen`. Here are some hints on
 how to generate GHTorrent compatible SSH keys:
