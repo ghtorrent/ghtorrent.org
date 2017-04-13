@@ -41,17 +41,17 @@ as nobody will post there).
 {% highlight ruby%}
 require 'bunny'
 conn = Bunny.new(:host => '127.0.0.1', :port => 5672,
-                 :username => 'tbd', :password => 'tbd')
+                 :username => 'streamer', :password => 'streamer')
 conn.start
 ch  = conn.create_channel
-exchange = ch.topic('ght-streams')
+exchange = ch.topic('ght-streams', :durable => true)
 {% endhighlight%}
 
 ### Declaring a queue
 
 You can declare as many queues as you want (within reasonable limits). To
 make the queue unique, we ask you to prefix your queue name with your
-username (e.g. `gousiosg_events`).
+username (e.g. `gousiosg_queue`).
 
 {% highlight ruby%}
 q = ch.queue(`gousiosg_queue`, :auto_delete => true)
