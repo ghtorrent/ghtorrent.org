@@ -17,14 +17,14 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Master Student</dt>
-  <dd>Aditi Rawat, Masters Computer Science, Web Information Systems research group, EEMCS Faculty, Technical University, Delft. A.rawat@student.tudelft.nl</dd>
+  <dt>Undergraduate</dt>
+  <dd>Davide Primiceri, Student Computer Science, University of Bari, Italy. d.primiceri@studenti.uniba.it</dd>
 
-  <dt>23 February, 2017</dt>
+  <dt>21 April, 2017</dt>
   <dd></dd>
 
-  <dt>Needed for Master Thesis</dt>
-  <dd>I am doing my master thesis on the topic 'personalised expetise recommendation in community question answering systems using data from multiple web collaborative platforms'. In order to do my analysis work, i need to combine github data with stackoverflow data and twitter data. Thus i require the email hash and other login details of all users. Kindly share the personal data with me. 
+  <dt>Needed for Degree Thesis</dt>
+  <dd>I am doing my degree thesis on the topic 'Evaluating the effects of multitasking among the open source projects of GitHub'. In order to do my analysis work, i need to combine GitHub data with Travis data. Thus i require the name and other login details of all users. Kindly share the personal data with me. 
   </dd>
 
 </dl>
