@@ -17,15 +17,14 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Undergraduate</dt>
-  <dd>Davide Primiceri, Student Computer Science, University of Bari, Italy. d.primiceri@studenti.uniba.it</dd>
+  <dt>Work Title</dt>
+  <dd>Name and Affiliation</dd>
 
-  <dt>21 April, 2017</dt>
+  <dt>Date of request</dt>
   <dd></dd>
 
-  <dt>Needed for Degree Thesis</dt>
-  <dd>I am doing my degree thesis on the topic 'Evaluating the effects of multitasking among the open source projects of GitHub'. In order to do my analysis work, i need to combine GitHub data with Travis data. Thus i require the name and other login details of all users. Kindly share the personal data with me. 
-  </dd>
+  <dt>Why do you need the personal data?</dt>
+  <dd></dd>
 
 </dl>
 {%endhighlight%}
@@ -82,6 +81,20 @@ to the data.
 
   <dt>Intended use</dt>
   <dd>Normalizing and de-duplicating of author contribution data on our free for open source lgtm.com project, which provides source code analysis and fault detection, as well as showing coding velocity and quality per author and organization</dd>
+
+</dl>
+
+<dl>
+  <dt>Undergraduate</dt>
+  <dd>Davide Primiceri, Student Computer Science, University of Bari, Italy.
+  <a href="mailto:d.primiceri@studenti.uniba.it">d.primiceri@studenti.uniba.it</a></dd>
+
+  <dt>21 April, 2017</dt>
+  <dd></dd>
+
+  <dt>Needed for Degree Thesis</dt>
+  <dd>I am doing my degree thesis on the topic 'Evaluating the effects of multitasking among the open source projects of GitHub'. In order to do my analysis work, i need to combine GitHub data with Travis data. Thus i require the name and other login details of all users. Kindly share the personal data with me.
+  </dd>
 
 </dl>
 
