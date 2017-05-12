@@ -3139,6 +3139,7 @@ paramiko paramiko
 pardom ActiveAndroid
 parrot parrot
 pat thinking-sphinx
+patrikhuber eos
 paulasmuth fnordmetric
 pauldix feedzirra
 paulirish infinite-scroll
