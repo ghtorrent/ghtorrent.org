@@ -98,6 +98,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Bogdan Vasilescu, Assistant Professor, School of Computer Science, Carnegie Mellon University
+  <a href="vasilescu@cmu.edu">vasilescu@cmu.edu</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>June 1, 2017</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding gender diversity in GitHub teams.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
