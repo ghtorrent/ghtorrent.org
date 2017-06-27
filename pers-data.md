@@ -17,14 +17,14 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Work Title</dt>
-  <dd>Name and Affiliation</dd>
+  <dt>Researcher</dt>
+  <dd>Omar Elazhary, University of Victoria, Canada</dd>
 
   <dt>Date of request</dt>
-  <dd></dd>
+  <dd>27/06/2017</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd></dd>
+  <dd>I am currently conducting research into how software developers use tools in tandem with their software repository providers' platforms (i.e. integrations). I'm looking into what role those tools play when it comes to software development and evaluation activities.</dd>
 
 </dl>
 {%endhighlight%}
