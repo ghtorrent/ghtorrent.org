@@ -111,6 +111,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Graduate Student</dt>
+  <dd>Farhana Sarker, Computer Science Graduate Student, College of Engineering, University of California Davis
+  <a href="fasarker@ucdavis.edu">fasarker@ucdavis.edu</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>September 16, 2017</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding multitasking in GitHub teams.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
