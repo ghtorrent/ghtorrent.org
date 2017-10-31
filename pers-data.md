@@ -124,6 +124,17 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Guanliang Chen, PhD candidate, Web Information Systems group, EEMCS, TU Delft <a href="guanliang.chen@tudelft.nl">guanliang.chen@tudelft.nl</a> </dd>
+  
+  <dt>Date of request</dt>
+  <dd>Oct 30, 2017</dd>
+  
+  <dt>Intended use</dt>
+  <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
