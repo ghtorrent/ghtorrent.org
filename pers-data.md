@@ -17,14 +17,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Work Title</dt>
-  <dd>Name and Affiliation</dd>
+  <dt>Postdoctoral Researcher</dt>
+  <dd>Ayushi Rastogi, UC Irvine
+  <a href="ayushir@ics.uci.edu">ayushir@ics.uci.edu</a></dd>
 
   <dt>Date of request</dt>
-  <dd></dd>
+  <dd>November 30, 2017</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd></dd>
+  <dd> My research focus is empirical software engineering, with a particular interest in human traits, team performance, and collaboration patterns. </dd>
 
 </dl>
 {%endhighlight%}
