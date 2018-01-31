@@ -136,6 +136,21 @@ to the data.
   <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
 </dl>
 
+
+<dl>
+  <dt>PhD Student</dt>
+  <dd>Harsh Ketkar, University of Michigan
+  <a href="hketkar@umich.edu">hketkar@umich.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>January 18, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd> I am researching how contribution patterns of individual developers change over time and across platforms.</dd>
+
+</dl>
+{%endhighlight%}
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
