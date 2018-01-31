@@ -17,15 +17,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Postdoctoral Researcher</dt>
-  <dd>Ayushi Rastogi, UC Irvine
-  <a href="ayushir@ics.uci.edu">ayushir@ics.uci.edu</a></dd>
+  <dt></dt>
+  <dd> Job Title
+  <a href="email">email</a></dd>
 
   <dt>Date of request</dt>
-  <dd>November 30, 2017</dd>
+  <dd>The actual date</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> My research focus is empirical software engineering, with a particular interest in human traits, team performance, and collaboration patterns. </dd>
+  <dd> Provide an explanation </dd>
 
 </dl>
 {%endhighlight%}
@@ -128,14 +128,26 @@ to the data.
 <dl>
   <dt>Researcher</dt>
   <dd>Guanliang Chen, PhD candidate, Web Information Systems group, EEMCS, TU Delft <a href="guanliang.chen@tudelft.nl">guanliang.chen@tudelft.nl</a> </dd>
-  
+
   <dt>Date of request</dt>
   <dd>Oct 30, 2017</dd>
-  
+
   <dt>Intended use</dt>
   <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
 </dl>
 
+<dl>
+  <dt>Postdoctoral Researcher</dt>
+  <dd>Ayushi Rastogi, UC Irvine
+  <a href="ayushir@ics.uci.edu">ayushir@ics.uci.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>November 30, 2017</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd> My research focus is empirical software engineering, with a particular interest in human traits, team performance, and collaboration patterns. </dd>
+
+</dl>
 
 <dl>
   <dt>PhD Student</dt>
@@ -149,7 +161,6 @@ to the data.
   <dd> I am researching how contribution patterns of individual developers change over time and across platforms.</dd>
 
 </dl>
-{%endhighlight%}
 
 ## Disclaimer
 
