@@ -1,16 +1,16 @@
 ---
 layout: page
-title: MSR 2014 Mining Challenge Dataset 
-tagline: 
+title: MSR 2014 Mining Challenge Dataset
+tagline:
 ---
 ### Versions
 
 After the initial release of the dataset, the users found errors and missing
 features. The list of versions along with the fixes is presented in the table
-below. Only the latest version is offered for download. 
+below. Only the latest version is offered for download.
 
 *You are advised to always run queries against the newest version.* If you have already downloaded an older version and the described fix does not
-affect your experiment, you could skip the update. 
+affect your experiment, you could skip the update.
 
 <table class="table table-hover table-condensed">
   <thead>
@@ -19,7 +19,7 @@ affect your experiment, you could skip the update.
       <th>Release date</th>
       <th>Fixed error</th>
   </tr>
-  </thead> 
+  </thead>
   <tbody>
   <tr>
       <td>1.3</td>
@@ -59,8 +59,8 @@ information is in it.
 
 Similarly to GHTorrent itself, the MSR challenge dataset comes in two flavours:
 
-* A [MongoDB database dump](https://ghtstorage.blob.core.windows.net/downloads/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](mongo.html).
-* A [MySQL database dump](https://ghtstorage.blob.core.windows.net/downloads/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](relational.html).
+* A [MongoDB database dump](http://ghtorrent-downloads.ewi.tudelft.nl/datasets/msr14-mongo.tar.gz) containing the results of querying the Github API. See [format here](mongo.html).
+* A [MySQL database dump](http://ghtorrent-downloads.ewi.tudelft.nl/datasets/msr14-mysql.gz) containing a queriable version of important fields extracted from the raw data. See [schema here](relational.html).
 
 The included projects are the following:
 
@@ -226,11 +226,10 @@ of RAM. Your mileage may vary, but relatively new systems with more than 4GB RAM
 Not necessarily. The MySQL database can readily cover many aspects of activity
 on Github. Perhaps the only reason to use the MongoDB dump is to analyse commit contents, branches affected by pull requests or milestones, which are not included in MySQL.
 
-#### How can I ask a question about the dataset? 
+#### How can I ask a question about the dataset?
 
 Your question and the potential answer might be useful for other people as well,
 so please use the form below. *Please note that I will not answer
 questions sent to my email.*
 
 {% include comments.html%}
-    
