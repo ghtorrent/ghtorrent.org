@@ -162,6 +162,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Emerson Murphy-Hill, North Carolina State University, 
+  <a href="emerson@csc.ncsu.edu">emerson@csc.ncsu.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>April 24, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will use email addresses to cross-reference GitHub accounts with social media accounts.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
