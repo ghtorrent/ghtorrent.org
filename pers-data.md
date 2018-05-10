@@ -17,15 +17,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dt>researcher</dt>
+  <dd>Kuljit Kaur Chahal, Assistant Prof., Guru Nanak Dev University, Amritsar, india, 
+  <a href="uljitchahal.cse@gndu.ac.in">kuljitchahal.cse@gndu.ac.in</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>May 10, 2018</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> research focus on code quality and composition of developer population on github</dd>
 
 </dl>
 {%endhighlight%}
