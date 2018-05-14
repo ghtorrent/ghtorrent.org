@@ -36,9 +36,11 @@ The following examples are in Ruby.
 Assuming your connection works as described above, you should have port
 5672 listening on localhost. You should connect and define the `ght-streams`
 exchange (if you define other exchnages, you will receive no messages
-as nobody will post there).
+as there is no script posting to them).
 
 {% highlight ruby%}
+#!/usr/bin/env ruby
+
 require 'bunny'
 conn = Bunny.new(:host => '127.0.0.1', :port => 5672,
                  :username => 'streamer', :password => 'streamer')
@@ -51,10 +53,12 @@ exchange = ch.topic('ght-streams', :durable => true)
 
 You can declare as many queues as you want (within reasonable limits). To
 make the queue unique, we ask you to prefix your queue name with your
-username (e.g. `gousiosg_queue`).
+username (e.g. `gousiosg_queue`). You should also make your queue
+non persistent, to avoid consuming server resouces when your program
+finishes.
 
 {% highlight ruby%}
-q = ch.queue(`gousiosg_queue`, :auto_delete => true)
+q = ch.queue("gousiosg_queue", :auto_delete => true)
 {% endhighlight%}
 
 ### Binding queues to routing keys
@@ -64,7 +68,7 @@ This allows clients to declare queues that selectively receive only
 the messages they are interested into. The routing key is structured as
 follows:
 
-{% highlight ruby%}
+{% highlight%}
 prefix.{entity|event}.action
 {% endhighlight%}
 
@@ -103,7 +107,7 @@ the `prefix`. The permitted values are the following:
 `teamadd`,
 `watch`
 
-* For `ent` prefixes, it is the name of the MongoDB collection that was updated. One of: 
+* For `ent` prefixes, it is the name of the MongoDB collection that was updated. One of:
 `commit_comments`,
 `commits`,
 `followers`,
@@ -133,13 +137,13 @@ Let's see some example routing keys:
 
 * `evt.repos.insert`: This will retrieve all new inserts to the `repos`
 collection
-* `evt.download.*`: This will retrieve all download events
-* `ent.*.update`: This will retrieve all updates
+* `evt.fork.*`: This will retrieve all fork events
+* `ent.*.update`: This will retrieve all updates on MongoDB collections
 * `*.*.insert`: This will retrieve all new events and all MongoDB inserts
 
 {% highlight ruby%}
-q.bind(amqp.exchange, :routing_key => 'evt.gist.*')
-q.subscribe do |delivery_info, properties, payload|
+q.bind(exchange, :routing_key => "evt.fork.*")
+q.subscribe do |delivery_info, metadata, payload|
   puts "#{delivery_info.routing_key}: #{payload}"
 end
 {% endhighlight %}
