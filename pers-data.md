@@ -175,6 +175,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Graduate Student</dt>
+  <dd>Filipe Falcão, Federal University of Alagoas, 
+  <a href="filipebatista@ic.ufal.br">filipebatista@ic.ufal.br</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>May 29, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will replicate studies that use GHTorrent and require the email addresses. I will also employ a email unification strategy.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
