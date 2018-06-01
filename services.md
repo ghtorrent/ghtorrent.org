@@ -12,7 +12,7 @@ and third parties:
 * [Querying MySQL](mysql.html) programmatically
 * [Streaming](streaming.html) of entries in MongoDB and MySQL
 
-_The services are in kind and do not enail any quality or availability guarantee
+_The services are in kind and do not entail any quality or availability guarantee
 ._
 
 ## Obtaining access
@@ -20,9 +20,11 @@ _The services are in kind and do not enail any quality or availability guarantee
 All services are offered over SSH tunnelling. See at the page of each
 individual service for connection details.
 
-To obtain access to any of the services, add your public SSH key 
-(usually in `~/.ssh/id_rsa.pub`), using a pull request, to 
+To obtain access to any of the services, add your public SSH key
+(usually in `~/.ssh/id_rsa.pub`), using a pull request, to
 [this file](https://github.com/ghtorrent/ghtorrent.org/blob/master/keys.txt).
+All pull requests are merged on Friday afternoon, so please wait a bit
+before firing a reminder email.
 
 To create a public/private key pair, use `ssh-keygen`. Here are some hints on
 how to generate GHTorrent compatible SSH keys:
@@ -38,15 +40,14 @@ how to generate GHTorrent compatible SSH keys:
 ## Fair use
 
 To address GitHub's growth and GHTorrent's growing demands in API calls and the
-community's demand for betteemar, more rich data, we need more GitHub API keys. We
-therefore kindly ask you to send us a GitHub API key (a “personal access token”
-as Github describes it) with your SSH key.
+community's demand for better, more rich data, we need more GitHub API keys. We
+therefore kindly ask you to [send us](mailto:gousiosg@gmail.com)
+a GitHub API key (a “personal access token” as Github describes it).
 
 The process to create a key is simple: First, go to the following URL (while
 logged in):
 
-[https://github.com/settings/tokens/new](https://github.com/settings/tokens/new
-)
+[https://github.com/settings/tokens/new](https://github.com/settings/tokens/new)
 
 deselect *all* checkboxes *except* from `public_repo`, set a token name and
 click on "Generate Token".

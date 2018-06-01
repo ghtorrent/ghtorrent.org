@@ -4,6 +4,16 @@ title: Hall of Fame
 tagline:
 ---
 
+### Donations
+
+* [17 Nov 2015] Microsoft donated $98,000 in Azure credits
+* [30 Oct 2016] Google donated $1000 in Google Cloud credits
+
+The project would also like to thank the anonymous donors for their
+generocity. GHTorrent will become a better project thanks to you!
+
+### Papers using GHTorrent
+
 This list is a subset of researchers who have used GHTorrent for research or
 teaching. If you are a user of the dataset, please consider adding your details.
 You can do it using the following simple steps:
@@ -54,7 +64,6 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 * [Kelly Blincoe](http://thesegalgroup.org/people/kelly-blincoe): Research on Implicit Coordination and its impact on productivity.
 * [Eirini Kalliamvakou](http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
   1. {% reference KGBSGD14 %}
-
 
 ### API keys contributors
 

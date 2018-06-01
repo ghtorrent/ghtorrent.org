@@ -17,16 +17,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt>Researcher</dt>
-  <dd>List here your name, affiliation and contact details</dd>
+  <dt></dt>
+  <dd> Job Title
+  <a href="email">email</a></dd>
 
   <dt>Date of request</dt>
-  <dd></dd>
+  <dd>The actual date</dd>
 
-  <dt>Intended use</dt>
-  <dd>Please be specific (e.g. "combining accounts with StackOverflow") as
-  to what the personal data will be used for. Generic descriptions (e.g. "research on GitHub") will be discarded.
-  </dd>
+  <dt>Why do you need the personal data?</dt>
+  <dd> Provide an explanation </dd>
 
 </dl>
 {%endhighlight%}
@@ -70,6 +69,109 @@ to the data.
 
   <dt>Intended use</dt>
   <dd>Research regarding Open Source software network, especially focus on the interaction between programming habitants and company employees</dd>
+
+</dl>
+
+<dl>
+  <dt>Researcher</dt>
+  <dd>Chris Chabot, Semmle.com
+  <a href="chabotc@semmle.com">chabotc@semmle.com</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>Dec. 11, 2016</dd>
+
+  <dt>Intended use</dt>
+  <dd>Normalizing and de-duplicating of author contribution data on our free for open source lgtm.com project, which provides source code analysis and fault detection, as well as showing coding velocity and quality per author and organization</dd>
+
+</dl>
+
+<dl>
+  <dt>Undergraduate</dt>
+  <dd>Davide Primiceri, Student Computer Science, University of Bari, Italy.
+  <a href="mailto:d.primiceri@studenti.uniba.it">d.primiceri@studenti.uniba.it</a></dd>
+
+  <dt>21 April, 2017</dt>
+  <dd></dd>
+
+  <dt>Needed for Degree Thesis</dt>
+  <dd>I am doing my degree thesis on the topic 'Evaluating the effects of multitasking among the open source projects of GitHub'. In order to do my analysis work, i need to combine GitHub data with Travis data. Thus i require the name and other login details of all users. Kindly share the personal data with me.
+  </dd>
+
+</dl>
+
+<dl>
+  <dt>Researcher</dt>
+  <dd>Bogdan Vasilescu, Assistant Professor, School of Computer Science, Carnegie Mellon University
+  <a href="vasilescu@cmu.edu">vasilescu@cmu.edu</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>June 1, 2017</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding gender diversity in GitHub teams.</dd>
+
+</dl>
+
+<dl>
+  <dt>Graduate Student</dt>
+  <dd>Farhana Sarker, Computer Science Graduate Student, College of Engineering, University of California Davis
+  <a href="fasarker@ucdavis.edu">fasarker@ucdavis.edu</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>September 16, 2017</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding multitasking in GitHub teams.</dd>
+
+</dl>
+
+<dl>
+  <dt>Researcher</dt>
+  <dd>Guanliang Chen, PhD candidate, Web Information Systems group, EEMCS, TU Delft <a href="guanliang.chen@tudelft.nl">guanliang.chen@tudelft.nl</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>Oct 30, 2017</dd>
+
+  <dt>Intended use</dt>
+  <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
+</dl>
+
+<dl>
+  <dt>Postdoctoral Researcher</dt>
+  <dd>Ayushi Rastogi, UC Irvine
+  <a href="ayushir@ics.uci.edu">ayushir@ics.uci.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>November 30, 2017</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd> My research focus is empirical software engineering, with a particular interest in human traits, team performance, and collaboration patterns. </dd>
+
+</dl>
+
+<dl>
+  <dt>PhD Student</dt>
+  <dd>Harsh Ketkar, University of Michigan
+  <a href="hketkar@umich.edu">hketkar@umich.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>January 18, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd> I am researching how contribution patterns of individual developers change over time and across platforms.</dd>
+
+</dl>
+
+<dl>
+  <dt>Researcher</dt>
+  <dd>Emerson Murphy-Hill, North Carolina State University, 
+  <a href="emerson@csc.ncsu.edu">emerson@csc.ncsu.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>April 24, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will use email addresses to cross-reference GitHub accounts with social media accounts.</dd>
 
 </dl>
 

@@ -3,13 +3,12 @@ layout: page
 title: The GHTorrent project
 tagline:
 ---
-{% include JB/setup %}
 
 Welcome to the GHTorrent project, an effort to create a scalable, queriable,
 offline mirror of data offered through the [Github REST API](http://developer.github.com).
 
 Follow [@ghtorrent](https://twitter.com/ghtorrent) on Twitter for project
-updates and [exiting research](halloffame.html) done with GHTorrent.
+updates and [exciting research](halloffame.html) done with GHTorrent.
 
 ##What does GHTorrent do?
 
@@ -50,6 +49,11 @@ linking withing the the dataset (user geolocation). There are many possibilities
 for expansion. One could for example think of linking commits to issues.
 
 * **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found.
+
+* **Donating:** We are trying to make GHTorrent a self-sustainable operation.
+If you are using GHTorrent, please consider donating (you can find a donation
+button on the left). All individual/companies that have donated will be listed
+in the Hall of Fame page.
 
 ### Why did you do it?
 

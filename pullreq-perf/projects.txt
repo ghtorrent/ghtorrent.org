@@ -3139,6 +3139,7 @@ paramiko paramiko
 pardom ActiveAndroid
 parrot parrot
 pat thinking-sphinx
+patrikhuber eos
 paulasmuth fnordmetric
 pauldix feedzirra
 paulirish infinite-scroll
@@ -3976,6 +3977,7 @@ uis-dat320-fall2014 lab1
 ukhas habitat
 umbraco Umbraco-CMS
 umbraco Umbraco4Docs
+umbraco UmbracoDocs
 ummjackson dogecoin-resources
 unbit uwsgi
 unbit uwsgi-docs

@@ -3,7 +3,6 @@ layout: page
 title: Lean Request Results
 group: navigation
 ---
-{% include JB/setup %}
 
 <script>
 
@@ -72,7 +71,7 @@ $(document).ready(function() {
   });
 
   function results(data, status, xhr) {
-    
+
     function idGen() {
       return (Math.random() + 1).toString(36).substr(2, 5);
     }

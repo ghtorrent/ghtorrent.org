@@ -18,7 +18,7 @@ databases: one with [raw data](mongo.html) and one with [linked
 entities](relational.html). Using this data, users can get insights just for
 their repositories or for the full state of OSS development on GitHub.
 
-GHTorrent has been extensively used by 
+GHTorrent has been extensively used by
 [researchers](halloffame.html),
 [companies](https://github.com/Microsoft/ghinsights) and OSS projects
 as a source of software process and product analytics.
@@ -39,7 +39,8 @@ please consider the perils reported in [this paper](http://gousios.gr/bibliograp
 
 For non-commercial uses (including, but not limited to, educational, research or personal uses), the dataset is distributed under the [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) license. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
-For commercial uses, pleas [contact the maintainer](mailto:gousiosg@gmail.com) for more information.
+For commercial uses, please [contact the maintainer](mailto:gousiosg@gmail.com) for more information. Usually, a sizable donation to the project will be enough
+to grant you full access.
 
 #### _Who is behind GHTorrent?_
 
@@ -72,7 +73,7 @@ their project’s processes.
 
 #### _...contribute to GHTorrent?_
 
-Please read the [contribution guide](contrib.html)
+Please read the [contribution guide](contrib.html).
 
 #### _... cite the GHTorrent data set?_
 

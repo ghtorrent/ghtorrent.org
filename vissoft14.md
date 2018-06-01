@@ -1,11 +1,11 @@
 ---
 layout: page
-title: VISSOFT 2014 Challenge Dataset 
-tagline: 
+title: VISSOFT 2014 Challenge Dataset
+tagline:
 ---
 ### Versions
 
-*You are advised to always run queries against the newest version.* 
+*You are advised to always run queries against the newest version.*
 
 <table class="table table-hover table-condensed">
   <thead>
@@ -14,7 +14,7 @@ tagline:
       <th>Release date</th>
       <th>Fixed error</th>
   </tr>
-  </thead> 
+  </thead>
   <tbody>
     <tr>
       <td>1.0</td>
@@ -39,22 +39,22 @@ Similarly to GHTorrent itself, the VISSOFT challenge dataset comes in two flavou
 
 ### Importing and using
 
-The following instructions assume an OSX or Linux based host, on which 
+The following instructions assume an OSX or Linux based host, on which
 you have a running MongoDB or/and MySQL instance.
 
 {%highlight bash%}
 # Download and extract
-$ wget https://ghtstorage.blob.core.windows.net/downloads/vissoft14-01032014.tar.gz
-$ du -b vissoft14-01032014.tar.gz 
+$ wget http://ghtorrent-downloads.ewi.tudelft.nl/datasets/vissoft14-01032014.tar.gz
+$ du -b vissoft14-01032014.tar.gz
 49178639  vissoft14-01032014.tar.gz
-$ md5sum vissoft14-01032014.tar.gz 
+$ md5sum vissoft14-01032014.tar.gz
 4928efb679a0dc8254924d56760d65ec  vissoft14-01032014.tar.gz
-$ tar zxvf vissoft14-01032014.tar.gz 
+$ tar zxvf vissoft14-01032014.tar.gz
 $ cd vissoft14
-$ du -b 
+$ du -b
 351024865
 
-# MongoDB import 
+# MongoDB import
 $ ls *.bson|while read dump; do mongorestore -d vissoft14 $dump; done
 $ mongo vissoft14
 mongo> db.commits.count()
@@ -68,7 +68,7 @@ mysql > create user 'vissoft14'@'localhost' identified by 'vissoft14';
 mysql> create database vissoft14;
 mysql> grant all privileges on vissoft14.* to vissoft14@'localhost';
 mysql> flush privileges;
-mysql> ^D 
+mysql> ^D
 $ cat mysql.sql |mysql -u vissoft14 -p vissoft14
 $ mysql -u vissoft14 -p vissoft14
 mysql> select count(*) from commits;
@@ -98,11 +98,10 @@ of RAM. Your mileage may vary, but relatively new systems with more than 4GB RAM
 Not necessarily. The MySQL database can readily cover many aspects of activity
 on Github. Perhaps the only reason to use the MongoDB dump is to analyse commit contents, branches affected by pull requests or milestones, which are not included in MySQL.
 
-#### How can I ask a question about the dataset? 
+#### How can I ask a question about the dataset?
 
 Your question and the potential answer might be useful for other people as
 well, so please use the form below. *Please note that I (Georgios Gousios) will
 not answer questions sent to my email.*
 
 {% include comments.html%}
-    

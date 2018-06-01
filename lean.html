@@ -1,20 +1,18 @@
 ---
 layout: page
-title: Lean GHTorrent 
-header: Lean GHTorrent 
+title: Lean GHTorrent
+header: Lean GHTorrent
 group: navigation
 ---
-{% include JB/setup %}
-
 
 Lean GHTorrent allows researchers to get a slice of the full GHTorrent
-dataset 
+dataset
 
 <script>
 
 function checkRepos(repos) {
   var repoArr = repos.split(/\r?\n/).map(function(x){return x.trim();});
-  
+
   return repoArr.reduce(function(acc, project) {
     var owner = project.split("/")[0];
     var repo = project.split("/")[1];
@@ -29,7 +27,7 @@ function checkRepos(repos) {
       return acc.concat([project]);
     }
 
-    if (!/^[0-9a-zA-Z\-_.]+$/.test(repo) || 
+    if (!/^[0-9a-zA-Z\-_.]+$/.test(repo) ||
         !/^[0-9a-zA-Z\-_.]+$/.test(owner)) {
       return acc.concat([project]);
     }
@@ -85,7 +83,7 @@ $(document).ready(function() {
 <div id="errors" style="display:none">
   The following are not valid repository names:
   <div id="errorrepos" style="margin: 20px; color: rgb(173, 63, 63);"></div>
-  
+
   Valid repository names
   contain small and capital letters or one of the following characters: _-.
   <br/>

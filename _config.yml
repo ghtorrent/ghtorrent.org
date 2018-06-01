@@ -1,7 +1,8 @@
 permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: "pygments"
+highlighter: "rouge"
+#markdown: kramdown
 markdown: rdiscount
 
 # Themes are encouraged to use these universal variable
@@ -10,43 +11,12 @@ title : GHTorrent
 tagline: Query Github data!
 author :
   name : Georgios Gousios
-  email : georgios@cs.ru.nl
+  email : gousiosg@gmail.com
   github : gousiosg
   twitter : gousiosg
   feedburner :
 
 production_url : http://www.ghtorrent.org
-
-JB :
-  version : 0.2.13
-  BASE_PATH : false
-  ASSET_PATH : false
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  comments :
-    provider : disqus
-    disqus :
-      short_name : ghtorrent
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
-  analytics :
-    provider : google
-    google :
-        tracking_id : 'UA-38537159-1'
-    getclicky :
-      site_id :
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-  sharing :
-    provider : addthis
 
 scholar:
   style: apa
@@ -66,4 +36,3 @@ scholar:
   details_link:   more...
 
   query: "@*"
-
