@@ -175,6 +175,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Software Engineer</dt>
+  <dd>Priya Rani, Synopsys (India) Pvt Ltd., 
+  <a href="priyar@synopsys.com">priyar@synopsys.com</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>June 01, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I need this to set up the staging environment for GHTorrent.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
