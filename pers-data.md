@@ -17,15 +17,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dt>Researcher</dt>
+  <dd> Sean P. Goggins, Associate Professor, University of Missouri,
+  <a href="gogginss@missouri.edu">gogginss@missouri.edu</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>June 5, 2018</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> To conduct research on open source project health and sustainability. </dd>
 
 </dl>
 {%endhighlight%}
