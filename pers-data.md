@@ -126,17 +126,6 @@ to the data.
 </dl>
 
 <dl>
-  <dt>Researcher</dt>
-  <dd>Guanliang Chen, PhD candidate, Web Information Systems group, EEMCS, TU Delft <a href="guanliang.chen@tudelft.nl">guanliang.chen@tudelft.nl</a> </dd>
-
-  <dt>Date of request</dt>
-  <dd>Oct 30, 2017</dd>
-
-  <dt>Intended use</dt>
-  <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
-</dl>
-
-<dl>
   <dt>Postdoctoral Researcher</dt>
   <dd>Ayushi Rastogi, UC Irvine
   <a href="ayushir@ics.uci.edu">ayushir@ics.uci.edu</a></dd>
@@ -173,6 +162,17 @@ to the data.
   <dt>Why do you need the personal data?</dt>
   <dd>I will use email addresses to cross-reference GitHub accounts with social media accounts.</dd>
 
+</dl>
+
+<dl>
+  <dt>Researcher</dt>
+  <dd>Guanliang Chen, PhD candidate, Web Information Systems group, EEMCS, TU Delft <a href="guanliang.chen@tudelft.nl">guanliang.chen@tudelft.nl</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>July 4, 2018</dd>
+
+  <dt>Intended use</dt>
+  <dd>To match learners in edX and investigate to what extend learners from programming MOOCs applied the knowledge into practice.</dd>
 </dl>
 
 ## Disclaimer
