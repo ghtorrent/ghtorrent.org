@@ -175,6 +175,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Chris Rojas, Cornell University, 
+  <a href="car332@cornell.edu">car332@cornell.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>July 6, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I am researching peer-influence effects on contributions to open-source, and I would like to include how they vary by gender.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
