@@ -6,6 +6,9 @@ tagline:
 
 ## Accessing personal data
 
+**Update Jun 2018: GDPR is in effect, which means that until GHTorrent's legal status
+is cleared, we cannot distribute this data anymore.**
+
 As of Mar 2016, the GHTorrent project does not offer personal data
 (namely, emails and real names) for download. For research purposes,
 you can request access to a file containing a mapping between
