@@ -20,15 +20,15 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dt>Researcher</dt>
+  <dd>Joschka Schwarz, PhD candidate, Hamburg University of Technology, Germany
+    <a href="email">joschka.schwarz@tuhh.de</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>July 23, 2018</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd>Research regarding developers' expertise in social coding platforms.</dd>
 
 </dl>
 {%endhighlight%}
