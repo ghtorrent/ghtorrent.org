@@ -177,6 +177,18 @@ to the data.
   <dd>I will use email addresses to cross-reference GitHub accounts with social media accounts.</dd>
 
 </dl>
+<dl>
+  <dt>Graduate</dt>
+  <dd>Mohammed Khalil Ait Brahim, Al Akhawayn University, 
+  <a href="mohammed.khalil.ab@gmail.com">mohammed.khalil.ab@gmail.com</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>September 12, 2018</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I want to use names and emails to match users on different social media and analyze developpers' activity.</dd>
+
+</dl>
 
 ## Disclaimer
 
