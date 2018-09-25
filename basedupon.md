@@ -22,3 +22,4 @@ project missing/wrongly listed/not hosted on GitHub? Please add it by
 * [BonnyCI/shuffleboard](https://github.com/BonnyCI/shuffleboard) Truffle-shuffling data for the [ci-plunder project](https://github.com/BonnyCI/ci-plunder)
 * [jakeharding/repo-health](https://github.com/jakeharding/repo-health) This repository holds the proof of concept for the repository health and sustainability project
 * [PRioritizer/PRioritizer-analyzer](https://github.com/PRioritizer/PRioritizer-analyzer) Prioritize your pull requests
+* [acs/ghtorrent](https://github.com/acs/ghtorrent) Analyze GHTorrent data using Elasticsearch + Kibana
