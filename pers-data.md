@@ -178,6 +178,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Felippe Scheidt<a href="felippescheidt@gmail.com">felippescheidt@gmail.com</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>Sep. 25, 2018</dd>
+
+  <dt>Intended use</dt>
+  <dd>Phd research on Open Source Social network for users contributions analysis and commit patterns.</dd>
+
+</dl>
+
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
