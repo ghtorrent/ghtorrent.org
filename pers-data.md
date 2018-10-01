@@ -35,6 +35,20 @@ to the data.
 
 ## People with access to personal data
 
+#### Pavel Azaletskiy
+<dl>
+  <dt>Researcher</dt>
+  <dd>Head of Engineering Excellence Center at EPAM Systems
+  <a href="email">pavel@azaleteskiy.com</a></dd>
+
+  <dt>27 July 2018</dt>
+  <dd>The actual date</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>Research social aspects of engineers' collaboration and teamwork across multiple repositories of GitHub</dd>
+
+</dl>
+
 #### Georgios Gousios
 <dl>
   <dt>Researcher</dt>
