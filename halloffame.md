@@ -65,6 +65,10 @@ Github](https://github.com/gousiosg/ghtorrent.org/blob/master/halloffame.md). Yo
 * [Eirini Kalliamvakou](http://thesegalgroup.org/people/eirini-kalliamvakou): Research on collaborative development using decentralized workflows and GitHub. Used GHTorrent to extract information about pull requests for potential mining perils.
   1. {% reference KGBSGD14 %}
 
+#### [University of Trier/SE](http://st.uni-trier.de/)
+* [Sebastian Baltes](http://sbaltes.com/): Research on the usage of Stack Overflow code snippets in GitHub projects, its licensing implications, and developers' awareness.
+  1. {% reference BaltesDiehl2018 %}
+
 ### API keys contributors
 
 The following people's contributions of GitHub OAuth API keys has allowed
