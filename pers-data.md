@@ -21,14 +21,14 @@ to the data.
 {%highlight html%}
 <dl>
   <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dd> Sam Walkow, PhD Student, University of Illinois
+  <a href="swalkow2@illinois.edu">swalkow2@illinois.edu</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>02/27/19</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> To research contributors attrition rate in projects and their demographics. Also to look at diversity in projects.</dd>
 
 </dl>
 {%endhighlight%}
