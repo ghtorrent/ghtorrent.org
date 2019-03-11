@@ -22,13 +22,13 @@ to the data.
 <dl>
   <dt></dt>
   <dd> Job Title
-  <a href="email">email</a></dd>
+  <a href="email">NorbertEke@cmail.carleton.ca</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>2019-03-11</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> Research purposes: My Master's thesis work is in mining software repositories and currently I am trying to link SOTorrent with GHTorrent throught the users table. I would need this personal data in order to join the 2 user tables based on hashing the email address and matching it to SOTorrent user table's email hash.</dd>
 
 </dl>
 {%endhighlight%}
