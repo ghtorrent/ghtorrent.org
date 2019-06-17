@@ -21,14 +21,14 @@ to the data.
 {%highlight html%}
 <dl>
   <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dd> Master student in University of Victoria
+  <a href="email">zkchen@uvic.ca</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>June 17 2019</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> I am currently doing research on open source software ecosystem and I need the user data to examine further details </dd>
 
 </dl>
 {%endhighlight%}
