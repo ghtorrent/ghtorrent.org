@@ -20,15 +20,16 @@ to the data.
 
 {%highlight html%}
 <dl>
-  <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dt>Graduate Student</dt>
+  <dd> Reza Nadri, Computer Science Graduate Student, Dr Cheriton School of Computer Science, University of Waterloo, On, Canada
+  <a href="email">rnadri@uwaterloo.ca</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>July 29, 2019</dd>
 
   <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dd> I am replicating this study : Ayushi et al. “Geographical bias in GitHub : perceptions and reality.” (2016). I would like to
+       replicate in a newer and larger dataset. To replicate this study, I need emails (since ayushi uses this field) and names to replicate and potentially extend this work.</dd>
 
 </dl>
 {%endhighlight%}
