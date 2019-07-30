@@ -178,6 +178,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Michael Vetter, Technical University of Munich,
+    <a href="mailto:michael.vetter@tum.de">michael.vetter@tum.de</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>July 30, 2019</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I analyze acquisitions and their effect on the open source contributions of the employees of the acquired company. Gaining access to the email addresses would enable me to match the users to companies via their email domains.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
