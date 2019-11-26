@@ -178,6 +178,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Research Group</dt>
+  <dd>Social & Decision Analystic Division,<br>Biocomplexity Institute & Initiative,<br>University of Virginia<br>
+  <a href="jbs3hp@virginia.edu">jbs3hp@virginia.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>November 26, 2019</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>Attribute contributions by sectors (e.g., US/foreign, academia, NGO, private, household) as part of a cooperative agreement with NSF/NCSES.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
