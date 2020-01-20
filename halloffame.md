@@ -8,6 +8,7 @@ tagline:
 
 * [17 Nov 2015] Microsoft donated $98,000 in Azure credits
 * [30 Oct 2016] Google donated $1000 in Google Cloud credits
+* [1 Jun 2019 ] Google donated $30000 in Azure credits
 
 The project would also like to thank the anonymous donors for their
 generocity. GHTorrent will become a better project thanks to you!

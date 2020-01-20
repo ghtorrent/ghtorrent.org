@@ -31,7 +31,7 @@ researchers](https://scholar.google.gr/scholar?cites=11132126230347149781) have
 or use the [online access services](services.html) to get access to the data.
 
 When using GHTorrent data for research or large scale repository analysis,
-please consider the perils reported in [this paper](http://gousios.gr/bibliography/KGBSGD15.html).
+please consider the perils reported in [this paper](http://gousios.org/bibliography/KGBSGD16.html).
 
 #### _Which license is GHTorrent distributed under?_
 
@@ -39,8 +39,8 @@ please consider the perils reported in [this paper](http://gousios.gr/bibliograp
 
 For non-commercial uses (including, but not limited to, educational, research or personal uses), the dataset is distributed under the [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) license. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
-For commercial uses, please [contact the maintainer](mailto:gousiosg@gmail.com) for more information. Usually, a sizable donation to the project will be enough
-to grant you full access.
+For commercial uses, please [contact the maintainer](mailto:gousiosg@gmail.com) for more information. 
+Usually, a sizable donation to the project will be enough to grant you full access.
 
 #### _Who is behind GHTorrent?_
 
@@ -55,7 +55,8 @@ Financial support has been provided by the following organizations:
 
 * TU Delft: purchace and running costs for initial servers (2012 -- late 2015)
 * Microsoft: donation of Azure tokens for running the project infrastructure
-  (late 2015 -- late 2016)
+  (late 2015 -- late 2019)
+* TU Delft: purchace and running costs for servers (2020 -- onwards)
 
 #### _How is GHTorrent different from Github Archive?_
 
@@ -101,10 +102,7 @@ suite](http://www.gousios.gr/bibliography/G13.html). MSR 2013: 233-236
 
 #### _...download the data?_
 
-You don't need to. GHTorrent offers a multitude of [online
-services](services.html) that enable access to almost realtime versions
-of the datastores. If you really want to, you can get all the data from
-the [downloads](downloads.html) page.
+You can get all the data from the [downloads](downloads.html) page.
 
 #### _...use the data for my private project?_
 
@@ -131,7 +129,8 @@ process the timestamps in any way.
 
 #### _My data is out of date_
 
-Github only creates events when an entity is created and not when it is updated or deleted. It is therefore not possible to be completely up-to-date with changes in users (e.g. updated location) and repositories (e.g. renames). GHTorrent tries its best to stay up to date by refreshing all users and all repos every X months. As the DB contains 12M+ users and 30M+ repos, this process may take a while and it can also fail due to spurious reasons.
+Github only creates events when an entity is created and not when it is updated or deleted. It is therefore not possible to be completely up-to-date with changes in users (e.g. updated location) and repositories (e.g. renames).
+ As the DB contains 50M+ users and 140M+ repos, this refresh process may take a while and it can also fail due to spurious reasons.
 
 ## Copyright and Privacy
 
@@ -152,13 +151,17 @@ By personal information, we mean data that identify a real person uniquely. In
 the context of GHTorrent, these are emails and real names.
 
 As of Mar 2016, GHTorrent does not distribute any personal information by
-default. Researchers whose research requires access to personal data
-can use [this form](pers-data.html) to obtain it.
+default. 
+
+Researchers whose research required access to personal data
+could use [this form](pers-data.html) to obtain it. **As of
+May 2018, and due to GDPR, this is not possible any more.**
 
 #### _Can I get more information?_
 
-Yes. Please read the following Slidedeck. If you are still in doubt,
+Yes. Please see the following Slidedeck. If you are still in doubt,
 please contact us.
+
 <div style="width: 50%;margin-left:auto;margin-right:auto;">
 <script async class="speakerdeck-embed" data-id="1c64fd1e7dfe4032aff246b2dd1195bf" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
@@ -189,7 +192,7 @@ many emails we are sending. Here are some tips to avoid annoying people:
   users have explicitly stated that they don't want to be involved in surveys.
 
 - Try to limit your data collection to a sample of users. While it may be
-  tempting to contact all 12 million developers, it is also likely to leave a
+  tempting to contact all 40+ million developers, it is also likely to leave a
   bad impression of researchers in general, and can make future studies
   difficult.
 
