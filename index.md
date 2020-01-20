@@ -10,7 +10,7 @@ offline mirror of data offered through the [Github REST API](http://developer.gi
 Follow [@ghtorrent](https://twitter.com/ghtorrent) on Twitter for project
 updates and [exciting research](halloffame.html) done with GHTorrent.
 
-##What does GHTorrent do?
+## What does GHTorrent do?
 
 GHTorrent monitors the [Github public event time
 line](https://api.github.com/events). For each event, it retrieves its contents
@@ -30,9 +30,9 @@ The project releases the data collected during that period as
 
 ### How much data do you have?
 
-Currently (Jan 2015), MongoDB stores around 4TB of JSON data (compressed), while
-MySQL more than 1.5 billion rows of extracted metadata.  A large part of the
-activity of 2012, 2013, 2014 and 2015 has been retrieved, while we are also
+Currently (Jan 2020), MongoDB stores around 18TB of JSON data (compressed), while
+MySQL more than 6.5 billion rows of extracted metadata. A large part of the
+activity of 2012-2019 has been retrieved, while we are also
 going backwards to retrieve the full recorded history of important projects.
 
 ### How can I help?
@@ -41,24 +41,20 @@ GHTorrent needs contributions on the following fronts:
 
 * **API keys:** We can run multiple GHTorrent worker instances concurrently. To
 go over Github's API rate limit, we need multiple Github API keys provided by
-users.  If you use GHTorrent for your reseach, please consider [donating a
+users. If you use GHTorrent for your reseach, please consider [donating a
 key](services.html).
 
 * **Linking and analysis:** GHTorrent currently only does limited analysis and
 linking withing the the dataset (user geolocation). There are many possibilities
 for expansion. One could for example think of linking commits to issues.
 
-* **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) to report any data consistency issues you have found.
-
-* **Donating:** We are trying to make GHTorrent a self-sustainable operation.
-If you are using GHTorrent, please consider donating (you can find a donation
-button on the left). All individual/companies that have donated will be listed
-in the Hall of Fame page.
+* **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) 
+to report any data consistency issues you have found.
 
 ### Why did you do it?
 
-We are doing research on [software repositories](http://www.msrconf.org/).
-Github is an exciting new data source for us, one that has several of the
+We are doing research on [software analytics](http://gousios.org/research.html).
+Github is an exciting data source for us, one that has several of the
 problems we are facing as data miners solved. The uniformity of data
 will allow scaling of research to hundreds or thousands of repositories
 spanning across multiple languages and application domains.
@@ -72,10 +68,10 @@ data coming from GitHub.
 
 ### Can I know more?
 
-Have a look at the following presentation for a short introduction.
+Have a look at the following presentation for an introduction.
 
 <div style="width: 50%;margin-left:auto;margin-right:auto;">
-<script class="speakerdeck-embed" data-id="75bea5909fbb0130f0eb364613f6f036" data-ratio="1.33333" src="//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="c25d64607e600130294c22000a9f019a" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 </div>
 
 ### How can I cite this work?
