@@ -24,3 +24,4 @@ project missing/wrongly listed/not hosted on GitHub? Please add it by
 * [PRioritizer/PRioritizer-analyzer](https://github.com/PRioritizer/PRioritizer-analyzer) Prioritize your pull requests
 * [acs/ghtorrent](https://github.com/acs/ghtorrent) Analyze GHTorrent data using Elasticsearch + Kibana
 * [sergibro/github-recomendations](https://github.com/sergibro/github-recomendations) GitHub repositories and users recommendations by embeddings
+* [SemanGit/SemanGit](https://github.com/SemanGit/SemanGit) Graph dataset with semantic layer about usage of the git procotol
