@@ -21,14 +21,14 @@ to the data.
 {%highlight html%}
 <dl>
   <dt></dt>
-  <dd> Job Title
-  <a href="email">email</a></dd>
+  <dd> Geza Sapi, Research fellow, Düsseldorf Institute for Competition Economics,
+  <a href="sapi@dice.uni-duesseldorf.de">email</a></dd>
 
-  <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dt>29.04.2020</dt>
+  <dd>29.04.2020</dd>
 
-  <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dt>Intended use</dt>
+  <dd> Research project on the relationship between corporate open source software development activity and changes in the economic environment. </dd>
 
 </dl>
 {%endhighlight%}
