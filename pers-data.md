@@ -22,13 +22,13 @@ to the data.
 <dl>
   <dt></dt>
   <dd> Job Title
-  <a href="email">email</a></dd>
+  <a href="abhijithpallavi@gmail.com">email</a></dd>
 
   <dt>Date of request</dt>
-  <dd>The actual date</dd>
+  <dd>June 18 2020</dd>
 
-  <dt>Why do you need the personal data?</dt>
-  <dd> Provide an explanation </dd>
+  <dt>Intended use</dt>
+  <dd> For a resarch project to identify the potential user for the company to hire! </dd>
 
 </dl>
 {%endhighlight%}
