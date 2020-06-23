@@ -10,10 +10,10 @@ exemptLabels:
 staleLabel: wontfix
 # Comment to post when marking an issue as stale. Set to `false` to disable
 markComment: >
-  Thank you for your pull request. The GHTorrent project does stopped
-  offering shell access to data services on Jun 2019. This pull request
+  Thank you for your pull request. The GHTorrent project stopped
+  offering shell access to data services in Jun 2019. This pull request
   will be closed. If you request access to personal data, please note that
-  GDPR does allow us to distribute those.
+  GDPR does allow GHTorrent to distribute those since May 2018.
 
   Please ping @gousiosg for other requests.
 # Comment to post when closing a stale issue. Set to `false` to disable
