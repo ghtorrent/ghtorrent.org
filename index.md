@@ -45,7 +45,7 @@ users. If you use GHTorrent for your reseach, please consider [donating a
 key](services.html).
 
 * **Linking and analysis:** GHTorrent currently only does limited analysis and
-linking withing the the dataset (user geolocation). There are many possibilities
+linking within the the dataset (user geolocation). There are many possibilities
 for expansion. One could for example think of linking commits to issues.
 
 * **Reporting bugs:** Please use Github's [issue tracker here](https://github.com/gousiosg/ghtorrent.org/issues) 
