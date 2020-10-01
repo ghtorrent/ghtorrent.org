@@ -4,7 +4,7 @@ title: The GHTorrent documentation
 tagline:
 ---
 
-## Data formats
+## Data formats AN amezing project
 
 * [The relational data schema](relational.html)
 * [Collections in the MongoDB database](mongo.html)
