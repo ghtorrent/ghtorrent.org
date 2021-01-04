@@ -178,6 +178,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Research & Development Software Engineer</dt>
+  <dd>Samim Mohabuth, Nabla Business Solutions Ltd, Mauritius
+  <a href="smohabuth@nabla.mu">smohabuth@nabla.mu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>January 04, 2021</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will be using the email addresses/names to reference account from social networks/other public databases to determine the contribution of users based on their profession.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
