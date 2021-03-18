@@ -178,6 +178,22 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Praharshita Krishna, PhD student, Information Systems Area, Indian Institute Of Management Ahmedabad
+  <a href="phd19praharshitak@iima.ac.in">phd19praharshitak@iima.ac.in</a> </dd>
+
+  <dt>Date of request</dt>
+  <dd>18th March, 2021</dd>
+
+  <dt>Intended use</dt>
+  <dd>Research regarding gender diversity in open source software development.</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will use email addresses to identify gender of the contributors.</dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
