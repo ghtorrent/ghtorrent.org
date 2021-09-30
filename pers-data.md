@@ -178,6 +178,19 @@ to the data.
 
 </dl>
 
+<dl>
+  <dt>Researcher</dt>
+  <dd>Amiangshu Bosu, Wayne State University, 
+  <a href="abosu@wayne.edu">abosu@wayne.edu</a></dd>
+
+  <dt>Date of request</dt>
+  <dd>September 30, 2021</dd>
+
+  <dt>Why do you need the personal data?</dt>
+  <dd>I will use that data for a research project to identify how various demographics attributes influece pull request and code reviews. A registered report describing the research is available at: <a href="https://arxiv.org/pdf/2108.07774.pdf">https://arxiv.org/pdf/2108.07774.pdf </a></dd>
+
+</dl>
+
 ## Disclaimer
 
 The data is provided as is with no further guarantees of data quality or law
