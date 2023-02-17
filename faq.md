@@ -61,7 +61,7 @@ Financial support has been provided by the following organizations:
 #### _How is GHTorrent different from Github Archive?_
 
 [Github Archive](http://githubarchive.org) collects and stores the GitHub event
-stream. In addition to that, GHTorrent applies dependency based retrieval on all
+stream. In addition to that, GHTorrent applies dependency-based retrieval on all
 entities (e.g. commits, pull requests etc) that are linked from the events and
 stores the results in two databases: a raw data one (MongoDB) that stores the
 unprocessed responses from GitHub API and a relational one (MySQL) that stores
@@ -123,7 +123,7 @@ unavoidable.
 #### _I 've seen weird commit timestamps_
 
 Git records the commit timestamp on the developer's workstation. If the clock
-is missconfigured, timestamps will be weird. We have seen timestamps such
+is misconfigured, timestamps will be weird. We have seen timestamps such
 as `0000-01-01 00:00` or `2034-12-31 23:59`. GitHub and GHTorrent do not
 process the timestamps in any way.
 
